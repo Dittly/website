@@ -37,6 +37,7 @@
     "styled-system": "^1.0.0-4"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.1.5",
     "jest": "^20.0.4",
     "react-test-renderer": "^15.6.1"
   }

@@ -1,15 +1,36 @@
 {
   "env": {
     "development": {
-      "presets": "next/babel"
+      "presets": "next/babel",
+      "plugins": [
+        ["styled-components", {
+          "displayName": true,
+          "ssr": true,
+          "preprocess": false
+        }]
+      ]
     },
     "production": {
-      "presets": "next/babel"
+      "presets": "next/babel",
+      "plugins": [
+        ["styled-components", {
+          "displayName": true,
+          "ssr": true,
+          "preprocess": false
+        }]
+      ]
     },
     "test": {
       "presets": [
         ["env", { "modules": "commonjs" }],
         "next/babel"
+      ],
+      "plugins": [
+        ["styled-components", {
+          "displayName": true,
+          "ssr": true,
+          "preprocess": false
+        }]
       ]
     }
   }
