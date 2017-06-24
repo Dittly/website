@@ -12,6 +12,21 @@
     "start": "next start",
     "test": "jest --coverage"
   },
+  "jest": {
+    "collectCoverageFrom" : [
+      "**/*.js",
+      "!**/coverage/**",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "dependencies": {
     "grid-styled": "^2.0.0-4",
     "next": "beta",
