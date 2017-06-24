@@ -1,3 +1,7 @@
+import PageHeaderSC from '../components/page-header-sc'
+
 export default () => (
-  <div>Welcome to Dittly!</div>
+  <PageHeaderSC>
+    Welcome to Dittly!
+  </PageHeaderSC>
 )
