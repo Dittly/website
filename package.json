@@ -10,7 +10,8 @@
     "build": "next build",
     "dev": "next",
     "start": "next start",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "jest": {
     "collectCoverageFrom": [
