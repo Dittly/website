@@ -7,9 +7,10 @@
   "author": "Mike Nikles <mikenikles@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "dev": "next",
+    "start": "next start",
+    "test": "jest --coverage"
   },
   "dependencies": {
     "grid-styled": "^2.0.0-4",
@@ -20,6 +21,7 @@
     "styled-system": "^1.0.0-4"
   },
   "devDependencies": {
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "react-test-renderer": "^15.6.1"
   }
 }
