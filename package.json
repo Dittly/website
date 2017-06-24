@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "grid-styled": "^2.0.0-4",
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
