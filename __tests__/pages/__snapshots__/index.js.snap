@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders / correctly 1`] = `
-<div
-  className="sc-bdVaJa gYTVNr"
-  color="tomato"
-  fontSize={4}
->
-  <h1
-    className="sc-bwzfXH bFHdpU"
+<div>
+  <div
+    className="box-iwu0rr-0 lmcBvQ"
+    fontSize={4}
   >
-    Welcome to Dittly!
-  </h1>
+    <h1
+      className="index-sc__PageHeaderSC-s18xio5n-0 ZrBDF"
+    >
+      Welcome to Dittly!
+    </h1>
+  </div>
 </div>
 `;
