@@ -1,10 +1,15 @@
 import ReactGA from 'react-ga'
 
-const isInitialized = false
+let isInitialized = false
+
+// Used for testing purposes
+export const _resetInitialized = () => {
+  isInitialized = false
+}
 
 export const initGA = () => {
-  console.log('GA init')
   ReactGA.initialize('UA-101586415-1')
+  isInitialized = true
 }
 
 export const logPageView = () => {
