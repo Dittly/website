@@ -1,12 +1,13 @@
 jest.mock('react-ga')
+jest.mock('next/document')
 
 import React from 'react'
-import Index from '../../pages'
+import Document from '../../pages/_document'
 import renderer from 'react-test-renderer'
 
 it('renders / correctly', () => {
   const tree = renderer.create(
-    <Index />
+    <Document />
   ).toJSON()
   expect(tree).toMatchSnapshot()
 })
