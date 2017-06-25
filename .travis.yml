@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "7"
 cache: yarn
+script: yarn test:ci
 
 # Greenkeeper
 before_install: yarn global add greenkeeper-lockfile@1
