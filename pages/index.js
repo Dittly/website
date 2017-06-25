@@ -1,10 +1,9 @@
 import MainLayout from '../components/layouts/main'
-import PageHeader from '../components/page-header'
+// The LandingPage is a placeholder until we go live
+import LandingPage from '../components/landing-page'
 
 export default () => (
   <MainLayout>
-    <PageHeader>
-      Welcome to Dittly!
-    </PageHeader>
+    <LandingPage />
   </MainLayout>
 )

@@ -2,15 +2,44 @@
 
 exports[`renders / correctly 1`] = `
 <div>
-  <div
-    className="box-iwu0rr-0 lmcBvQ"
-    fontSize={4}
-  >
-    <h1
-      className="index-sc__PageHeaderSC-s18xio5n-0 ZrBDF"
+  <div>
+    <div
+      className="box-iwu0rr-0 lmcBvQ"
+      fontSize={4}
     >
-      Welcome to Dittly!
-    </h1>
+      <h1
+        className="index-sc__PageHeaderSC-s18xio5n-0 ZrBDF"
+      >
+        Welcome to Dittly!
+      </h1>
+    </div>
+    <p>
+      When it comes to home-improvement, do it together.
+    </p>
+    <p>
+      <small>
+        Introducing
+      </small>
+    </p>
+    <h2>
+      Dittly
+    </h2>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        name="email"
+        onChange={[Function]}
+        placeholder="Your Email"
+        required={true}
+        type="email"
+      />
+      <button
+        type="submit"
+      >
+        Send
+      </button>
+    </form>
   </div>
 </div>
 `;
