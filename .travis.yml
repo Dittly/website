@@ -1,7 +1,10 @@
 language: node_js
 node_js:
   - "7"
-cache: yarn
+cache:
+  yarn: true
+  directories:
+    - node_modules
 script: yarn test:ci
 
 # Greenkeeper
