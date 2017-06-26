@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import { createMockClient } from '../test-helpers'
 
 describe('apollo/test-helpers', () => {

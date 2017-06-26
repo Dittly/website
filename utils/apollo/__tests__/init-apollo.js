@@ -1,3 +1,4 @@
+/* eslint-env jest, node */
 import initApollo from '../init-apollo'
 
 const expectApolloClientToBeInitializedProperly = (client, initialState) => {

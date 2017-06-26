@@ -1,8 +1,8 @@
+/* eslint-env jest */
 jest.mock('react-ga')
 
 import React from 'react'
-import { ApolloClient, ApolloProvider } from 'react-apollo'
-import { mockNetworkInterface } from 'react-apollo/lib/test-utils'
+import { ApolloProvider } from 'react-apollo'
 import renderer from 'react-test-renderer'
 import { createMockClient } from '../../utils/apollo/test-helpers'
 import Index from '../../pages'

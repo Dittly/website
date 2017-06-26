@@ -22,7 +22,7 @@ export default (ComposedComponent) => {
 
       // Run all graphql queries in the component tree
       // and extract the resulting data
-      if (!process.browser) {
+      if (!process.browser) { // eslint-disable-line no-undef
         const apollo = initApollo()
         // Provide the `url` prop data in case a graphql query uses it
         const url = { query: ctx.query, pathname: ctx.pathname }

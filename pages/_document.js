@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
     const main = sheet.collectStyles(<Main />)
     const styleTags = sheet.getStyleElement()
     return (
-      <html>
+      <html lang="en">
         <Head>
           <title>Dittly</title>
           {styleTags}

@@ -1,3 +1,4 @@
+/* eslint-env jest */
 jest.mock('react-ga')
 jest.mock('next/document')
 

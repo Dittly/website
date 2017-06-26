@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import { mount } from 'enzyme'
 import { EmailInput } from '../'
 

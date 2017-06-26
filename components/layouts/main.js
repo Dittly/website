@@ -1,15 +1,23 @@
+import PropTypes from 'prop-types'
 import React from 'react'
-import { initGA, logPageView } from '../../utils/ga'
+import { logPageView } from '../../utils/ga'
 
-export default class MainLayout extends React.Component {
+class MainLayout extends React.Component {
   componentDidMount() {
     logPageView()
   }
   render() {
+    const { children } = this.props
     return (
       <div>
-        {this.props.children}
+        {children}
       </div>
     )
   }
 }
+
+MainLayout.propTypes = {
+  children: PropTypes.node
+}
+
+export default MainLayout

@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'react-apollo'
 
 import { createSignUpPreview } from './index-gq'
 
-const updateStateValue = (key, value) => (prevState, props) => ({
+const updateStateValue = (key, value) => (prevState, props) => ({ // eslint-disable-line no-unused-vars
   [key]: value
 })
 
@@ -58,6 +59,10 @@ export class EmailInput extends React.Component {
       </div>
     )
   }
+}
+
+EmailInput.propTypes = {
+  submitEmail: PropTypes.func.isRequired
 }
 
 /* istanbul ignore next */

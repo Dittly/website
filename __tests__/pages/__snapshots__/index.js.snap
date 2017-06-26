@@ -4,11 +4,11 @@ exports[`Index page renders / correctly 1`] = `
 <div>
   <div>
     <div
-      className="box-iwu0rr-0 lmcBvQ"
+      className="box-s1qf175f-0 ecIryM"
       fontSize={4}
     >
       <h1
-        className="index-sc__PageHeaderSC-s18xio5n-0 ZrBDF"
+        className="index-sc__PageHeaderSC-w6arum-0 eElHOM"
       >
         Welcome to Dittly!
       </h1>

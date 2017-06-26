@@ -1,7 +1,7 @@
 import PageHeader from '../page-header'
 import EmailInput from './email-input'
 
-export default () => (
+const LandingPage = () => (
   <div>
     <PageHeader>
       Welcome to Dittly!
@@ -12,3 +12,5 @@ export default () => (
     <EmailInput />
   </div>
 )
+
+export default LandingPage

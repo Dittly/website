@@ -1,3 +1,4 @@
+/* eslint-env jest */
 jest.mock('react-ga')
 
 import ReactGA from 'react-ga'
