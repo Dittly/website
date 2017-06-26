@@ -1,10 +1,13 @@
 import React from 'react'
+import { graphql } from 'react-apollo'
 
-const updateStateValue = (fieldName, value) => (prevState, props) => ({
-  [fieldName]: value
+import { createSignUpPreview } from './index-gq'
+
+const updateStateValue = (key, value) => (prevState, props) => ({
+  [key]: value
 })
 
-class EmailInput extends React.Component {
+export class EmailInput extends React.Component {
   constructor(props) {
     super(props)
 
@@ -20,21 +23,51 @@ class EmailInput extends React.Component {
     this.setState(updateStateValue(event.target.name, event.target.value))
   }
 
-  // Ignoring that temporarily until Apollo is installed to deal with form submits
-  /* istanbul ignore next */
   onSubmit(event) {
     event.preventDefault()
-    console.log('STATE IS', this.state)
+    this.props.submitEmail(this.state.email)
+      .then(() => {
+        this.setState(
+          updateStateValue('submissionMessage', `Awesome, thanks for signing up! We'll be in touch once Dittly is ready for beta access.`)
+        )
+      })
+      // See the "submits the form unsuccessfully" test case for details as to why this is ignored
+      .catch( /* istanbul ignore next */ (error) => {
+        if (error.message.includes('unique constraint') && error.message.includes('Field name = email')) {
+          this.setState(
+            updateStateValue('submissionMessage', `It looks like you've already signed up. That's awesome, we'll get in touch with you asap.`)
+          )
+        }
+      })
   }
 
   render() {
+    const { submissionMessage } = this.state
+
     return (
-      <form onSubmit={this.onSubmit}>
-        <input name="email" type="email" onChange={this.onChange} placeholder="Your Email" required />
-        <button type="submit">Send</button>
-      </form>
+      <div>
+        <form onSubmit={this.onSubmit}>
+          <input name="email" type="email" onChange={this.onChange} placeholder="Your Email" required />
+          <button type="submit">Send</button>
+        </form>
+        {
+          submissionMessage && (
+            <p id="submissionMessage">{submissionMessage}</p>
+          )
+        }
+      </div>
     )
   }
 }
 
-export default EmailInput
+/* istanbul ignore next */
+// TODO: Figure out how to write test for this
+const EmailInputWrapper = graphql(createSignUpPreview, {
+  props: ({ mutate }) => ({
+    submitEmail: (email) => mutate({
+      variables: { email }
+    })
+  })
+})(EmailInput)
+
+export default EmailInputWrapper

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders / correctly 1`] = `
+exports[`Index page renders / correctly 1`] = `
 <div>
   <div>
     <div
@@ -24,22 +24,24 @@ exports[`renders / correctly 1`] = `
     <h2>
       Dittly
     </h2>
-    <form
-      onSubmit={[Function]}
-    >
-      <input
-        name="email"
-        onChange={[Function]}
-        placeholder="Your Email"
-        required={true}
-        type="email"
-      />
-      <button
-        type="submit"
+    <div>
+      <form
+        onSubmit={[Function]}
       >
-        Send
-      </button>
-    </form>
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Your Email"
+          required={true}
+          type="email"
+        />
+        <button
+          type="submit"
+        >
+          Send
+        </button>
+      </form>
+    </div>
   </div>
 </div>
 `;
