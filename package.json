@@ -9,8 +9,9 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
+    "lint": "eslint '**/*.js'",
     "start": "next start",
-    "test": "jest --coverage",
+    "test": "yarn lint && jest --coverage",
     "test:ci": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:watch": "jest --watch"
   },
@@ -43,9 +44,14 @@
     "styled-system": "^1.0.0-4"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "babel-plugin-styled-components": "^1.1.5",
     "coveralls": "^2.13.1",
     "enzyme": "^2.9.1",
+    "eslint": "^4.1.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
     "react-test-renderer": "^15.6.1"
   }

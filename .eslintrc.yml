@@ -1,0 +1,3 @@
+extends:
+  - './.eslint/react-a11y.yml'
+parser: babel-eslint

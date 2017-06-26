@@ -1,0 +1,5 @@
+extends:
+  - './es6-react.yml'
+  - 'plugin:jsx-a11y/recommended'
+plugins:
+  - jsx-a11y
