@@ -10,7 +10,7 @@ DummyComponent.displayName = 'DummyComponent'
 describe('apollo/with-data', () => {
   it('sets the displayName correctly', () => {
     const WithDataComponent = withData(() => (<DummyComponent />))
-    const wrapper = mount(<WithDataComponent serverState={{}}/>)
+    const wrapper = mount(<WithDataComponent serverState={{}} />)
     // console.log(wrapper.debug())
     expect(wrapper.find('WithData(DummyComponent)').exists()).toBe(true)
   })

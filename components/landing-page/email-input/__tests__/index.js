@@ -21,7 +21,7 @@ describe('EmailInput', () => {
     expect.assertions(1)
     const submitEmailMock = jest.fn()
     submitEmailMock.mockReturnValue(Promise.resolve())
-    const wrapper = mount(<EmailInput submitEmail={submitEmailMock}/>)
+    const wrapper = mount(<EmailInput submitEmail={submitEmailMock} />)
     wrapper.find('form').simulate('submit')
 
     return Promise.resolve().then(() => {
@@ -37,7 +37,7 @@ describe('EmailInput', () => {
     submitEmailMock.mockReturnValue(Promise.reject({
       message: 'A unique constraint would be violated on SignUpPreview. Details: Field name = email'
     }))
-    const wrapper = mount(<EmailInput submitEmail={submitEmailMock}/>)
+    const wrapper = mount(<EmailInput submitEmail={submitEmailMock} />)
     wrapper.find('form').simulate('submit')
     console.log('AAA', wrapper.state())
 

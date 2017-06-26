@@ -2,7 +2,7 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  render () {
+  render() {
     const sheet = new ServerStyleSheet()
     const main = sheet.collectStyles(<Main />)
     const styleTags = sheet.getStyleElement()
@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
           {styleTags}
         </Head>
         <body>
-          <div className='root'>
+          <div className="root">
             {main}
           </div>
           <NextScript />

@@ -8,7 +8,7 @@ const gaTrackingID = 'UA-101586415-1'
 Object.defineProperty(window.location, 'pathname', {
   writable: true,
   value: '/test-path'
-});
+})
 
 describe('utils/ga', () => {
   beforeEach(() => {
@@ -73,7 +73,7 @@ describe('utils/ga', () => {
       const category = 'test-category'
       const action = 'test-action'
       ga.logEvent(category, action)
-      expect(ReactGA.event).toBeCalledWith({ category, action})
+      expect(ReactGA.event).toBeCalledWith({ category, action })
     })
 
     it('does not fire the event if no category is available', () => {

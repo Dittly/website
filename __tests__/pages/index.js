@@ -13,11 +13,11 @@ describe('Index page', () => {
   beforeAll(() => {
     apolloClient = createMockClient()
   })
-  
+
   it('renders / correctly', () => {
     const tree = renderer.create(
       <ApolloProvider client={apolloClient}>
-        <Index serverState={{}}/>
+        <Index serverState={{}} />
       </ApolloProvider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

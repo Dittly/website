@@ -3,7 +3,7 @@ import initApollo from '../init-apollo'
 const expectApolloClientToBeInitializedProperly = (client, initialState) => {
     expect(client).toBeDefined()
     expect(client.initialState).toBe(initialState)
-    expect(client.networkInterface._uri).toBe('https://api.graph.cool/simple/v1/cj4c5zajubgpn0142pihd2xs3')  
+    expect(client.networkInterface._uri).toBe('https://api.graph.cool/simple/v1/cj4c5zajubgpn0142pihd2xs3')
 }
 
 describe('apollo/init-apollo', () => {

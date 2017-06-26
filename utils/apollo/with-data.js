@@ -11,7 +11,7 @@ export default (ComposedComponent) => {
       serverState: PropTypes.object.isRequired
     }
 
-    static async getInitialProps (ctx) {
+    static async getInitialProps(ctx) {
       let serverState = {}
 
       // Evaluate the composed component's getInitialProps()
@@ -25,7 +25,7 @@ export default (ComposedComponent) => {
       if (!process.browser) {
         const apollo = initApollo()
         // Provide the `url` prop data in case a graphql query uses it
-        const url = {query: ctx.query, pathname: ctx.pathname}
+        const url = { query: ctx.query, pathname: ctx.pathname }
 
         // Run all graphql queries
         const app = (
@@ -51,12 +51,12 @@ export default (ComposedComponent) => {
       }
     }
 
-    constructor (props) {
+    constructor(props) {
       super(props)
       this.apollo = initApollo(this.props.serverState)
     }
 
-    render () {
+    render() {
       return (
         <ApolloProvider client={this.apollo}>
           <ComposedComponent {...this.props} />

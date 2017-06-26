@@ -32,7 +32,7 @@ export class EmailInput extends React.Component {
         )
       })
       // See the "submits the form unsuccessfully" test case for details as to why this is ignored
-      .catch( /* istanbul ignore next */ (error) => {
+      .catch(/* istanbul ignore next */ (error) => {
         if (error.message.includes('unique constraint') && error.message.includes('Field name = email')) {
           this.setState(
             updateStateValue('submissionMessage', `It looks like you've already signed up. That's awesome, we'll get in touch with you asap.`)

@@ -2,10 +2,10 @@ import React from 'react'
 import { initGA, logPageView } from '../../utils/ga'
 
 export default class MainLayout extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     logPageView()
   }
-  render () {
+  render() {
     return (
       <div>
         {this.props.children}
