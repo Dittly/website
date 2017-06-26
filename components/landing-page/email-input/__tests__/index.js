@@ -7,7 +7,7 @@ describe('EmailInput', () => {
     const inputValues = {
       email: 'unit-test-email@dittly.co'
     }
-    const wrapper = mount(<EmailInput />)
+    const wrapper = mount(<EmailInput submitEmail={() => {}} />)
 
     // Populate the form fields
     Object.keys(inputValues).forEach((fieldName) => {

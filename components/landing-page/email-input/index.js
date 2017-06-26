@@ -69,7 +69,7 @@ EmailInput.propTypes = {
 // TODO: Figure out how to write test for this
 const EmailInputWrapper = graphql(createSignUpPreview, {
   props: ({ mutate }) => ({
-    submitEmail: (email) => mutate({
+    submitEmail: /* istanbul ignore next */ (email) => mutate({
       variables: { email }
     })
   })
