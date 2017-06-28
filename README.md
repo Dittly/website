@@ -30,4 +30,16 @@ At Dittly, we care about
 * take feedback very seriously
 * make data-driven decisions
 * write perfectly tested code, no exceptions
-* rely on monitoring across the entire infrastructure
+* monitor everything
+
+## Development
+
+## 3rd Party Services
+
+We rely on 3rd party services to automate as many tasks as possible.
+
+* **[Travis](https://travis-ci.org/Dittly)**: Continuous integration service to run tests.
+* **[Coveralls](https://coveralls.io/github/Dittly/website)**: Test coverage reports.
+* **[Greenkeeper](https://greenkeeper.io/)**: Automatically monitors and updates NPM dependencies.
+* **[Now](https://zeit.co/now)**: Deployment infrastructure.
+* **[Graphcool](https://www.graph.cool/)**: GraphQL backend.
