@@ -35,7 +35,6 @@
     "graphql": "^0.10.3",
     "grid-styled": "^2.0.0-4",
     "isomorphic-fetch": "^2.2.1",
-    "micro": "^7.3.3",
     "next": "beta",
     "next-routes": "^1.0.30",
     "prop-types": "^15.5.10",
