@@ -8,7 +8,8 @@ export const _resetInitialized = () => {
 }
 
 export const initGA = () => {
-  ReactGA.initialize('UA-101586415-1')
+  // ReactGA.initialize('UA-101586415-1')
+  ReactGA.initialize('UA-notliveyet-1')
   isInitialized = true
 }
 

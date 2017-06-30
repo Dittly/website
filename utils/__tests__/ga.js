@@ -4,7 +4,7 @@ jest.mock('react-ga')
 import ReactGA from 'react-ga'
 import * as ga from '../ga'
 
-const gaTrackingID = 'UA-101586415-1'
+const gaTrackingID = 'UA-notliveyet-1'
 
 Object.defineProperty(window.location, 'pathname', {
   writable: true,
