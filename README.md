@@ -34,6 +34,15 @@ At Dittly, we care about
 
 ## Development
 
+### Naming Conventions
+
+The following naming conventions apply:
+
+| Filename  | Variables      | Type                   |
+| --------- | -------------- | ---------------------- |
+| `*-sc.js` | `mainHeaderSC` | Styled-Component       |
+| `*-gq.js` | N/A            | GrahQL definition file |
+
 ## 3rd Party Services
 
 We rely on 3rd party services to automate as many tasks as possible.
