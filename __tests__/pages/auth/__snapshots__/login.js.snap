@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index page renders / correctly 1`] = `
+exports[`Login page renders / correctly 1`] = `
 <div>
   <div
     className="box-s1qf175f-0 wVoOR"
@@ -20,6 +20,8 @@ exports[`Index page renders / correctly 1`] = `
       Login
     </a>
   </div>
-  Homepage
+  <h1>
+    Login
+  </h1>
 </div>
 `;
