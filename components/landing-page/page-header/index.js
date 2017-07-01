@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Box from '../box'
+import Box from '../../box'
 
 import PageHeaderSC from './index-sc'
 

@@ -1,4 +1,4 @@
-import PageHeader from '../page-header'
+import PageHeader from './page-header'
 import EmailInput from './email-input'
 
 const LandingPage = () => (
