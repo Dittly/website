@@ -6,7 +6,7 @@ const LandingPage = () => (
   <div>
     <Header />
     <PageHeader>
-      When it comes to home-improvement, do it together.
+      When it comes to home&#8209;improvement,<br/> do it together.
     </PageHeader>
     <p>When it comes to home-improvement, do it together.</p>
     <p><small>Introducing</small></p>
