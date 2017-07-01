@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const PageHeaderSC = styled.h1`
-  color: tomato
+  font-family: 'Arvo', serif;
 `
 
 export default PageHeaderSC

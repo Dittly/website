@@ -6,7 +6,7 @@ const LandingPage = () => (
   <div>
     <Header />
     <PageHeader>
-      Welcome to Dittly!
+      When it comes to home-improvement, do it together.
     </PageHeader>
     <p>When it comes to home-improvement, do it together.</p>
     <p><small>Introducing</small></p>
