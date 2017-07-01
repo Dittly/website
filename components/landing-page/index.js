@@ -1,8 +1,10 @@
 import PageHeader from './page-header'
 import EmailInput from './email-input'
+import Header from './header'
 
 const LandingPage = () => (
   <div>
+    <Header />
     <PageHeader>
       Welcome to Dittly!
     </PageHeader>
