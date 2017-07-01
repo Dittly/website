@@ -1,14 +1,12 @@
 import PageHeader from './page-header'
 import EmailInput from './email-input'
-import Header from './header'
 import Logo from './logo'
 import Text from './text'
 
 const LandingPage = () => (
   <div>
-    <Header />
     <PageHeader>
-      When it comes to home&#8209;improvement,<br/> do it together.
+      When it comes to home&#8209;improvement,<br /> do it together.
     </PageHeader>
     <div>
       <Text color="#9B9B9B">Coming Soon</Text>
