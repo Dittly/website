@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const PageHeaderSC = styled.h1`
+const PageHeaderSC = styled.p`
   font-family: 'Arvo', serif;
   font-size: 28px;
   font-weight: 400;
