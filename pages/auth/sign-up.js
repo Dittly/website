@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql, gql, withApollo, compose } from 'react-apollo'
 import cookie from 'cookie'
 
-import MainLayout from '../../components/layouts/main'
 import { Link } from '../../utils/routes'
 import { authRoutes, homeRoutes } from '../../utils/routes/routes-definitions'
 
@@ -10,14 +9,14 @@ import withData from '../../utils/apollo/with-data'
 import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
 
-class Login extends React.Component {
+class CreateAccount extends React.Component {
   static async getInitialProps(context, apolloClient) {
     const { loggedInUser } = await checkLoggedIn(context, apolloClient)
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.
-      // Throw them back to the secret page
-      redirect(context, homeRoutes.secret)
+      // Throw them back to the main page
+      redirect(context, homeRoutes.home)
     }
 
     return {}
@@ -25,16 +24,17 @@ class Login extends React.Component {
 
   render() {
     return (
-      <MainLayout>
-        {/* this.props.signin is the mutation function provided by apollo below */}
-        <form onSubmit={this.props.signin}>
+      <div>
+        {/* this.props.create is the mutation function provided by apollo below */}
+        <form onSubmit={this.props.create}>
+          <input type='text' placeholder='Your Name' name='name' /><br />
           <input type='email' placeholder='Email' name='email' /><br />
           <input type='password' placeholder='Password' name='password' /><br />
-          <button>Sign in</button>
+          <button>Create account</button>
         </form>
         <hr />
-        New? <Link prefetch route={authRoutes.signup.name}><a>Create account</a></Link>
-      </MainLayout>
+        Already have an account? <Link prefetch route={authRoutes.login.name}><a>Sign in</a></Link>
+      </div>
     )
   }
 }
@@ -45,9 +45,14 @@ export default compose(
   // withApollo exposes `this.props.client` used when logging out
   withApollo,
   graphql(
-    // The `signinUser` mutation is provided by graph.cool by default
+    // The `createUser` & `signinUser` mutations are provided by graph.cool by
+    // default.
+    // Multiple mutations are executed by graphql sequentially
     gql`
-      mutation Signin($email: String!, $password: String!) {
+      mutation Create($name: String!, $email: String!, $password: String!) {
+        createUser(name: $name, authProvider: { email: { email: $email, password: $password }}) {
+          id
+        }
         signinUser(email: { email: $email, password: $password }) {
           token
         }
@@ -55,25 +60,26 @@ export default compose(
     `,
     {
       // Use an unambiguous name for use in the `props` section below
-      name: 'signinWithEmail',
+      name: 'createWithEmail',
       // Apollo's way of injecting new props which are passed to the component
       props: ({
-        signinWithEmail,
+        createWithEmail,
         // `client` is provided by the `withApollo` HOC
         ownProps: { client }
       }) => ({
-          // `signin` is the name of the prop passed to the component
-          signin: (event) => {
+          // `create` is the name of the prop passed to the component
+          create: (event) => {
             /* global FormData */
             const data = new FormData(event.target)
 
             event.preventDefault()
             event.stopPropagation()
 
-            signinWithEmail({
+            createWithEmail({
               variables: {
                 email: data.get('email'),
-                password: data.get('password')
+                password: data.get('password'),
+                name: data.get('name')
               }
             }).then(({ data: { signinUser: { token } } }) => {
               // Store the token in cookie
@@ -84,8 +90,8 @@ export default compose(
               // Force a reload of all the current queries now that the user is
               // logged in
               client.resetStore().then(() => {
-                // Now redirect to the secret
-                redirect({}, homeRoutes.secret)
+                // Now redirect to the homepage
+                redirect({}, homeRoutes.home)
               })
             })
               .catch((error) => {
@@ -97,4 +103,4 @@ export default compose(
         })
     }
   )
-)(Login)
+)(CreateAccount)

@@ -10,6 +10,11 @@ const authRoutes = {
     name: 'login',
     pattern: '/login',
     page: 'auth/login'
+  },
+  signup: {
+    name: 'signup',
+    pattern: '/sign-up',
+    page: 'auth/sign-up'
   }
 }
 
@@ -17,6 +22,10 @@ const homeRoutes = {
   home: {
     name: 'index',
     pattern: '/'
+  },
+  secret: {
+    name: 'secret',
+    pattern: '/secret'
   }
 }
 

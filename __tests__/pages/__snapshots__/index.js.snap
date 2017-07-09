@@ -7,14 +7,21 @@ exports[`Index page renders / correctly 1`] = `
     color="white"
   >
     <a
-      href={true}
+      href="/"
       onClick={[Function]}
     >
       Dittly
     </a>
      | 
     <a
-      href={true}
+      href="/secret"
+      onClick={[Function]}
+    >
+      Secret
+    </a>
+     | 
+    <a
+      href="/login"
       onClick={[Function]}
     >
       Login
