@@ -34,21 +34,21 @@
   "dependencies": {
     "cookie": "^0.3.1",
     "graphql": "^0.10.3",
-    "grid-styled": "^2.0.0-4",
+    "grid-styled": "^2.0.0-8",
     "isomorphic-fetch": "^2.2.1",
-    "next": "beta",
-    "next-routes": "^1.0.30",
+    "next": "^2.4.7",
+    "next-routes": "^1.0.40",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-apollo": "^1.4.2",
+    "react-apollo": "^1.4.3",
     "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",
-    "styled-components": "^2.1.0",
-    "styled-system": "^1.0.0-4"
+    "styled-components": "^2.1.1",
+    "styled-system": "^1.0.0-8"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-plugin-styled-components": "^1.1.5",
+    "babel-plugin-styled-components": "^1.1.7",
     "coveralls": "^2.13.1",
     "enzyme": "^2.9.1",
     "eslint": "^4.1.1",
