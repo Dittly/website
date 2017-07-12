@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <meta name="google-site-verification" content="wjFi2JtlRC-jy5mCnCc2epXwTHGfsYWfPQB7lkubC_U" />
           <title>Dittly</title>
 
           <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
