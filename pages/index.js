@@ -1,8 +1,10 @@
 import MainLayout from '../components/layouts/main'
 import withData from '../utils/apollo/with-data'
 
-export default withData((props) => (
+const Index = (props) => (
   <MainLayout>
     Homepage
   </MainLayout>
-))
+)
+
+export default withData(Index)

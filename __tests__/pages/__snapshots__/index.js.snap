@@ -2,31 +2,33 @@
 
 exports[`Index page renders / correctly 1`] = `
 <div>
-  <div
-    className="box-s1qf175f-0 wVoOR"
-    color="white"
-  >
-    <a
-      href="/"
-      onClick={[Function]}
+  <header>
+    <div
+      className="box-s1qf175f-0 iNmKap"
+      color="white"
     >
-      Dittly
-    </a>
-     | 
-    <a
-      href="/secret"
-      onClick={[Function]}
-    >
-      Secret
-    </a>
-     | 
-    <a
-      href="/login"
-      onClick={[Function]}
-    >
-      Login
-    </a>
-  </div>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Dittly
+      </a>
+       | 
+      <a
+        href="/secret"
+        onClick={[Function]}
+      >
+        Secret
+      </a>
+       | 
+      <a
+        href="/login"
+        onClick={[Function]}
+      >
+        Login
+      </a>
+    </div>
+  </header>
   Homepage
 </div>
 `;

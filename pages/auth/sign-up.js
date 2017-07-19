@@ -1,9 +1,9 @@
 import React from 'react'
-import { graphql, gql, withApollo, compose } from 'react-apollo'
+import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
-import { Link } from '../../utils/routes'
-import { authRoutes, homeRoutes } from '../../utils/routes/routes-definitions'
+import {Link} from '../../utils/routes'
+import {authRoutes, homeRoutes} from '../../utils/routes/routes-definitions'
 
 import withData from '../../utils/apollo/with-data'
 import redirect from '../../utils/apollo/redirect'
@@ -11,7 +11,7 @@ import checkLoggedIn from '../../utils/apollo/check-logged-in'
 
 class CreateAccount extends React.Component {
   static async getInitialProps(context, apolloClient) {
-    const { loggedInUser } = await checkLoggedIn(context, apolloClient)
+    const {loggedInUser} = await checkLoggedIn(context, apolloClient)
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.
@@ -27,9 +27,9 @@ class CreateAccount extends React.Component {
       <div>
         {/* this.props.create is the mutation function provided by apollo below */}
         <form onSubmit={this.props.create}>
-          <input type='text' placeholder='Your Name' name='name' /><br />
-          <input type='email' placeholder='Email' name='email' /><br />
-          <input type='password' placeholder='Password' name='password' /><br />
+          <input type="text" placeholder="Your Name" name="name" /><br />
+          <input type="email" placeholder="Email" name="email" /><br />
+          <input type="password" placeholder="Password" name="password" /><br />
           <button>Create account</button>
         </form>
         <hr />
@@ -65,42 +65,42 @@ export default compose(
       props: ({
         createWithEmail,
         // `client` is provided by the `withApollo` HOC
-        ownProps: { client }
+        ownProps: {client}
       }) => ({
-          // `create` is the name of the prop passed to the component
-          create: (event) => {
-            /* global FormData */
-            const data = new FormData(event.target)
+        // `create` is the name of the prop passed to the component
+        create: (event) => {
+          /* global FormData */
+          const data = new FormData(event.target)
 
-            event.preventDefault()
-            event.stopPropagation()
+          event.preventDefault()
+          event.stopPropagation()
 
-            createWithEmail({
-              variables: {
-                email: data.get('email'),
-                password: data.get('password'),
-                name: data.get('name')
-              }
-            }).then(({ data: { signinUser: { token } } }) => {
-              // Store the token in cookie
-              document.cookie = cookie.serialize('token', token, {
-                maxAge: 30 * 24 * 60 * 60 // 30 days
-              })
-
-              // Force a reload of all the current queries now that the user is
-              // logged in
-              client.resetStore().then(() => {
-                // Now redirect to the homepage
-                redirect({}, homeRoutes.home)
-              })
+          createWithEmail({
+            variables: {
+              email: data.get('email'),
+              password: data.get('password'),
+              name: data.get('name')
+            }
+          }).then(({data: {signinUser: {token}}}) => {
+            // Store the token in cookie
+            document.cookie = cookie.serialize('token', token, {
+              maxAge: 30 * 24 * 60 * 60 // 30 days
             })
-              .catch((error) => {
-                // Something went wrong, such as incorrect password, or no network
-                // available, etc.
-                console.error(error)
-              })
-          }
-        })
+
+            // Force a reload of all the current queries now that the user is
+            // logged in
+            client.resetStore().then(() => {
+              // Now redirect to the homepage
+              redirect({}, homeRoutes.home)
+            })
+          })
+            .catch((error) => {
+              // Something went wrong, such as incorrect password, or no network
+              // available, etc.
+              console.error(error)
+            })
+        }
+      })
     }
   )
 )(CreateAccount)

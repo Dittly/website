@@ -164,7 +164,7 @@ rules:
   no-whitespace-before-property: error
   object-curly-spacing:
     - error
-    - always
+    - never
   operator-linebreak:
     - error
     - after

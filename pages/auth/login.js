@@ -1,10 +1,10 @@
 import React from 'react'
-import { graphql, gql, withApollo, compose } from 'react-apollo'
+import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
 import MainLayout from '../../components/layouts/main'
-import { Link } from '../../utils/routes'
-import { authRoutes, homeRoutes } from '../../utils/routes/routes-definitions'
+import {Link} from '../../utils/routes'
+import {authRoutes, homeRoutes} from '../../utils/routes/routes-definitions'
 
 import withData from '../../utils/apollo/with-data'
 import redirect from '../../utils/apollo/redirect'
@@ -12,7 +12,7 @@ import checkLoggedIn from '../../utils/apollo/check-logged-in'
 
 class Login extends React.Component {
   static async getInitialProps(context, apolloClient) {
-    const { loggedInUser } = await checkLoggedIn(context, apolloClient)
+    const {loggedInUser} = await checkLoggedIn(context, apolloClient)
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.
@@ -28,8 +28,8 @@ class Login extends React.Component {
       <MainLayout>
         {/* this.props.signin is the mutation function provided by apollo below */}
         <form onSubmit={this.props.signin}>
-          <input type='email' placeholder='Email' name='email' /><br />
-          <input type='password' placeholder='Password' name='password' /><br />
+          <input type="email" placeholder="Email" name="email" /><br />
+          <input type="password" placeholder="Password" name="password" /><br />
           <button>Sign in</button>
         </form>
         <hr />
@@ -60,41 +60,41 @@ export default compose(
       props: ({
         signinWithEmail,
         // `client` is provided by the `withApollo` HOC
-        ownProps: { client }
+        ownProps: {client}
       }) => ({
-          // `signin` is the name of the prop passed to the component
-          signin: (event) => {
-            /* global FormData */
-            const data = new FormData(event.target)
+        // `signin` is the name of the prop passed to the component
+        signin: (event) => {
+          /* global FormData */
+          const data = new FormData(event.target)
 
-            event.preventDefault()
-            event.stopPropagation()
+          event.preventDefault()
+          event.stopPropagation()
 
-            signinWithEmail({
-              variables: {
-                email: data.get('email'),
-                password: data.get('password')
-              }
-            }).then(({ data: { signinUser: { token } } }) => {
-              // Store the token in cookie
-              document.cookie = cookie.serialize('token', token, {
-                maxAge: 30 * 24 * 60 * 60 // 30 days
-              })
-
-              // Force a reload of all the current queries now that the user is
-              // logged in
-              client.resetStore().then(() => {
-                // Now redirect to the secret
-                redirect({}, homeRoutes.secret)
-              })
+          signinWithEmail({
+            variables: {
+              email: data.get('email'),
+              password: data.get('password')
+            }
+          }).then(({data: {signinUser: {token}}}) => {
+            // Store the token in cookie
+            document.cookie = cookie.serialize('token', token, {
+              maxAge: 30 * 24 * 60 * 60 // 30 days
             })
-              .catch((error) => {
-                // Something went wrong, such as incorrect password, or no network
-                // available, etc.
-                console.error(error)
-              })
-          }
-        })
+
+            // Force a reload of all the current queries now that the user is
+            // logged in
+            client.resetStore().then(() => {
+              // Now redirect to the secret
+              redirect({}, homeRoutes.secret)
+            })
+          })
+            .catch((error) => {
+              // Something went wrong, such as incorrect password, or no network
+              // available, etc.
+              console.error(error)
+            })
+        }
+      })
     }
   )
 )(Login)
