@@ -17,7 +17,7 @@ class Login extends React.Component {
     if (loggedInUser.user) {
       // Already signed in? No need to continue.
       // Throw them back to the secret page
-      redirect(context, homeRoutes.secret)
+      redirect(context, homeRoutes.welcome)
     }
 
     return {}
@@ -78,7 +78,7 @@ export default compose(
             // logged in
             client.resetStore().then(() => {
               // Now redirect to the secret
-              redirect({}, homeRoutes.secret)
+              redirect({}, homeRoutes.welcome)
             })
           })
             .catch((error) => {

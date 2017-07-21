@@ -23,9 +23,9 @@ const homeRoutes = {
     name: 'index',
     pattern: '/'
   },
-  secret: {
-    name: 'secret',
-    pattern: '/secret'
+  welcome: {
+    name: 'welcome',
+    pattern: '/welcome'
   }
 }
 

@@ -4,7 +4,7 @@ import IndexContent from '../src'
 
 const Index = (props) => (
   <MainLayout>
-    <IndexContent />
+    <IndexContent {...props} />
   </MainLayout>
 )
 

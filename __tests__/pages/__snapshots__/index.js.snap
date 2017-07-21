@@ -15,7 +15,7 @@ exports[`Index page renders / correctly 1`] = `
       </a>
        | 
       <a
-        href="/secret"
+        href="/welcome"
         onClick={[Function]}
       >
         Secret

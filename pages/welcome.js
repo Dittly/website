@@ -2,12 +2,12 @@ import React from 'react'
 
 import withAuth from '../components/with-auth'
 import MainLayout from '../components/layouts/main'
-import SecretContent from '../src/secret'
+import WelcomeContent from '../src/welcome'
 
-const Secret = (props) => (
+const Welcome = (props) => (
   <MainLayout>
-    <SecretContent {...props} />
+    <WelcomeContent {...props} />
   </MainLayout>
 )
 
-export default withAuth(Secret)
+export default withAuth(Welcome)
