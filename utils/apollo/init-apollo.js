@@ -1,4 +1,4 @@
-import { ApolloClient, createNetworkInterface } from 'react-apollo'
+import {ApolloClient, createNetworkInterface} from 'react-apollo'
 import fetch from 'isomorphic-fetch'
 
 let apolloClient = null
@@ -9,7 +9,7 @@ if (!process.browser) { // eslint-disable-line no-undef
   global.fetch = fetch
 }
 
-const create = (initialState, { getToken }) => {
+const create = (initialState, {getToken}) => {
   const networkInterface = createNetworkInterface({
     // Server URL (must be absolute)
     uri: 'https://api.graph.cool/simple/v1/cj4c5zajubgpn0142pihd2xs3',

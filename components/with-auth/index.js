@@ -1,25 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cookie from 'cookie'
-import { withApollo, compose } from 'react-apollo'
+import {withApollo, compose} from 'react-apollo'
 
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
 import withData from '../../utils/apollo/with-data'
 
-import { authRoutes } from '../../utils/routes/routes-definitions'
+import {authRoutes} from '../../utils/routes/routes-definitions'
 import redirect from '../../utils/apollo/redirect'
 
 export default (WrappedComponent) => {
   class WithAuth extends React.Component {
     static async getInitialProps(context, apolloClient) {
-      const { loggedInUser } = await checkLoggedIn(context, apolloClient)
+      const {loggedInUser} = await checkLoggedIn(context, apolloClient)
 
       if (!loggedInUser.user) {
         // If not signed in, send them somewhere more useful
         redirect(context, authRoutes.login)
       }
 
-      return { loggedInUser }
+      return {loggedInUser}
     }
 
     signOut = () => {

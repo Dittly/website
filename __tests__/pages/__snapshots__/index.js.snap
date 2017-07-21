@@ -29,6 +29,8 @@ exports[`Index page renders / correctly 1`] = `
       </a>
     </div>
   </header>
-  Homepage
+  <p>
+    Homepage
+  </p>
 </div>
 `;

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cookie from 'cookie'
-import { ApolloProvider, getDataFromTree } from 'react-apollo'
+import {ApolloProvider, getDataFromTree} from 'react-apollo'
 import initApollo from './init-apollo'
 
 const parseCookies = (ctx = {}, options = {}) => (
@@ -45,7 +45,7 @@ export default (ComposedComponent) => {
           return {}
         }
         // Provide the `url` prop data in case a graphql query uses it
-        const url = { query: ctx.query, pathname: ctx.pathname }
+        const url = {query: ctx.query, pathname: ctx.pathname}
 
         // Run all graphql queries
         const app = (
