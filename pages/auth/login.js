@@ -26,7 +26,7 @@ class Login extends React.Component {
   render() {
     return (
       <MainLayout>
-        <LoginContent />
+        <LoginContent {...this.props} />
       </MainLayout>
     )
   }
