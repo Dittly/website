@@ -29,7 +29,15 @@ const homeRoutes = {
   }
 }
 
+const projectRoutes = {
+  create: {
+    name: 'projects/create',
+    pattern: '/projects/create'
+  }
+}
+
 module.exports = {
   authRoutes,
-  homeRoutes
+  homeRoutes,
+  projectRoutes
 }

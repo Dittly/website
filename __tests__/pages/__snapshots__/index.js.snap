@@ -29,9 +29,20 @@ exports[`Index page renders / correctly 1`] = `
       </a>
     </div>
   </header>
-  <p>
-    Homepage
-  </p>
+  <div>
+    <h1>
+      Welcome!
+    </h1>
+    <p>
+      Get started by creating your own project, or see what projects other’s have done.
+    </p>
+    <a
+      href="/projects/create"
+      onClick={[Function]}
+    >
+      + Create Project
+    </a>
+  </div>
   <footer>
     <div
       className="box-i25azl-0 gQkklT"
