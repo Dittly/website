@@ -18,7 +18,7 @@ exports[`Index page renders / correctly 1`] = `
         href="/welcome"
         onClick={[Function]}
       >
-        Secret
+        Welcome
       </a>
        | 
       <a
@@ -32,5 +32,13 @@ exports[`Index page renders / correctly 1`] = `
   <p>
     Homepage
   </p>
+  <footer>
+    <div
+      className="box-s1qf175f-0 iNmKap"
+      color="white"
+    >
+      Icon 1 | Icon 2 | Icon 3 | etc.
+    </div>
+  </footer>
 </div>
 `;

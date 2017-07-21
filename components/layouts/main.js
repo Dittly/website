@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from '../header'
+import Footer from '../footer'
 import {logPageView} from '../../utils/ga'
 
 class MainLayout extends React.Component {
@@ -19,10 +20,9 @@ class MainLayout extends React.Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <header>
-          <Header />
-        </header>
+        <Header />
         {children}
+        <Footer />
       </div>
     )
   }
