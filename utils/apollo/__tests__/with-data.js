@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import React from 'react'
-import { mount } from 'enzyme'
+import {mount} from 'enzyme'
 import withData from '../with-data'
 
 const DummyComponent = () => (

@@ -45,7 +45,7 @@ describe('utils/ga', () => {
 
     it('fires the pageview correctly', () => {
       ga.logPageView()
-      expect(ReactGA.set).toBeCalledWith({ page: '/test-path' })
+      expect(ReactGA.set).toBeCalledWith({page: '/test-path'})
       expect(ReactGA.pageview).toBeCalledWith('/test-path')
     })
   })
@@ -74,7 +74,7 @@ describe('utils/ga', () => {
       const category = 'test-category'
       const action = 'test-action'
       ga.logEvent(category, action)
-      expect(ReactGA.event).toBeCalledWith({ category, action })
+      expect(ReactGA.event).toBeCalledWith({category, action})
     })
 
     it('does not fire the event if no category is available', () => {
@@ -115,13 +115,13 @@ describe('utils/ga', () => {
     it('fires the exception correctly', () => {
       const description = 'test-description'
       ga.logException(description)
-      expect(ReactGA.exception).toBeCalledWith({ description, fatal: false })
+      expect(ReactGA.exception).toBeCalledWith({description, fatal: false})
     })
 
     it('fires the exception correctly with fatal set to true', () => {
       const description = 'test-description'
       ga.logException(description, true)
-      expect(ReactGA.exception).toBeCalledWith({ description, fatal: true })
+      expect(ReactGA.exception).toBeCalledWith({description, fatal: true})
     })
 
     it('does not fire the exception if no description is available', () => {

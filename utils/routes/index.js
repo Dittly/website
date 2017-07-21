@@ -5,7 +5,7 @@ const routesDefinitions = require('./routes-definitions')
 
 // Populates all defined routes
 for (const [, routesDefinition] of Object.entries(routesDefinitions)) {
-  for (const [, { name, pattern, page }] of Object.entries(routesDefinition)) {
+  for (const [, {name, pattern, page}] of Object.entries(routesDefinition)) {
     if (page) {
       routes.add(name, pattern, page)
     } else {

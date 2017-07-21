@@ -1,5 +1,5 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, {Head, Main, NextScript} from 'next/document'
+import {ServerStyleSheet} from 'styled-components'
 
 // Adds normalize and general styles
 // import '../components/landing-page/styles/base-styles'

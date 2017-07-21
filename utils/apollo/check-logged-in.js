@@ -1,4 +1,4 @@
-import { gql } from 'react-apollo'
+import {gql} from 'react-apollo'
 
 export default (context, apolloClient) => (
   apolloClient.query({
@@ -10,11 +10,11 @@ export default (context, apolloClient) => (
         }
       }
     `
-  }).then(({ data }) => {
-    return { loggedInUser: data }
+  }).then(({data}) => {
+    return {loggedInUser: data}
   })
   .catch(() => {
     // Fail gracefully
-    return { loggedInUser: {} }
+    return {loggedInUser: {}}
   })
 )

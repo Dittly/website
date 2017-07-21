@@ -2,9 +2,9 @@
 jest.mock('react-ga')
 
 import React from 'react'
-import { ApolloProvider } from 'react-apollo'
+import {ApolloProvider} from 'react-apollo'
 import renderer from 'react-test-renderer'
-import { createMockClient } from '../../utils/apollo/test-helpers'
+import {createMockClient} from '../../utils/apollo/test-helpers'
 import Index from '../../pages'
 
 describe('Index page', () => {

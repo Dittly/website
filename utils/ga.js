@@ -18,7 +18,7 @@ export const logPageView = () => {
     initGA()
   }
   console.log(`Logging pageview for ${window.location.pathname}`)
-  ReactGA.set({ page: window.location.pathname })
+  ReactGA.set({page: window.location.pathname})
   ReactGA.pageview(window.location.pathname)
 }
 
@@ -27,7 +27,7 @@ export const logEvent = (category = '', action = '') => {
     initGA()
   }
   if (category && action) {
-    ReactGA.event({ category, action })
+    ReactGA.event({category, action})
   }
 }
 
@@ -36,6 +36,6 @@ export const logException = (description = '', fatal = false) => {
     initGA()
   }
   if (description) {
-    ReactGA.exception({ description, fatal })
+    ReactGA.exception({description, fatal})
   }
 }

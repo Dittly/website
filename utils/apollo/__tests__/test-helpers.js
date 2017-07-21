@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { createMockClient } from '../test-helpers'
+import {createMockClient} from '../test-helpers'
 
 describe('apollo/test-helpers', () => {
   it('successfully create an Apollo mock client', () => {
