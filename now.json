@@ -2,5 +2,6 @@
   "name": "dittly",
   "alias": [
     "dittly"
-  ]
+  ],
+  "dotenv": ".env.production"
 }
