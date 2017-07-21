@@ -1,4 +1,5 @@
 .DS_Store
+.env
 .next
 coverage
 node_modules

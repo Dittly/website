@@ -4,7 +4,7 @@ exports[`Index page renders / correctly 1`] = `
 <div>
   <header>
     <div
-      className="box-s1qf175f-0 iNmKap"
+      className="box-i25azl-0 gQkklT"
       color="white"
     >
       <a
@@ -34,7 +34,7 @@ exports[`Index page renders / correctly 1`] = `
   </p>
   <footer>
     <div
-      className="box-s1qf175f-0 iNmKap"
+      className="box-i25azl-0 gQkklT"
       color="white"
     >
       Icon 1 | Icon 2 | Icon 3 | etc.
