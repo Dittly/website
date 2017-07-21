@@ -3,12 +3,12 @@ import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
 import MainLayout from '../../components/layouts/main'
-import {Link} from '../../utils/routes'
-import {authRoutes, homeRoutes} from '../../utils/routes/routes-definitions'
+import {homeRoutes} from '../../utils/routes/routes-definitions'
 
 import withData from '../../utils/apollo/with-data'
 import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
+import LoginContent from '../../src/auth/login'
 
 class Login extends React.Component {
   static async getInitialProps(context, apolloClient) {
@@ -26,14 +26,7 @@ class Login extends React.Component {
   render() {
     return (
       <MainLayout>
-        {/* this.props.signin is the mutation function provided by apollo below */}
-        <form onSubmit={this.props.signin}>
-          <input type="email" placeholder="Email" name="email" /><br />
-          <input type="password" placeholder="Password" name="password" /><br />
-          <button>Sign in</button>
-        </form>
-        <hr />
-        New? <Link prefetch route={authRoutes.signup.name}><a>Create account</a></Link>
+        <LoginContent />
       </MainLayout>
     )
   }
