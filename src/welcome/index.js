@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types'
+import {graphql} from 'react-apollo'
+import {getAllProjects} from './gq'
 
-const Welcome = ({loggedInUser, signOut}) => (
+import ProjectList from '../../components/project/list'
+
+const Welcome = ({loggedInUser, signOut, data}) => (
   <div>
     Hello {loggedInUser.user.name}!<br />
     <button onClick={signOut}>Sign out</button>
+    <ProjectList isLoading={data.loading} projects={data.allProjects} />
   </div>
 )
 
@@ -16,4 +21,4 @@ Welcome.propTypes = {
   })
 }
 
-export default Welcome
+export default graphql(getAllProjects)(Welcome)

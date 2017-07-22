@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cookie from 'cookie'
+import Head from 'next/head'
 import {ApolloProvider, getDataFromTree} from 'react-apollo'
 import initApollo from './init-apollo'
 
@@ -53,7 +54,18 @@ export default (ComposedComponent) => {
             <ComposedComponent url={url} {...composedInitialProps} />
           </ApolloProvider>
         )
-        await getDataFromTree(app)
+        
+        try {
+          // Run all GraphQL queries
+          await getDataFromTree(app)
+        } catch (error) {
+          // Prevent Apollo Client GraphQL errors from crashing SSR.
+          // Handle them in components via the data.error prop:
+          // http://dev.apollodata.com/react/api-queries.html#graphql-query-data-error
+        }
+        // getDataFromTree does not call componentWillUnmount
+        // head side effect therefore need to be cleared manually
+        Head.rewind()
 
         // Extract query data from the Apollo's store
         const state = apollo.getInitialState()
