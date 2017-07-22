@@ -16,7 +16,7 @@ class Login extends React.Component {
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.
-      // Throw them back to the secret page
+      // Throw them back to the welcome page
       redirect(context, homeRoutes.welcome)
     }
 
