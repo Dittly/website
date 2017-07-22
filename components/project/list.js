@@ -1,20 +1,19 @@
-const Loading = () => (
-  <p>Loading projects...</p>
-)
+import {Link} from '../../utils/routes'
+import {projectRoutes} from '../../utils/routes/routes-definitions'
 
-export const ProjectListThumbnail = ({title, location, type, user}) => (
+export const ProjectListThumbnail = ({id, title, location, type, user}) => (
   <div>
-    <h1>{title}</h1><br />
+    <Link route={projectRoutes.details.name} params={{id}}><a><h1>{title}</h1></a></Link><br />
     <small>{location}</small><br />
     <img src="https://unsplash.it/200/?random" alt={title} />
     <p>{user.name}</p>
   </div>
 )
 
-const ProjectList = ({isLoading, projects}) => (
+const ProjectList = ({projects}) => (
   <div>
     {
-      isLoading ? <Loading /> : projects.map((project) => (
+      projects.map((project) => (
         <ProjectListThumbnail key={project.id} {...project} />
       ))
     }

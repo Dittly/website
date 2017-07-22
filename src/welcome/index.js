@@ -4,11 +4,17 @@ import {getAllProjects} from './gq'
 
 import ProjectList from '../../components/project/list'
 
-const Welcome = ({loggedInUser, signOut, data}) => (
+const Loading = () => (
+  <p>Loading projects...</p>
+)
+
+const Welcome = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
   <div>
     Hello {loggedInUser.user.name}!<br />
     <button onClick={signOut}>Sign out</button>
-    <ProjectList isLoading={data.loading} projects={data.allProjects} />
+    {
+      loading ? <Loading /> : <ProjectList isLoading={loading} projects={allProjects} />
+    }
   </div>
 )
 

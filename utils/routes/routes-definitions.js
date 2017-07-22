@@ -33,6 +33,10 @@ const projectRoutes = {
   create: {
     name: 'projects/create',
     pattern: '/projects/create'
+  },
+  details: {
+    name: 'projects/details',
+    pattern: '/projects/:id'
   }
 }
 
