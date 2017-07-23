@@ -1,5 +1,5 @@
 # project: cj4c5zajubgpn0142pihd2xs3
-# version: 19
+# version: 37
 
 type File implements Node {
   contentType: String!
@@ -15,8 +15,16 @@ type File implements Node {
 type Project implements Node {
   createdAt: DateTime!
   id: ID! @isUnique
+  location: String!
+  title: String!
+  type: ProjectTypes!
   updatedAt: DateTime!
   user: User! @relation(name: "ProjectOnUser")
+}
+
+enum ProjectTypes {
+  ProjectTypeA
+  ProjectTypeB
 }
 
 type SignUpPreview implements Node {

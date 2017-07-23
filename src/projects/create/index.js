@@ -1,6 +1,6 @@
 import React from 'react'
-import {graphql} from 'react-apollo'
-import {createProject} from './gq'
+import {graphql, compose} from 'react-apollo'
+import {getProjectTypes, createProject} from './gq'
 
 class Create extends React.Component {
   onSubmit = (event) => {
@@ -15,15 +15,19 @@ class Create extends React.Component {
       type: data.get('type'),
       userId: this.props.loggedInUser.user.id
     })
-    .then(() => {
-      console.log('SUCCESS. PROJECT CREATED!')
-    })
-    .catch((error) => {
-      console.log('ERROR. PROJECT NOT CREATED.', error)
-    })
+      .then(() => {
+        console.log('SUCCESS. PROJECT CREATED!')
+      })
+      .catch((error) => {
+        console.log('ERROR. PROJECT NOT CREATED.', error)
+      })
   }
 
   render() {
+    const {
+      projectTypes
+    } = this.props
+
     return (
       <div>
         <h1>Create a Project</h1>
@@ -39,8 +43,11 @@ class Create extends React.Component {
               <option>Labels go here</option>
             </select>
             <select id="create-project-type" name="type">
-              <option>Types go here</option>
-              <option value="ProjectTypeA">Project Type A</option>
+              {
+                projectTypes && projectTypes.map((projectType) => (
+                  <option key={projectType} value={projectType}>{projectType}</option>
+                ))
+              }
             </select>
           </label>
           <br /><br />
@@ -51,10 +58,19 @@ class Create extends React.Component {
   }
 }
 
-export default graphql(createProject, {
-  props: ({mutate}) => ({
-    submitProject: ({title, location, type, userId}) => mutate({
-      variables: {title, location, type, userId}
+export default compose(
+  graphql(getProjectTypes, {
+    name: 'projectTypesData',
+    props: ({projectTypesData}) => ({
+      projectTypes: projectTypesData.loading ? [] : projectTypesData.__type.enumValues.map((enumValue) => enumValue.name)
+    })
+  }),
+  graphql(createProject, {
+    name: 'createProject',
+    props: ({createProject}) => ({
+      submitProject: ({title, location, type, userId}) => createProject({
+        variables: {title, location, type, userId}
+      })
     })
   })
-})(Create)
+)(Create)
