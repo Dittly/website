@@ -20,6 +20,10 @@ const Welcome = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
 
 Welcome.propTypes = {
   signOut: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    allProjects: PropTypes.array,
+    loading: PropTypes.bool
+  }),
   loggedInUser: PropTypes.shape({
     user: PropTypes.shape({
       name: PropTypes.string.isRequired

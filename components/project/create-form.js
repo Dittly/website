@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const CreateForm = ({projectTypes, onSubmit}) => (
   <form onSubmit={onSubmit}>
     <label htmlFor="create-project-title"><br />Project Title*<br />
@@ -22,5 +24,10 @@ const CreateForm = ({projectTypes, onSubmit}) => (
     <button>Create</button>
   </form>
 )
+
+CreateForm.propTypes = {
+  projectTypes: PropTypes.array.isRequired,
+  onSubmit: PropTypes.func.isRequired
+}
 
 export default CreateForm

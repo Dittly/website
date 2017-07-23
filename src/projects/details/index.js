@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getProject} from './gq'
 
@@ -14,6 +15,13 @@ const Details = ({data: {loading, Project}}) => (
     }
   </div>
 )
+
+Details.propTypes = {
+  data: PropTypes.shape({
+    loading: PropTypes.bool,
+    Project: PropTypes.object
+  })
+}
 
 export default graphql(getProject, {
   options: ({url: {query: {id}}}) => {

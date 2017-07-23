@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {graphql, compose} from 'react-apollo'
 import {getProjectTypes, createProject} from './gq'
 
@@ -37,6 +38,16 @@ class Create extends React.Component {
       </div>
     )
   }
+}
+
+Create.propTypes = {
+  submitProject: PropTypes.func.isRequired,
+  loggedInUser: PropTypes.shape({
+    user: PropTypes.shape({
+      id: PropTypes.string
+    })
+  }),
+  projectTypes: PropTypes.array
 }
 
 export default compose(
