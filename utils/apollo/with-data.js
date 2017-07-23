@@ -14,10 +14,15 @@ const parseCookies = (ctx = {}, options = {}) => (
   )
 )
 
+// Gets the display name of a JSX component for dev tools
+const getComponentDisplayName = (Component) => {
+  return Component.displayName || Component.name || 'Unknown'
+}
+
 export default (ComposedComponent) => {
   /* istanbul ignore next */
   return class WithData extends React.Component {
-    // static displayName = `WithData(${ComposedComponent().type.displayName})`
+    static displayName = `WithData(${getComponentDisplayName(ComposedComponent)})`
     static propTypes = {
       serverState: PropTypes.object.isRequired
     }
@@ -54,7 +59,7 @@ export default (ComposedComponent) => {
             <ComposedComponent url={url} {...composedInitialProps} />
           </ApolloProvider>
         )
-        
+
         try {
           // Run all GraphQL queries
           await getDataFromTree(app)

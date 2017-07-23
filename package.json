@@ -11,8 +11,9 @@
     "dev": "node server.js",
     "lint": "eslint '**/*.js'",
     "start": "NODE_ENV=production node server.js",
-    "test": "yarn lint && jest --coverage",
+    "test": "yarn lint && yarn test:coverage",
     "test:ci": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:coverage": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "jest": {

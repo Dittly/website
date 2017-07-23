@@ -10,6 +10,10 @@ Object.defineProperty(window.location, 'pathname', {
   writable: true,
   value: '/test-path'
 })
+Object.defineProperty(process.env, 'GA_TRACKING_ID', { // eslint-disable-line no-undef
+  writable: true,
+  value: gaTrackingID
+})
 
 describe('utils/ga', () => {
   beforeEach(() => {
