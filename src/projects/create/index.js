@@ -2,6 +2,8 @@ import React from 'react'
 import {graphql, compose} from 'react-apollo'
 import {getProjectTypes, createProject} from './gq'
 
+import CreateProjectForm from '../../../components/project/create-form'
+
 class Create extends React.Component {
   onSubmit = (event) => {
     const data = new FormData(event.target)
@@ -31,28 +33,7 @@ class Create extends React.Component {
     return (
       <div>
         <h1>Create a Project</h1>
-        <form onSubmit={this.onSubmit}>
-          <label htmlFor="create-project-title"><br />Project Title*<br />
-            <input id="create-project-title" name="title" placeholder="e.g. Kitchen Makeover" type="text" />
-          </label>
-          <label htmlFor="create-project-location"><br /><br />Where are you building this project?<br />
-            <input id="create-project-location" name="location" placeholder="Start typing a location" type="text" />
-          </label>
-          <label htmlFor="create-project-label"><br /><br />What kind of project is it?<br />
-            <select disabled id="create-project-label" name="label">
-              <option>Labels go here</option>
-            </select>
-            <select id="create-project-type" name="type">
-              {
-                projectTypes && projectTypes.map((projectType) => (
-                  <option key={projectType} value={projectType}>{projectType}</option>
-                ))
-              }
-            </select>
-          </label>
-          <br /><br />
-          <button>Create</button>
-        </form>
+        <CreateProjectForm onSubmit={this.onSubmit} projectTypes={projectTypes} />
       </div>
     )
   }
