@@ -5,7 +5,7 @@ import Head from 'next/head'
 import {ApolloProvider, getDataFromTree} from 'react-apollo'
 import initApollo from './init-apollo'
 
-const parseCookies = (ctx = {}, options = {}) => (
+export const parseCookies = (ctx = {}, options = {}) => (
   cookie.parse(
     ctx.req && ctx.req.headers.cookie
       ? ctx.req.headers.cookie
@@ -14,8 +14,7 @@ const parseCookies = (ctx = {}, options = {}) => (
   )
 )
 
-// Gets the display name of a JSX component for dev tools
-const getComponentDisplayName = (Component) => {
+export const getComponentDisplayName = (Component) => {
   return Component.displayName || Component.name || 'Unknown'
 }
 

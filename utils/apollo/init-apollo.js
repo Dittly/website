@@ -9,7 +9,7 @@ if (!process.browser) { // eslint-disable-line no-undef
   global.fetch = fetch
 }
 
-const create = (initialState, {getToken}) => {
+export const _create = (initialState, {getToken}) => {
   const networkInterface = createNetworkInterface({
     // Server URL (must be absolute)
     uri: 'https://api.graph.cool/simple/v1/cj4c5zajubgpn0142pihd2xs3',
@@ -42,13 +42,13 @@ export default function initApollo(initialState, options = {}) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
   if (!process.browser) { // eslint-disable-line no-undef
-    return create(initialState, options)
+    return _create(initialState, options)
   }
 
   /* istanbul ignore else */
   // Reuse client on the client-side
   if (!apolloClient) {
-    apolloClient = create(initialState, options)
+    apolloClient = _create(initialState, options)
   }
 
   return apolloClient

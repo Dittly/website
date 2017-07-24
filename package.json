@@ -30,7 +30,8 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "resetMocks": true
   },
   "dependencies": {
     "babel-plugin-inline-dotenv": "^1.1.1",

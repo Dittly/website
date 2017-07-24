@@ -12,7 +12,7 @@ import LoginContent from '../../src/auth/login'
 
 class Login extends React.Component {
   static async getInitialProps(context, apolloClient) {
-    const {loggedInUser} = await checkLoggedIn(context, apolloClient)
+    const {loggedInUser} = await checkLoggedIn(apolloClient)
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.

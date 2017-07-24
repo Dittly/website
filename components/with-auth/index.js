@@ -12,7 +12,7 @@ import redirect from '../../utils/apollo/redirect'
 export default (WrappedComponent) => {
   class WithAuth extends React.Component {
     static async getInitialProps(context, apolloClient) {
-      const {loggedInUser} = await checkLoggedIn(context, apolloClient)
+      const {loggedInUser} = await checkLoggedIn(apolloClient)
 
       if (!loggedInUser.user) {
         // If not signed in, send them somewhere more useful

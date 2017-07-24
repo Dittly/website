@@ -1,6 +1,8 @@
 import {Router} from '../routes'
 
 export default (context, targetRoute) => {
+  // Not dealing with mock Router at this point
+  /* istanbul ignore else */
   if (context.res) {
     // server
     // 303: "See other"

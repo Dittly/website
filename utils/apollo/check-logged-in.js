@@ -1,6 +1,6 @@
 import {gql} from 'react-apollo'
 
-export default (context, apolloClient) => (
+export default (apolloClient) => (
   apolloClient.query({
     query: gql`
       query getUser {

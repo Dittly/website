@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils/routes/routes-definitions contains all routes 1`] = `
+Object {
+  "authRoutes": Object {
+    "login": Object {
+      "name": "login",
+      "page": "auth/login",
+      "pattern": "/login",
+    },
+    "signup": Object {
+      "name": "signup",
+      "page": "auth/sign-up",
+      "pattern": "/sign-up",
+    },
+  },
+  "homeRoutes": Object {
+    "home": Object {
+      "name": "index",
+      "pattern": "/",
+    },
+    "welcome": Object {
+      "name": "welcome",
+      "pattern": "/welcome",
+    },
+  },
+  "projectRoutes": Object {
+    "create": Object {
+      "name": "projects/create",
+      "pattern": "/projects/create",
+    },
+    "details": Object {
+      "name": "projects/details",
+      "pattern": "/projects/:id",
+    },
+  },
+}
+`;
