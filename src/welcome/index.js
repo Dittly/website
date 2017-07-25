@@ -4,11 +4,11 @@ import {getAllProjects} from './gq'
 
 import ProjectList from '../../components/project/list'
 
-const Loading = () => (
+export const Loading = () => (
   <p>Loading projects...</p>
 )
 
-const Welcome = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
+export const WelcomeWrapper = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
   <div>
     Hello {loggedInUser.user.name}!<br />
     <button onClick={signOut}>Sign out</button>
@@ -18,17 +18,17 @@ const Welcome = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
   </div>
 )
 
-Welcome.propTypes = {
-  signOut: PropTypes.func.isRequired,
+WelcomeWrapper.propTypes = {
   data: PropTypes.shape({
     allProjects: PropTypes.array,
     loading: PropTypes.bool
-  }),
+  }).isRequired,
   loggedInUser: PropTypes.shape({
     user: PropTypes.shape({
       name: PropTypes.string.isRequired
     })
-  })
+  }).isRequired,
+  signOut: PropTypes.func.isRequired
 }
 
-export default graphql(getAllProjects)(Welcome)
+export default graphql(getAllProjects)(WelcomeWrapper)

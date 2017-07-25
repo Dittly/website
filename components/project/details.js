@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-export const Details = ({id, title, location, type, user}) => (
+export const ProjectDetails = ({id, title, location, type, user}) => (
   <div>
     <h1>{title}</h1><small>(#{id})</small><br />
     <small>{location}</small><br />
@@ -10,7 +10,7 @@ export const Details = ({id, title, location, type, user}) => (
   </div>
 )
 
-Details.propTypes = {
+ProjectDetails.propTypes = {
   id: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -18,4 +18,4 @@ Details.propTypes = {
   user: PropTypes.object.isRequired
 }
 
-export default Details
+export default ProjectDetails

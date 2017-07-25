@@ -4,11 +4,11 @@ import {getProject} from './gq'
 
 import ProjectDetails from '../../../components/project/details'
 
-const Loading = () => (
+export const Loading = () => (
   <p>Loading project...</p>
 )
 
-const Details = ({data: {loading, Project}}) => (
+export const ProjectDetailsWrapper = ({data: {loading, Project}}) => (
   <div>
     {
       loading ? <Loading /> : <ProjectDetails {...Project} />
@@ -16,7 +16,7 @@ const Details = ({data: {loading, Project}}) => (
   </div>
 )
 
-Details.propTypes = {
+ProjectDetailsWrapper.propTypes = {
   data: PropTypes.shape({
     loading: PropTypes.bool,
     Project: PropTypes.object
@@ -24,11 +24,11 @@ Details.propTypes = {
 }
 
 export default graphql(getProject, {
-  options: ({url: {query: {id}}}) => {
+  options: /* istanbul ignore next */({url: {query: {id}}}) => {
     return ({
       variables: {
         projectId: id
       }
     })
   }
-})(Details)
+})(ProjectDetailsWrapper)
