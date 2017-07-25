@@ -38,12 +38,12 @@ At Dittly, we care about
 
 The following naming conventions apply:
 
-| Filename       | Variables      | Type                                                                                     |
+| Pattern        | Variables      | Type                                                                                     |
 | -------------- | -------------- | ---------------------------------------------------------------------------------------- |
-| `*-sc.js`      | `mainHeaderSC` | Styled-Component                                                                         |
-| `*-gq.js`      | N/A            | GrahQL definition file                                                                   |
-| `pages/*`      | N/A            | Top-level, lightweight page components. Use `with-auth` or `with-data` HOCs if required. |
-| `src/*`        | N/A            | Components used in `pages/*`. Deal with GraphQL queries here.                            |
+| `*-sc.js`      | `mainHeaderSC` | Styled-Component.                                                                        |
+| `*-gq.js`      | N/A            | GrahQL definition file.                                                                  |
+| `pages/*`      | N/A            | Top-level, lightweight page components. Use `with-auth` or `with-data` HOCs if required. Define URL structure. |
+| `src/*`        | N/A            | Components used in `pages/*`. Deal with GraphQL queries, loading state, etc. here.       |
 | `components/*` | N/A            | Pure React components, ideally functional components.                                    |
 
 ## 3rd Party Services
