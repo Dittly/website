@@ -5,7 +5,7 @@ import {getProjectTypes, createProject} from './gq'
 
 import CreateProjectForm from '../../../components/project/create-form'
 
-class Create extends React.Component {
+export class Create extends React.Component {
   onSubmit = (event) => {
     const data = new FormData(event.target)
 
@@ -53,13 +53,13 @@ Create.propTypes = {
 export default compose(
   graphql(getProjectTypes, {
     name: 'projectTypesData',
-    props: ({projectTypesData}) => ({
+    props: /* istanbul ignore next */ ({projectTypesData}) => ({
       projectTypes: projectTypesData.loading ? [] : projectTypesData.__type.enumValues.map((enumValue) => enumValue.name)
     })
   }),
   graphql(createProject, {
     name: 'createProject',
-    props: ({createProject}) => ({
+    props: /* istanbul ignore next */ ({createProject}) => ({
       submitProject: ({title, location, type, userId}) => createProject({
         variables: {title, location, type, userId}
       })

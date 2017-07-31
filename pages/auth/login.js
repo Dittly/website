@@ -10,7 +10,8 @@ import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
 import LoginContent from '../../src/auth/login'
 
-class Login extends React.Component {
+export class Login extends React.Component {
+  /* istanbul ignore next */
   static async getInitialProps(context, apolloClient) {
     const {loggedInUser} = await checkLoggedIn(apolloClient)
 
