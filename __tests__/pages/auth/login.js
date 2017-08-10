@@ -4,7 +4,7 @@ jest.mock('../../../utils/routes')
 
 import {mount} from 'enzyme'
 
-import {Login} from '../login'
+import {Login} from '../../../pages/auth/login'
 import MainLayout from '../../../components/layouts/main'
 import LoginContent from '../../../src/auth/login'
 
