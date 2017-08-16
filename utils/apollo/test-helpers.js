@@ -1,5 +1,5 @@
 import {ApolloClient} from 'react-apollo'
-import {mockNetworkInterface} from 'react-apollo/lib/test-utils'
+import {mockNetworkInterface} from 'react-apollo/test-utils'
 
 export const createMockClient = () => {
   const query = ''

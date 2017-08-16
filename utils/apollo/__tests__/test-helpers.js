@@ -5,7 +5,7 @@ describe('apollo/test-helpers', () => {
   it('successfully create an Apollo mock client', () => {
     const client = createMockClient()
     expect(client).toBeDefined()
-    const defaultMockResponseKey = '{"variables":{},"query":""}'
+    const defaultMockResponseKey = '{"query":"","variables":{}}'
     const defaultMockResponse = client.networkInterface.mockedResponsesByKey[defaultMockResponseKey]
 
     expect(defaultMockResponse.length).toBe(1)
