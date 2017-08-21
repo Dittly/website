@@ -19,7 +19,7 @@ export default css`
     letter-spacing: 0.1px;
     line-height: 1.3;
     -webkit-font-smoothing: antialiased;
-    color: ${neutrals.neutral40};
+    color: ${neutrals.neutral50};
   }
 
   img {

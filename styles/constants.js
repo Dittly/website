@@ -5,23 +5,20 @@ export const typography = {
 
 export const neutrals = {
   neutral00: '#fff',
-  neutral10: '#edf1f3',
-  neutral15: '#dbdbdb',
-  neutral20: '#BABABA',
-  neutral25: '#8d9ba7',
-  neutral30: '#727272',
-  neutral40: '#3D3D3D',
-  neutral50: '#000'
+  neutral10: '#F9F9F9',
+  neutral20: '#F0F4F9',
+  neutral30: '#D8D8D8',
+  neutral40: '#9B9B9B',
+  neutral50: '#4A4A4A'
 }
 
 export const colors = {
-  // TODO: Set to the correct value
-  brandOrange: '#F9593C',
   brandBlue: '#1A5CCF',
+  brandOrange: '#F9593C',
+  brandYellow: '#FFBB00',
 }
 
 export const sizes = {
-  // TODO: Set to the correct value
   unit: '4px',
   tapSize: '44px',
 }
