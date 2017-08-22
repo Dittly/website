@@ -15,9 +15,7 @@ export default css`
     overflow-x: hidden;
     font-family: ${typography.fontFamily};
     font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0.1px;
-    line-height: 1.3;
+
     -webkit-font-smoothing: antialiased;
     color: ${neutrals.neutral50};
   }

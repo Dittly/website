@@ -1,12 +1,6 @@
 import { css } from 'styled-components'
 
 export default css`
-  html {
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-
   body {
     margin: 0;
   }
@@ -18,11 +12,6 @@ export default css`
   nav,
   section {
     display: block;
-  }
-
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
   }
 
   figcaption,
