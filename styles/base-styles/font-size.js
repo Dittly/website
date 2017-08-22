@@ -8,17 +8,17 @@ export default css`
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
       
-    @media (min-width: 618px) {
+    ${media.hlfScreen`
       font-size: 16px;
-      line-height: 1.15
-    }
+      line-height: 1.15;
+    `}
   }
 
   h1 {
     font-size: 20px;
       
-    @media (min-width: 618px) {
+    ${media.hlfScreen`
       font-size: 28px;
-    }
+    `}
   }
 `
