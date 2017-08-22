@@ -6,6 +6,7 @@ export const typography = {
 export const neutrals = {
   neutral00: '#fff',
   neutral10: '#F9F9F9',
+  neutral15: '#EDEDED',
   neutral20: '#F0F4F9',
   neutral30: '#D8D8D8',
   neutral40: '#9B9B9B',

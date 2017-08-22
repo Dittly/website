@@ -20,6 +20,13 @@ export default css`
     color: ${neutrals.neutral50};
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: ${typography.headerFontFamily};
+  }
+
   img {
     max-width: 100%;
     height: auto;
