@@ -7,6 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 import Button from './Button';
 import Search from './Search';
 import Create from './Create';
+import TabBar from './TabBar';
 
 import { Welcome } from '@storybook/react/demo';
 
@@ -21,3 +22,6 @@ storiesOf('Search', module)
 
 storiesOf('Create', module)
   .add('with text', () => <Create></Create>);
+
+storiesOf('TabBar', module)
+  .add('with text', () => <TabBar></TabBar>);

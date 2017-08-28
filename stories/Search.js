@@ -8,6 +8,7 @@ const searchStyles = {
   fontFamily: 'Rubik',
   color: '#9B9B9B',
   fontSize: '14px',
+  maxWidth: '375px',
 };
 
 const Search = () => (
