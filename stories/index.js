@@ -8,6 +8,7 @@ import Button from './Button';
 import Search from './Search';
 import Create from './Create';
 import TabBar from './TabBar';
+import AddPost from './AddPost';
 
 import { Welcome } from '@storybook/react/demo';
 
@@ -25,3 +26,6 @@ storiesOf('Create', module)
 
 storiesOf('TabBar', module)
   .add('with text', () => <TabBar></TabBar>);
+
+storiesOf('AddPost', module)
+  .add('with text', () => <AddPost></AddPost>);
