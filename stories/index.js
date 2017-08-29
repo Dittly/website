@@ -9,7 +9,7 @@ import Search from './Search';
 import Create from './Create';
 import TabBar from './TabBar';
 import AddPost from './AddPost';
-import Profile from './Profile';
+import Post from './Post';
 
 import { Welcome } from '@storybook/react/demo';
 
@@ -31,5 +31,5 @@ storiesOf('TabBar', module)
 storiesOf('AddPost', module)
   .add('with text', () => <AddPost></AddPost>);
 
-storiesOf('Profile', module)
-  .add('with text', () => <Profile></Profile>);
+storiesOf('Post', module)
+  .add('with text', () => <Post></Post>);
