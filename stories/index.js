@@ -9,6 +9,7 @@ import Search from './Search';
 import Create from './Create';
 import TabBar from './TabBar';
 import AddPost from './AddPost';
+import Profile from './Profile';
 
 import { Welcome } from '@storybook/react/demo';
 
@@ -19,7 +20,7 @@ storiesOf('Button', module)
   .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
 
 storiesOf('Search', module)
-  .add('with text', () => <Search>Search</Search>);
+  .add('with text', () => <Search></Search>);
 
 storiesOf('Create', module)
   .add('with text', () => <Create></Create>);
@@ -29,3 +30,6 @@ storiesOf('TabBar', module)
 
 storiesOf('AddPost', module)
   .add('with text', () => <AddPost></AddPost>);
+
+storiesOf('Profile', module)
+  .add('with text', () => <Profile></Profile>);
