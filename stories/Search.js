@@ -21,11 +21,9 @@ const searchStyles = {
 };
 
 const Search = () => (
-  <div
-   style={searchStyles}
-  >
-  <img src={image.src} alt={image.alt} />
-  <Input placeholder={'Search'}/>
+  <div style={searchStyles}>
+    <img src={image.src} alt={image.alt} />
+    <Input placeholder={'Search'}/>
   </div>
 );
 
