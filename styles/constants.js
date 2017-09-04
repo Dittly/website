@@ -27,3 +27,7 @@ export const sizes = {
   unit: '4px',
   tapSize: '44px',
 }
+
+export const border = {
+  radius: '2px',
+}

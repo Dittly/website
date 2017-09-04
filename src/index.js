@@ -14,9 +14,9 @@ const Index = () => (
     <Search />
     <HeadBanner>
       <Section >
-        <h1 center >Welcome!</h1>
+        <h1>Welcome!</h1>
         <p>Get started by creating your own project, or see what projects other’s have done.</p>
-        <Link route={projectRoutes.create.name}><Add >+ Create Project</Add></Link>
+        <Link route={projectRoutes.create.name}><a>+ Create Project</a></Link>
       </Section>
       <Box>
       <ContextButton>Projects</ContextButton>

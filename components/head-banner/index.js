@@ -7,8 +7,4 @@ const HeadBanner = ({ children }) => (
   </HeadBannerSC>
 );
 
-HeadBanner.propTypes = {
-  children: React.PropTypes
-};
-
 export default HeadBanner;
