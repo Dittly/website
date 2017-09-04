@@ -29,6 +29,10 @@ export default css`
     font-weight: 500;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   img {
     max-width: 100%;
     height: auto;
