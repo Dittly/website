@@ -9,6 +9,7 @@ export default css`
 
   html {
     height: 100%;
+    background-color: ${neutrals.neutral20};
   }
 
   body {

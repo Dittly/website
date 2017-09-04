@@ -19,6 +19,10 @@ export const colors = {
   brandYellow: '#FFBB00',
 }
 
+export const boxShadows = {
+  soft: '0px 0px 5px 0px rgba(198,198,198,1)',
+}
+
 export const sizes = {
   unit: '4px',
   tapSize: '44px',

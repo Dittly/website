@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+
 import { boxShadows, neutrals } from '../../styles/constants'
 
-const CardSC = styled.div`
+
+const HeadBannerSC = styled.div`
   background-color: ${neutrals.neutral00};
-  box-shadow: ${boxShadows.soft};
-  borderRadius: 2px;
+  box-shadow: ${boxShadows.soft}
 `
 
-export default CardSC;
+export default HeadBannerSC;
