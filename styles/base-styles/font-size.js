@@ -15,7 +15,7 @@ export default css`
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 22px;
       
     ${media.hlfScreen`
       font-size: 28px;

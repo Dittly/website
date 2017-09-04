@@ -25,6 +25,7 @@ export default css`
   h3,
   h4 {
     font-family: ${typography.headerFontFamily};
+    font-weight: 500;
   }
 
   img {
