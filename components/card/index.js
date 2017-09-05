@@ -6,8 +6,4 @@ const Card = ({ children }) => (
   </CardSC>
 );
 
-Card.propTypes = {
-  children: React.PropTypes
-};
-
 export default Card;
