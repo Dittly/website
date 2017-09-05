@@ -2,17 +2,33 @@ import PropTypes from 'prop-types'
 import {Link} from '../../utils/routes'
 import {authRoutes} from '../../utils/routes/routes-definitions'
 
+import Input from '../../components/input'
+import HeaderBar from '../../components/header-bar'
+import Box from '../../components/box'
+import Button from '../../components/button'
+
 const SignUp = ({create}) => (
   <div>
-    {/* create is the mutation function provided by apollo below */}
-    <form onSubmit={create}>
-      <input type="text" placeholder="Your Name" name="name" /><br />
-      <input type="email" placeholder="Email" name="email" /><br />
-      <input type="password" placeholder="Password" name="password" /><br />
-      <button>Create account</button>
-    </form>
-    <hr />
-    Already have an account? <Link prefetch route={authRoutes.login.name}><a>Sign in</a></Link>
+    <HeaderBar>
+      Sign up
+    </HeaderBar>
+    <Box bg="#fff" p={1}>
+      {/* create is the mutation function provided by apollo below */}
+      <form onSubmit={create}>
+        <label>Name
+          <Input type="text" placeholder="Your Name" name="name" />
+        </label><br /><br />
+        <label>Email
+          <Input type="email" placeholder="Email" name="email" />
+        </label><br /><br />
+        <label>Password
+          <Input type="password" placeholder="Password" name="password" />
+        </label><br /><br />
+        <Button>Create account</Button>
+      </form>
+      <hr />
+      Already have an account? <Link prefetch route={authRoutes.login.name}><a>Sign in</a></Link>
+    </Box>
   </div>
 )
 
