@@ -10,7 +10,6 @@ const CardSC = styled.div`
   & + & {
     margin-bottom: 16px;
   }
-  
 `
 
 export default CardSC;

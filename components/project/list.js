@@ -4,17 +4,17 @@ import {Link} from '../../utils/routes'
 import {projectRoutes} from '../../utils/routes/routes-definitions'
 import { sizes, neutrals, colors, typography } from '../../styles/constants'
 
-
 import Card from '../card'
 import H1 from '../h1'
 import Box from '../box'
 import Profile from '../profile'
 
 const ProjectTitle = styled.h1`
+  margin: 0;
+
   color: ${neutrals.neutral50};
   font-weight: 400;
   font-family: ${typography.fontFamily};
-  margin: 0;
   font-size: 16px;
 `
 
@@ -24,10 +24,11 @@ const Soft = styled.small`
 `
 
 const ProjectImage = styled.div`
-  width: 100%;
   display: block;
-  text-align: center;
+  width: 100%;
   margin: 8px 0;
+
+  text-align: center;
 `
 
 export const ProjectListThumbnail = ({id, title, location, type, user}) => (

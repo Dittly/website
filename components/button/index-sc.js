@@ -15,14 +15,12 @@ const ButtonSC = styled.button`
   margin: 0;
   padding: 0.25em 1em;
 
-
   cursor: pointer;
   user-select: none;
 
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-
 
   color: inherit;
   border: 0;

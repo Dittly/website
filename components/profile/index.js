@@ -9,18 +9,20 @@ const ProfileSC = styled.div`
 `
 
 const Name = styled.span`
+  display: block;
+  margin-left: 4px;
+
   font-size: 12px;
   color: #4A4A4A;
   font-family: Rubik;
-  display: block;
-  margin-left: 4px;
 `
 
 const Time = styled.time`
+  margin-left: 4px;
+
   font-size: 8px;
   color: #9B9B9B;
   font-family: Rubik;
-  margin-left: 4px;
   line-height: 2;
 `
 

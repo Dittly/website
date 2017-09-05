@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
 const AvatarSC = styled.div`
-  border-radius: 100%;
   display: inline-block;
   width: 27px;
   height: 27px;
+
+  border-radius: 100%;
+  
   overflow: hidden;
 
   img {
