@@ -1,10 +1,10 @@
 /* eslint-env jest */
-jest.mock('../../../utils/routes')
+jest.mock('../../../../utils/routes')
 import {mount} from 'enzyme'
 
-import SignUp from '../sign-up'
-import {Link} from '../../../utils/routes'
-import {authRoutes} from '../../../utils/routes/routes-definitions'
+import SignUp from '../'
+import {Link} from '../../../../utils/routes'
+import {authRoutes} from '../../../../utils/routes/routes-definitions'
 
 describe('src/auth/sign-up', () => {
   it(`verifies ${SignUp.name} renders correctly`, () => {

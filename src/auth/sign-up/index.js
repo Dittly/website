@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import {Link} from '../../utils/routes'
-import {authRoutes} from '../../utils/routes/routes-definitions'
+import {Link} from '../../../utils/routes'
+import {authRoutes} from '../../../utils/routes/routes-definitions'
 
 const SignUp = ({create}) => (
   <div>
