@@ -232,7 +232,7 @@ Object {
               "kind": "NamedType",
               "name": Object {
                 "kind": "Name",
-                "value": "PROJECT_TYPE",
+                "value": "ProjectTypes",
               },
             },
           },
@@ -301,7 +301,7 @@ Object {
                 },
                 "value": Object {
                   "kind": "StringValue",
-                  "value": "PROJECT_TYPE",
+                  "value": "ProjectTypes",
                 },
               },
             ],

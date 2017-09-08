@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql, withApollo, compose} from 'react-apollo'
+import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
 import MainLayout from '../../components/layouts/main'

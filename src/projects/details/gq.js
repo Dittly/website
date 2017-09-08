@@ -6,7 +6,9 @@ export const getProject = gql`
       id
       title
       location
+      type
       user {
+        id
         name
       }
     }

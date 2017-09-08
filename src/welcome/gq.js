@@ -8,6 +8,7 @@ export const getAllProjects = gql`
       location
       type
       user {
+        id
         name
       }
     }
