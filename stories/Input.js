@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const inputStyles = {
   WebkitAppearance: 'none',
@@ -10,14 +10,14 @@ const inputStyles = {
   width: 'CALC(100% - 24px)',
   maxWidth: '375px',
   resize: 'none',
-};
+}
 
 const Input = ({placeholder}) => (
   <input style={inputStyles} placeholder={placeholder} />
-);
+)
 
 Input.propTypes = {
   placeholder: React.PropTypes.string.isRequired,
-};
+}
 
 export default Input

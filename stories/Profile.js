@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import Avatar from './Avatar';
+import Avatar from './Avatar'
 
 const profileStyles = {
   display: 'flex',
   alignItems: 'center',
-};
+}
 
 const nameStyles = {
   fontSize: '12px',
@@ -13,7 +13,7 @@ const nameStyles = {
   fontFamily: 'Rubik',
   display: 'block',
   marginLeft: '4px',
-};
+}
 
 const timeStyles = {
   fontSize: '8px',
@@ -21,7 +21,7 @@ const timeStyles = {
   fontFamily: 'Rubik',
   marginLeft: '4px',
   lineHeight: '2',
-};
+}
 
 const flexContainer = {
   display: 'flex',
@@ -37,6 +37,6 @@ const Profile = () => (
       <time style={timeStyles}>Time stamp</time>
     </div>
   </div>
-);
+)
 
-export default Profile;
+export default Profile

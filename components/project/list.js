@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {Link} from '../../utils/routes'
 import {projectRoutes} from '../../utils/routes/routes-definitions'
-import { sizes, neutrals, colors, typography } from '../../styles/constants'
+import {sizes, neutrals, colors, typography} from '../../styles/constants'
 
 import Card from '../card'
 import H1 from '../h1'
@@ -40,8 +40,7 @@ export const ProjectListThumbnail = ({id, title, location, type, user}) => (
         <ProjectImage>
           <img src="https://unsplash.it/200/?random" alt={title} />
         </ProjectImage>
-        <Profile userName = {user.name}>
-        </Profile>
+        <Profile userName={user.name} />
       </Box>
     </Card>
   </div>

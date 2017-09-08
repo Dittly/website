@@ -1,9 +1,7 @@
 import Box from '../box'
 
 const Footer = () => (
-  <footer>
-
-  </footer>
+  <footer />
 )
 
 export default Footer

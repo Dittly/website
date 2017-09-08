@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import {css} from 'styled-components'
 
 export const sizes = {
   giant: 1170,
@@ -6,7 +6,7 @@ export const sizes = {
   tablet: 768,
   hlfScreen: 618,
   phone: 480
-};
+}
 
 export const media = Object.keys(sizes).reduce((accumulator, label) => {
   // use em in breakpoints to work properly cross-browser and support users

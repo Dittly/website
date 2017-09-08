@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
-import Avatar from '../avatar';
+import Avatar from '../avatar'
 
 const ProfileSC = styled.div`
   display: flex;
@@ -40,6 +40,6 @@ const Profile = ({userName}) => (
       <Time>Time</Time>
     </FlexContainer>
   </ProfileSC>
-);
+)
 
-export default Profile;
+export default Profile

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { border, neutrals } from '../../styles/constants'
+import {border, neutrals} from '../../styles/constants'
 
 const Input = styled.input`
   display: inline-block;
@@ -22,5 +22,5 @@ const Input = styled.input`
   }
 `
 
-export default Input;
+export default Input
 

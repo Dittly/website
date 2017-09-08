@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { boxShadows, neutrals } from '../../styles/constants'
+import {boxShadows, neutrals} from '../../styles/constants'
 
 const CardSC = styled.div`
   background-color: ${neutrals.neutral00};
@@ -12,4 +12,4 @@ const CardSC = styled.div`
   }
 `
 
-export default CardSC;
+export default CardSC

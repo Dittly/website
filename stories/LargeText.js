@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const largeTextStyles = {
   fontFamily: 'Rubik',
@@ -6,16 +6,16 @@ const largeTextStyles = {
   fontSize: '18px',
   margin: '0',
   WebkitFontSmoothing: 'antialiased',
-};
+}
 
 const LargeText = ({children}) => (
   <p style={largeTextStyles}>
-      {children}
+    {children}
   </p>
-);
+)
 
 LargeText.propTypes = {
   children: React.PropTypes
-};
+}
 
 export default LargeText

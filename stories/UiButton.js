@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const uiButtonStyles = {
   backgroundColor: '#196DC8',
@@ -11,20 +11,20 @@ const uiButtonStyles = {
   fontWeight: '400',
   fontSize: '14px',
   borderRadius: '2px',
-};
+}
 
-const UiButton = ({ children, onClick }) => (
+const UiButton = ({children, onClick}) => (
   <button
-    style={uiButtonStyles}
-    onClick={onClick}
+      style={uiButtonStyles}
+      onClick={onClick}
   >
     {children}
   </button>
-);
+)
 
 UiButton.propTypes = {
   children: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func,
-};
+}
 
-export default UiButton;
+export default UiButton

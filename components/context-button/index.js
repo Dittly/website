@@ -10,15 +10,15 @@ const Icon = styled.div`
     width: 27px;
     height: 26px;
   }
-`;
+`
 
-const ContextButton = ({children})  => (
-    <ContextButtonSC>
-      <Icon>
-        <image src="../../static/mallet.png" />
-      </Icon>
-      {children}
-    </ContextButtonSC>
+const ContextButton = ({children}) => (
+  <ContextButtonSC>
+    <Icon>
+      <image src="../../static/mallet.png" />
+    </Icon>
+    {children}
+  </ContextButtonSC>
 )
 
 export default ContextButton

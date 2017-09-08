@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import styled from 'styled-components'
 import Button from '../button'
-import { border, boxShadows, neutrals, typography } from '../../styles/constants'
+import {border, boxShadows, neutrals, typography} from '../../styles/constants'
 
 import Input from '../../components/input'
 

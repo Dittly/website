@@ -19,8 +19,8 @@ const Index = () => (
         <Link route={projectRoutes.create.name}><a>+ Create Project</a></Link>
       </Section>
       <Box>
-      <ContextButton>Projects</ContextButton>
-    </Box>
+        <ContextButton>Projects</ContextButton>
+      </Box>
     </HeadBanner>
 
 

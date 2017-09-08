@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const addStyles = {
   fontFamily: 'Rubik',
@@ -7,12 +7,12 @@ const addStyles = {
   webkitAppearance: 'none',
   background: 'transparent',
   border: 'none',
-};
+}
 
 const Add = () => (
   <button style={addStyles}>
       + Add Photo or Video
   </button>
-);
+)
 
 export default Add

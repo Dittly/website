@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import searchIcon from '../static/search.svg';
-import Input from './Input';
+import searchIcon from '../static/search.svg'
+import Input from './Input'
 
 const image = {
   src: searchIcon,
   alt: 'magifying glass',
-};
+}
 
 
 const searchStyles = {
@@ -18,13 +18,13 @@ const searchStyles = {
   fontSize: '14px',
   maxWidth: '375px',
   display: 'flex',
-};
+}
 
 const Search = () => (
   <div style={searchStyles}>
     <img src={image.src} alt={image.alt} />
-    <Input placeholder={'Search'}/>
+    <Input placeholder={'Search'} />
   </div>
-);
+)
 
 export default Search

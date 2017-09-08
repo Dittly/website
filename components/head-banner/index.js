@@ -1,9 +1,9 @@
 import HeadBannerSC from './index-sc'
 
-const HeadBanner = ({ children }) => (
+const HeadBanner = ({children}) => (
   <HeadBannerSC>
     {children}
   </HeadBannerSC>
-);
+)
 
-export default HeadBanner;
+export default HeadBanner

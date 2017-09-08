@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { sizes, neutrals, colors, typography } from '../../styles/constants'
-import { media } from '../../styles/media'
+import {sizes, neutrals, colors, typography} from '../../styles/constants'
+import {media} from '../../styles/media'
 
 const ButtonSC = styled.button`
-  background-color: ${props => props.primary ? '#1A5CCF' : '#F9593C'};
-  font-family: ${props => props.primary ? 'Rubik' : 'Roboto Slab'};
+  background-color: ${(props) => props.primary ? '#1A5CCF' : '#F9593C'};
+  font-family: ${(props) => props.primary ? 'Rubik' : 'Roboto Slab'};
 
   line-height: normal;
 
@@ -41,13 +41,13 @@ const ButtonSC = styled.button`
   letter-spacing: 0.8px;
   font-size: 16px;
 
-  ${ media.tablet`
+  ${media.tablet`
     box-shadow: none;
     border-radius: 0;
     width: 30%;
     min-width: 40px !important; 
     min-height: 40px !important;
-  ` }
+  `}
   `
 
 export default ButtonSC

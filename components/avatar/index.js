@@ -4,6 +4,6 @@ const Avatar = () => (
   <AvatarSC>
     <image src="../../static/avatar.png" />
   </AvatarSC>
-);
+)
 
-export default Avatar;
+export default Avatar

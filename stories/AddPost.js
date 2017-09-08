@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Card from './Card';
-import Add from './Add';
-import UiButton from './UiButton';
+import Card from './Card'
+import Add from './Add'
+import UiButton from './UiButton'
 
 const textAreaStyles = {
   WebkitAppearance: 'none',
@@ -14,7 +14,7 @@ const textAreaStyles = {
   width: 'CALC(100% - 24px)',
   maxWidth: '375px',
   resize: 'none',
-};
+}
 
 const flexContainerStyles = {
   display: 'flex',
@@ -25,13 +25,12 @@ const flexContainerStyles = {
 
 const AddPost = () => (
   <Card>
-    <textarea style={textAreaStyles} placeholder={'How is your progress going?'}>
-    </textarea>
+    <textarea style={textAreaStyles} placeholder={'How is your progress going?'} />
     <div style={flexContainerStyles} >
       <Add />
       <UiButton>Post</UiButton>
     </div>
   </Card>
-);
+)
 
 export default AddPost

@@ -1,9 +1,9 @@
 import AddSC from './index-sc'
 
-const Add = ({children})  => (
+const Add = ({children}) => (
   <AddSC >
-      {children}
+    {children}
   </AddSC>
-);
+)
 
 export default Add
