@@ -2,7 +2,7 @@ import AvatarSC from './index-sc'
 
 const Avatar = () => (
   <AvatarSC>
-    <image src="../../static/avatar.png" />
+    <img src="/avatar.png" />
   </AvatarSC>
 )
 
