@@ -4,6 +4,9 @@ import {graphql, compose} from 'react-apollo'
 import {getProjectTypes, createProject} from './gq'
 
 import CreateProjectForm from '../../../components/project/create-form'
+import HeaderBar from '../../../components/header-bar'
+import Box from '../../../components/box'
+
 
 export class Create extends React.Component {
   onSubmit = (event) => {
@@ -33,8 +36,12 @@ export class Create extends React.Component {
 
     return (
       <div>
-        <h1>Create a Project</h1>
-        <CreateProjectForm onSubmit={this.onSubmit} projectTypes={projectTypes} />
+        <HeaderBar>
+          Create a Project
+        </HeaderBar>
+        <Box bg="#fff" p={1}>
+          <CreateProjectForm onSubmit={this.onSubmit} projectTypes={projectTypes} />
+        </Box>
       </div>
     )
   }
