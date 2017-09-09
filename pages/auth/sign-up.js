@@ -1,4 +1,4 @@
-import React from 'react'
+import BasePageComponent from '../../components/base-page'
 import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
@@ -10,7 +10,7 @@ import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
 import SignUpContent from '../../src/auth/sign-up'
 
-export class SignUp extends React.Component {
+export class SignUp extends BasePageComponent {
   /* istanbul ignore next */
   static async getInitialProps(context, apolloClient) {
     const {loggedInUser} = await checkLoggedIn(apolloClient)

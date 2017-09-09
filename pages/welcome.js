@@ -1,13 +1,16 @@
-import React from 'react'
-
+import BasePageComponent from '../components/base-page'
 import withAuth from '../components/with-auth'
 import MainLayout from '../components/layouts/main'
 import WelcomeContent from '../src/welcome'
 
-export const Welcome = props => (
-  <MainLayout>
-    <WelcomeContent {...props} />
-  </MainLayout>
-)
+export class Welcome extends BasePageComponent {
+  render() {
+    return (
+      <MainLayout>
+        <WelcomeContent {...this.props} />
+      </MainLayout>
+    )
+  }
+}
 
 export default withAuth(Welcome)
