@@ -9,7 +9,7 @@ const Button = ({children}) => (
 )
 
 Button.propTypes = {
-  // children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired
 }
 
 export default Button
