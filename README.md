@@ -48,7 +48,10 @@ The following naming conventions apply:
 
 ### Tech Stack
 
-TBD
+Mainly Javascript (ES6+). For 3rd party services, see below.
+
+* **[Next.js](https://github.com/zeit/next.js)**: A minimalistic framework for server-rendered React applications.
+* **[GraphQL](http://graphql.org/learn)**: Our API query language, in lieu of a REST API.
 
 ### Tools
 
