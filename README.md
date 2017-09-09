@@ -63,6 +63,8 @@ The following development tools help with code quality, formatting, and general 
   * Run with `yarn lint`
 * **[lint-staged](https://github.com/okonet/lint-staged)**: Run commands against staged files.
   * Runs automatically as a `git precommit` hook.
+* **[Prettier](https://github.com/prettier/prettier)**: Automatically format source files.
+  * Runs automatically as part of `lint-staged` and `ESLint`, see above.
 * **[Storybook](https://storybook.js.org)**: An interactive style guide.
   * Run with `yarn storybook`
 
