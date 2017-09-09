@@ -6,13 +6,9 @@ const addStyles = {
   fontSize: '14px',
   webkitAppearance: 'none',
   background: 'transparent',
-  border: 'none',
+  border: 'none'
 }
 
-const Add = () => (
-  <button style={addStyles}>
-      + Add Photo or Video
-  </button>
-)
+const Add = () => <button style={addStyles}>+ Add Photo or Video</button>
 
 export default Add

@@ -6,7 +6,8 @@ describe('apollo/test-helpers', () => {
     const client = createMockClient()
     expect(client).toBeDefined()
     const defaultMockResponseKey = '{"query":"","variables":{}}'
-    const defaultMockResponse = client.networkInterface.mockedResponsesByKey[defaultMockResponseKey]
+    const defaultMockResponse =
+      client.networkInterface.mockedResponsesByKey[defaultMockResponseKey]
 
     expect(defaultMockResponse.length).toBe(1)
     expect(defaultMockResponse[0].request.query).toBeDefined()

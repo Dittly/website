@@ -11,10 +11,15 @@ const Index = () => (
   <div>
     <Search />
     <HeadBanner>
-      <Section >
+      <Section>
         <h1>Welcome!</h1>
-        <p>Get started by creating your own project, or see what projects other’s have done.</p>
-        <Link route={projectRoutes.create.name}><a>+ Create Project</a></Link>
+        <p>
+          Get started by creating your own project, or see what projects other’s
+          have done.
+        </p>
+        <Link route={projectRoutes.create.name}>
+          <a>+ Create Project</a>
+        </Link>
       </Section>
       <Box>
         <ContextButton>Projects</ContextButton>

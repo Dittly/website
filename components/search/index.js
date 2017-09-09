@@ -33,7 +33,7 @@ const SearchInput = styled.input`
   color: ${neutrals.neutral50};
   font-size: 14px;
 
-    &::placeholder {
+  &::placeholder {
     color: ${neutrals.neutral40};
   }
 `
@@ -45,7 +45,6 @@ const Search = () => (
     </SearchIcon>
     <SearchInput placeholder="Search projects" type="text" />
   </SearchContainer>
-
 )
 
 export default Search

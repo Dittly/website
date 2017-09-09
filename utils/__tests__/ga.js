@@ -1,4 +1,5 @@
 /* eslint-env jest */
+/* global process */
 jest.mock('react-ga')
 
 import ReactGA from 'react-ga'
@@ -10,7 +11,7 @@ Object.defineProperty(window.location, 'pathname', {
   writable: true,
   value: '/test-path'
 })
-Object.defineProperty(process.env, 'GA_TRACKING_ID', { // eslint-disable-line no-undef
+Object.defineProperty(process.env, 'GA_TRACKING_ID', {
   writable: true,
   value: gaTrackingID
 })

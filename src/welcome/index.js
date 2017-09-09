@@ -12,28 +12,36 @@ import Section from '../../components/section'
 import HeadBanner from '../../components/head-banner'
 import ContextButton from '../../components/context-button'
 
+export const Loading = () => <p>Loading projects...</p>
 
-export const Loading = () => (
-  <p>Loading projects...</p>
-)
-
-export const WelcomeWrapper = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
+export const WelcomeWrapper = ({
+  loggedInUser,
+  signOut,
+  data: {loading, allProjects}
+}) => (
   <div>
     <Search />
     <HeadBanner>
-      <Section >
-        <h1>Hello {loggedInUser.user.name}!</h1><br />
-        <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>Sign out</a>
-        <Link route={projectRoutes.create.name}><a>+ Create Project</a></Link>
+      <Section>
+        <h1>Hello {loggedInUser.user.name}!</h1>
+        <br />
+        <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>
+          Sign out
+        </a>
+        <Link route={projectRoutes.create.name}>
+          <a>+ Create Project</a>
+        </Link>
       </Section>
       <Box>
         <ContextButton>Projects</ContextButton>
       </Box>
     </HeadBanner>
     <Box p={1}>
-      {
-          loading ? <Loading /> : <ProjectList isLoading={loading} projects={allProjects} />
-        }
+      {loading ? (
+        <Loading />
+      ) : (
+        <ProjectList isLoading={loading} projects={allProjects} />
+      )}
     </Box>
   </div>
 )

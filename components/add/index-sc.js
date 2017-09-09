@@ -9,7 +9,7 @@ const AddSC = styled.button`
 
   background: transparent;
   border: none;
-  
+
   cursor: pointer;
   user-select: none;
 `

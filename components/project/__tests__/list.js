@@ -24,20 +24,26 @@ describe('components/project/list', () => {
 
   it(`verifies one ProjectListThumbnail renders when one project is available`, () => {
     const props = {
-      projects: [{
-        id: 'test-id',
-        title: 'test-title',
-        location: 'test-location',
-        type: 'test-type',
-        user: {
-          name: 'test-user-name'
+      projects: [
+        {
+          id: 'test-id',
+          title: 'test-title',
+          location: 'test-location',
+          type: 'test-type',
+          user: {
+            name: 'test-user-name'
+          }
         }
-      }]
+      ]
     }
     const wrapper = mount(<ProjectList {...props} />)
     const projectListThumbnail = wrapper.find(ProjectListThumbnail)
     expect(projectListThumbnail.length).toBe(1)
-    expect(projectListThumbnail.find(Link).props().route).toBe(projectRoutes.details.name)
-    expect(projectListThumbnail.find(Link).props().params).toEqual({id: props.projects[0].id})
+    expect(projectListThumbnail.find(Link).props().route).toBe(
+      projectRoutes.details.name
+    )
+    expect(projectListThumbnail.find(Link).props().params).toEqual({
+      id: props.projects[0].id
+    })
   })
 })

@@ -8,7 +8,7 @@ const SectionSC = styled.div`
 
   ${media.tablet`
     text-align: left;
-  `}
+  `};
 `
 
 export default SectionSC

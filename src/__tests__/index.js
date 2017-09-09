@@ -9,7 +9,11 @@ describe('src/index', () => {
   it(`verifies ${Index.name} renders correctly`, () => {
     const wrapper = mount(<Index />)
     expect(wrapper.length).toBe(1)
-    expect(wrapper.find(Link).find('a')
-      .prop('href')).toMatch(projectRoutes.create.name)
+    expect(
+      wrapper
+        .find(Link)
+        .find('a')
+        .prop('href')
+    ).toMatch(projectRoutes.create.name)
   })
 })

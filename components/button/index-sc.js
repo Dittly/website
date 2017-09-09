@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import {media} from '../../styles/media'
 
 const ButtonSC = styled.button`
-  background-color: ${(props) => (props.primary ? '#1A5CCF' : '#F9593C')};
-  font-family: ${(props) => (props.primary ? 'Rubik' : 'Roboto Slab')};
+  background-color: ${props => (props.primary ? '#1A5CCF' : '#F9593C')};
+  font-family: ${props => (props.primary ? 'Rubik' : 'Roboto Slab')};
 
   line-height: normal;
 
@@ -34,7 +34,7 @@ const ButtonSC = styled.button`
   -moz-appearance: none;
 
   width: 100%;
-  box-shadow: 0px 0px 5px 0px rgba(77,77,77,1);
+  box-shadow: 0px 0px 5px 0px rgba(77, 77, 77, 1);
   color: white;
   font-weight: bold;
   letter-spacing: 0.8px;
@@ -46,7 +46,7 @@ const ButtonSC = styled.button`
     width: 30%;
     min-width: 40px !important; 
     min-height: 40px !important;
-  `}
-  `
+  `};
+`
 
 export default ButtonSC

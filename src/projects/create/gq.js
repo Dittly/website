@@ -12,8 +12,18 @@ export const getProjectTypes = gql`
 `
 
 export const createProject = gql`
-  mutation createProjectMutation($title: String!, $location: String!, $type: ProjectTypes!, $userId: ID!) {
-    createProject(title: $title, location: $location, type: $type, userId: $userId) {
+  mutation createProjectMutation(
+    $title: String!
+    $location: String!
+    $type: ProjectTypes!
+    $userId: ID!
+  ) {
+    createProject(
+      title: $title
+      location: $location
+      type: $type
+      userId: $userId
+    ) {
       id
       title
       location

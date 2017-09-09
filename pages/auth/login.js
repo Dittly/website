@@ -42,7 +42,7 @@ export default compose(
     // The `signinUser` mutation is provided by graph.cool by default
     gql`
       mutation Signin($email: String!, $password: String!) {
-        signinUser(email: { email: $email, password: $password }) {
+        signinUser(email: {email: $email, password: $password}) {
           token
         }
       }
@@ -57,7 +57,7 @@ export default compose(
         ownProps: {client}
       }) => ({
         // `signin` is the name of the prop passed to the component
-        signin: (event) => {
+        signin: event => {
           /* global FormData */
           const data = new FormData(event.target)
 
@@ -69,20 +69,21 @@ export default compose(
               email: data.get('email'),
               password: data.get('password')
             }
-          }).then(({data: {signinUser: {token}}}) => {
-            // Store the token in cookie
-            document.cookie = cookie.serialize('token', token, {
-              maxAge: 30 * 24 * 60 * 60 // 30 days
-            })
-
-            // Force a reload of all the current queries now that the user is
-            // logged in
-            client.resetStore().then(() => {
-              // Now redirect to the secret
-              redirect({}, homeRoutes.welcome)
-            })
           })
-            .catch((error) => {
+            .then(({data: {signinUser: {token}}}) => {
+              // Store the token in cookie
+              document.cookie = cookie.serialize('token', token, {
+                maxAge: 30 * 24 * 60 * 60 // 30 days
+              })
+
+              // Force a reload of all the current queries now that the user is
+              // logged in
+              client.resetStore().then(() => {
+                // Now redirect to the secret
+                redirect({}, homeRoutes.welcome)
+              })
+            })
+            .catch(error => {
               // Something went wrong, such as incorrect password, or no network
               // available, etc.
               console.error(error)

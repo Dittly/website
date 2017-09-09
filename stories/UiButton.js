@@ -14,17 +14,14 @@ const uiButtonStyles = {
 }
 
 const UiButton = ({children, onClick}) => (
-  <button
-      style={uiButtonStyles}
-      onClick={onClick}
-  >
+  <button style={uiButtonStyles} onClick={onClick}>
     {children}
   </button>
 )
 
 UiButton.propTypes = {
   children: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }
 
 export default UiButton

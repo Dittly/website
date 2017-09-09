@@ -4,7 +4,7 @@ import withAuth from '../components/with-auth'
 import MainLayout from '../components/layouts/main'
 import WelcomeContent from '../src/welcome'
 
-const Welcome = (props) => (
+const Welcome = props => (
   <MainLayout>
     <WelcomeContent {...props} />
   </MainLayout>

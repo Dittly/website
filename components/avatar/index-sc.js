@@ -6,7 +6,7 @@ const AvatarSC = styled.div`
   height: 27px;
 
   border-radius: 100%;
-  
+
   overflow: hidden;
 
   img {

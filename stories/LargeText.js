@@ -6,14 +6,10 @@ const largeTextStyles = {
   color: '#4A4A4A',
   fontSize: '18px',
   margin: '0',
-  WebkitFontSmoothing: 'antialiased',
+  WebkitFontSmoothing: 'antialiased'
 }
 
-const LargeText = ({children}) => (
-  <p style={largeTextStyles}>
-    {children}
-  </p>
-)
+const LargeText = ({children}) => <p style={largeTextStyles}>{children}</p>
 
 LargeText.propTypes = {
   children: PropTypes.node

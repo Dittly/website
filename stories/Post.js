@@ -12,7 +12,6 @@ const textStyles = {
   padding: '0px 12px 12px 12px'
 }
 
-
 const Post = () => (
   <Card>
     <div style={postStyles}>

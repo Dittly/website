@@ -1,20 +1,21 @@
 import {gql} from 'react-apollo'
 
-export default (apolloClient) => (
-  apolloClient.query({
-    query: gql`
-      query getUser {
-        user {
-          id
-          name
+export default apolloClient =>
+  apolloClient
+    .query({
+      query: gql`
+        query getUser {
+          user {
+            id
+            name
+          }
         }
-      }
-    `
-  }).then(({data}) => {
-    return {loggedInUser: data}
-  })
-  .catch(() => {
-    // Fail gracefully
-    return {loggedInUser: {}}
-  })
-)
+      `
+    })
+    .then(({data}) => {
+      return {loggedInUser: data}
+    })
+    .catch(() => {
+      // Fail gracefully
+      return {loggedInUser: {}}
+    })

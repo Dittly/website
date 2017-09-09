@@ -4,7 +4,7 @@ import Avatar from './Avatar'
 
 const profileStyles = {
   display: 'flex',
-  alignItems: 'center',
+  alignItems: 'center'
 }
 
 const nameStyles = {
@@ -12,7 +12,7 @@ const nameStyles = {
   color: '#4A4A4A',
   fontFamily: 'Rubik',
   display: 'block',
-  marginLeft: '4px',
+  marginLeft: '4px'
 }
 
 const timeStyles = {
@@ -20,13 +20,13 @@ const timeStyles = {
   color: '#9B9B9B',
   fontFamily: 'Rubik',
   marginLeft: '4px',
-  lineHeight: '2',
+  lineHeight: '2'
 }
 
 const flexContainer = {
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
+  justifyContent: 'center'
 }
 
 const Profile = () => (

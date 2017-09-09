@@ -44,10 +44,13 @@ export default compose(
     // Multiple mutations are executed by graphql sequentially
     gql`
       mutation Create($name: String!, $email: String!, $password: String!) {
-        createUser(name: $name, authProvider: { email: { email: $email, password: $password }}) {
+        createUser(
+          name: $name
+          authProvider: {email: {email: $email, password: $password}}
+        ) {
           id
         }
-        signinUser(email: { email: $email, password: $password }) {
+        signinUser(email: {email: $email, password: $password}) {
           token
         }
       }
@@ -62,7 +65,7 @@ export default compose(
         ownProps: {client}
       }) => ({
         // `create` is the name of the prop passed to the component
-        create: (event) => {
+        create: event => {
           /* global FormData */
           const data = new FormData(event.target)
 
@@ -75,20 +78,21 @@ export default compose(
               password: data.get('password'),
               name: data.get('name')
             }
-          }).then(({data: {signinUser: {token}}}) => {
-            // Store the token in cookie
-            document.cookie = cookie.serialize('token', token, {
-              maxAge: 30 * 24 * 60 * 60 // 30 days
-            })
-
-            // Force a reload of all the current queries now that the user is
-            // logged in
-            client.resetStore().then(() => {
-              // Now redirect to the homepage
-              redirect({}, homeRoutes.home)
-            })
           })
-            .catch((error) => {
+            .then(({data: {signinUser: {token}}}) => {
+              // Store the token in cookie
+              document.cookie = cookie.serialize('token', token, {
+                maxAge: 30 * 24 * 60 * 60 // 30 days
+              })
+
+              // Force a reload of all the current queries now that the user is
+              // logged in
+              client.resetStore().then(() => {
+                // Now redirect to the homepage
+                redirect({}, homeRoutes.home)
+              })
+            })
+            .catch(error => {
               // Something went wrong, such as incorrect password, or no network
               // available, etc.
               console.error(error)

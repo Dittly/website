@@ -34,8 +34,14 @@ export const ProjectListThumbnail = ({id, title, location, type, user}) => (
   <div>
     <Card>
       <Box p={1}>
-        <Link route={projectRoutes.details.name} params={{id}}><a><ProjectTitle secondary>{title}</ProjectTitle></a></Link>
-        <Soft>{location}, {type}</Soft>
+        <Link route={projectRoutes.details.name} params={{id}}>
+          <a>
+            <ProjectTitle secondary>{title}</ProjectTitle>
+          </a>
+        </Link>
+        <Soft>
+          {location}, {type}
+        </Soft>
         <ProjectImage>
           <img src="https://unsplash.it/200/?random" alt={title} />
         </ProjectImage>
@@ -55,11 +61,9 @@ ProjectListThumbnail.propTypes = {
 
 const ProjectList = ({projects}) => (
   <div>
-    {
-      projects.map((project) => (
-        <ProjectListThumbnail key={project.id} {...project} />
-      ))
-    }
+    {projects.map(project => (
+      <ProjectListThumbnail key={project.id} {...project} />
+    ))}
   </div>
 )
 

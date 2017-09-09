@@ -10,7 +10,7 @@ const inputStyles = {
   padding: '12px',
   width: 'CALC(100% - 24px)',
   maxWidth: '375px',
-  resize: 'none',
+  resize: 'none'
 }
 
 const Input = ({placeholder}) => (
@@ -18,7 +18,7 @@ const Input = ({placeholder}) => (
 )
 
 Input.propTypes = {
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired
 }
 
 export default Input

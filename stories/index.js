@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 
 import {storiesOf} from '@storybook/react'
@@ -13,23 +14,24 @@ import Post from './Post'
 
 import {Welcome} from '@storybook/react/demo'
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
+storiesOf('Welcome', module).add('to Storybook', () => (
+  <Welcome showApp={linkTo('Button')} />
+))
 
 storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>) // eslint-disable-line jsx-a11y/accessible-emoji
+  .add('with text', () => (
+    <Button onClick={action('clicked')}>Hello Button</Button>
+  ))
+  .add('with some emoji', () => (
+    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+  ))
 
-storiesOf('Search', module)
-  .add('with text', () => <Search />)
+storiesOf('Search', module).add('with text', () => <Search />)
 
-storiesOf('Create', module)
-  .add('with text', () => <Create />)
+storiesOf('Create', module).add('with text', () => <Create />)
 
-storiesOf('TabBar', module)
-  .add('with text', () => <TabBar />)
+storiesOf('TabBar', module).add('with text', () => <TabBar />)
 
-storiesOf('AddPost', module)
-  .add('with text', () => <AddPost />)
+storiesOf('AddPost', module).add('with text', () => <AddPost />)
 
-storiesOf('Post', module)
-  .add('with text', () => <Post />)
+storiesOf('Post', module).add('with text', () => <Post />)

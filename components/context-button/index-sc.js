@@ -6,7 +6,7 @@ const ContextButtonSC = styled.button`
   width: 72px;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid ${colors.brandBlue};  
+  border-bottom: 1px solid ${colors.brandBlue};
 
   line-height: normal;
 
@@ -26,6 +26,6 @@ const ContextButtonSC = styled.button`
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  `
+`
 
 export default ContextButtonSC

@@ -5,15 +5,9 @@ const createStyles = {
   border: 'none',
   fontFamily: 'Rubik',
   color: '#1A5CCF',
-  fontSize: '16px',
+  fontSize: '16px'
 }
 
-const Create = () => (
-  <button
-      style={createStyles}
-  >
-      + Create Project
-  </button>
-)
+const Create = () => <button style={createStyles}>+ Create Project</button>
 
 export default Create

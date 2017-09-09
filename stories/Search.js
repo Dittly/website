@@ -5,9 +5,8 @@ import Input from './Input'
 
 const image = {
   src: searchIcon,
-  alt: 'magifying glass',
+  alt: 'magifying glass'
 }
-
 
 const searchStyles = {
   backgroundColor: 'white',
@@ -17,7 +16,7 @@ const searchStyles = {
   color: '#9B9B9B',
   fontSize: '14px',
   maxWidth: '375px',
-  display: 'flex',
+  display: 'flex'
 }
 
 const Search = () => (

@@ -14,7 +14,7 @@ const Name = styled.span`
   margin-left: 4px;
 
   font-size: 12px;
-  color: #4A4A4A;
+  color: #4a4a4a;
   font-family: Rubik;
 `
 
@@ -22,7 +22,7 @@ const Time = styled.time`
   margin-left: 4px;
 
   font-size: 8px;
-  color: #9B9B9B;
+  color: #9b9b9b;
   font-family: Rubik;
   line-height: 2;
 `

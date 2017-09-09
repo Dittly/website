@@ -4,11 +4,13 @@ import checkLoggedIn from '../check-logged-in'
 describe('utils/apollo/checked-logged-in', () => {
   it('returns a loggedInUser', async () => {
     const mockApolloClient = {
-      query: jest.fn().mockReturnValue(Promise.resolve({
-        data: {
-          name: 'Test User'
-        }
-      }))
+      query: jest.fn().mockReturnValue(
+        Promise.resolve({
+          data: {
+            name: 'Test User'
+          }
+        })
+      )
     }
     const {loggedInUser} = await checkLoggedIn(mockApolloClient)
     expect(loggedInUser.name).toBe('Test User')

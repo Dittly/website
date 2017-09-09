@@ -4,17 +4,16 @@ import searchIcon from '../static/search.svg'
 
 import Avatar from './Avatar'
 
-
 const searchImage = {
   src: searchIcon,
-  alt: 'magifying glass',
+  alt: 'magifying glass'
 }
 
 const tabBarStyles = {
   backgroundColor: 'white',
   borderTop: '1px solid #EDEDED',
   maxWidth: '375px',
-  display: 'flex',
+  display: 'flex'
 }
 
 const tabBarButtonStyles = {
@@ -26,7 +25,7 @@ const tabBarButtonStyles = {
   width: '50%',
   padding: '6px',
   display: 'flex',
-  justifyContent: 'center',
+  justifyContent: 'center'
 }
 
 const TabBar = () => (

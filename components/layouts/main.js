@@ -9,16 +9,16 @@ class MainLayout extends React.Component {
     logPageView()
   }
   render() {
-    const {
-      children,
-      pageTitle
-    } = this.props
+    const {children, pageTitle} = this.props
     return (
       <div>
         <Head>
           <title>{pageTitle}</title>
           <meta charSet="utf-8" />
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
         <Header />
         {children}

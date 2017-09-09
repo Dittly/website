@@ -20,7 +20,9 @@ describe('components/project/create-form', () => {
     }
     const wrapper = mount(<CreateForm {...props} />)
     const propTypesSelect = wrapper.find('#create-project-type')
-    expect(propTypesSelect.find('option').length).toBe(props.projectTypes.length)
+    expect(propTypesSelect.find('option').length).toBe(
+      props.projectTypes.length
+    )
 
     const propTypeOption = propTypesSelect.find('option').first()
     expect(propTypeOption.key()).toBe(props.projectTypes[0])

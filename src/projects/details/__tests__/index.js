@@ -13,7 +13,7 @@ const baseProps = {
       location: '',
       title: '',
       type: '',
-      user: {},
+      user: {}
     }
   }
 }

@@ -1,6 +1,6 @@
 /* eslint-disable import/no-commonjs */
 const nextRoutes = require('next-routes')
-const routes = module.exports = nextRoutes()
+const routes = (module.exports = nextRoutes())
 const routesDefinitions = require('./routes-definitions')
 
 // Populates all defined routes

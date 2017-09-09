@@ -13,20 +13,23 @@ const textAreaStyles = {
   padding: '12px',
   width: 'CALC(100% - 24px)',
   maxWidth: '375px',
-  resize: 'none',
+  resize: 'none'
 }
 
 const flexContainerStyles = {
   display: 'flex',
   justifyContent: 'space-between',
   padding: '6px',
-  borderTop: '1px solid #EDEDED',
+  borderTop: '1px solid #EDEDED'
 }
 
 const AddPost = () => (
   <Card>
-    <textarea style={textAreaStyles} placeholder={'How is your progress going?'} />
-    <div style={flexContainerStyles} >
+    <textarea
+      style={textAreaStyles}
+      placeholder={'How is your progress going?'}
+    />
+    <div style={flexContainerStyles}>
       <Add />
       <UiButton>Post</UiButton>
     </div>

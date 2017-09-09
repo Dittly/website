@@ -14,17 +14,14 @@ const buttonStyles = {
 }
 
 const Button = ({children, onClick}) => (
-  <button
-      style={buttonStyles}
-      onClick={onClick}
-  >
+  <button style={buttonStyles} onClick={onClick}>
     {children}
   </button>
 )
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 }
 
 export default Button
