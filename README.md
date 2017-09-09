@@ -51,6 +51,7 @@ The following naming conventions apply:
 Mainly Javascript (ES6+). For 3rd party services, see below.
 
 * **[Next.js](https://github.com/zeit/next.js)**: A minimalistic framework for server-rendered React applications.
+* **[styled-components](https://www.styled-components.com)**: CSS in JS library we use for styling.
 * **[GraphQL](http://graphql.org/learn)**: Our API query language, in lieu of a REST API.
 
 ### Tools
