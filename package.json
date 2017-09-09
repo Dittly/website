@@ -24,7 +24,8 @@
       "**/*.js",
       "!server.js",
       "!**/coverage/**",
-      "!**/node_modules/**"
+      "!**/node_modules/**",
+      "!stories/**"
     ],
     "coverageThreshold": {
       "global": {
