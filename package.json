@@ -21,11 +21,18 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.js",
-      "!server.js",
-      "!**/coverage/**",
-      "!**/node_modules/**",
-      "!stories/**"
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/components/add/",
+      "<rootDir>/components/h1/",
+      "<rootDir>/coverage/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/pages/_document.js",
+      "<rootDir>/server.js",
+      "<rootDir>/stories/",
+      "<rootDir>/styles/base-styles/",
+      "-stories.js$"
     ],
     "coverageThreshold": {
       "global": {

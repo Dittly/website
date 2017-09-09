@@ -5,7 +5,8 @@ import fontSizeStyle from './font-size'
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
-  ${normalizeStyle}
-  ${generalStyle}
-  ${fontSizeStyle}
+${normalizeStyle}
+${generalStyle}
+${fontSizeStyle}
 `
+/* eslint-enable no-unused-expressions */

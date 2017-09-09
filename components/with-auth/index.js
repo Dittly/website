@@ -11,6 +11,7 @@ import redirect from '../../utils/apollo/redirect'
 
 export default WrappedComponent => {
   class WithAuth extends React.Component {
+    /* istanbul ignore next */
     static async getInitialProps(context, apolloClient) {
       const {loggedInUser} = await checkLoggedIn(apolloClient)
 

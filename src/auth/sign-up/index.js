@@ -31,7 +31,7 @@ const SignUp = ({create}) => (
         </label>
         <br />
         <br />
-        <Button>Create account</Button>
+        <Button primary>Create account</Button>
       </form>
       <hr />
       Already have an account?{' '}
