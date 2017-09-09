@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import {sizes, neutrals, colors} from '../../styles/constants'
-import {media} from '../../styles/media'
+import {colors} from '../../styles/constants'
 
 const ContextButtonSC = styled.button`
   min-height: 47px;

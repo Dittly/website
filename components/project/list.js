@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {Link} from '../../utils/routes'
 import {projectRoutes} from '../../utils/routes/routes-definitions'
-import {sizes, neutrals, colors, typography} from '../../styles/constants'
+import {neutrals, typography} from '../../styles/constants'
 
 import Card from '../card'
-import H1 from '../h1'
 import Box from '../box'
 import Profile from '../profile'
 

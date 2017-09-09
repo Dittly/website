@@ -2,10 +2,8 @@ import {Link} from '../utils/routes'
 import {projectRoutes} from '../utils/routes/routes-definitions'
 
 import Box from '../components/box'
-import Button from '../components/button'
 import Search from '../components/search'
 import Section from '../components/section'
-import Add from '../components/add'
 import HeadBanner from '../components/head-banner'
 import ContextButton from '../components/context-button'
 
@@ -22,8 +20,6 @@ const Index = () => (
         <ContextButton>Projects</ContextButton>
       </Box>
     </HeadBanner>
-
-
   </div>
 )
 

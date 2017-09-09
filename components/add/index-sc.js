@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {sizes, neutrals, colors} from '../../styles/constants'
+import {colors} from '../../styles/constants'
 
 const AddSC = styled.button`
   font-family: Rubik;

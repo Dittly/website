@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const inputStyles = {
   WebkitAppearance: 'none',
@@ -17,7 +18,7 @@ const Input = ({placeholder}) => (
 )
 
 Input.propTypes = {
-  placeholder: React.PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
 }
 
 export default Input

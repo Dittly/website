@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import CardSC from './index-sc'
 
 const Card = ({children}) => (
@@ -5,5 +7,9 @@ const Card = ({children}) => (
     {children}
   </CardSC>
 )
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 export default Card

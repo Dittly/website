@@ -15,13 +15,13 @@ const SignUp = ({create}) => (
     <Box bg="#fff" p={1}>
       {/* create is the mutation function provided by apollo below */}
       <form onSubmit={create}>
-        <label>Name
+        <label htmlFor="name">Name
           <Input type="text" placeholder="Your Name" name="name" />
         </label><br /><br />
-        <label>Email
+        <label htmlFor="email">Email
           <Input type="email" placeholder="Email" name="email" />
         </label><br /><br />
-        <label>Password
+        <label htmlFor="password">Password
           <Input type="password" placeholder="Password" name="password" />
         </label><br /><br />
         <Button>Create account</Button>

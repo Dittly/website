@@ -1,9 +1,5 @@
 import styled from 'styled-components'
-import {space} from 'styled-system'
 import {media} from '../../styles/media'
-
-import Box from '../box'
-
 
 const SectionSC = styled.div`
   padding: 12px;

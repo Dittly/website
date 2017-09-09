@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const largeTextStyles = {
   fontFamily: 'Rubik',
@@ -15,7 +16,7 @@ const LargeText = ({children}) => (
 )
 
 LargeText.propTypes = {
-  children: React.PropTypes
+  children: PropTypes.node
 }
 
 export default LargeText

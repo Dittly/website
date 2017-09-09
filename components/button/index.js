@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import ButtonSC from './index-sc'
 
 const Button = ({children}) => (
@@ -5,5 +7,9 @@ const Button = ({children}) => (
     {children}
   </ButtonSC>
 )
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 export default Button

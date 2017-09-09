@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {boxShadows, neutrals, typography} from '../../styles/constants'
+import {neutrals, typography} from '../../styles/constants'
 
 const HeaderBarSC = styled.div`
   background-color: ${neutrals.neutral00};

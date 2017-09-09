@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import Avatar from '../avatar'
@@ -41,5 +42,9 @@ const Profile = ({userName}) => (
     </FlexContainer>
   </ProfileSC>
 )
+
+Profile.propTypes = {
+  userName: PropTypes.string.isRequired
+}
 
 export default Profile

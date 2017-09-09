@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import AddSC from './index-sc'
 
 const Add = ({children}) => (
@@ -5,5 +7,9 @@ const Add = ({children}) => (
     {children}
   </AddSC>
 )
+
+Add.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 export default Add

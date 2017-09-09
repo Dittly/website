@@ -1,6 +1,5 @@
 import {css} from 'styled-components'
 import {neutrals, typography} from '../constants'
-import {media} from '../media'
 
 export default css`
   * {

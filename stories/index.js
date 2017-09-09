@@ -17,7 +17,7 @@ storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo(
 
 storiesOf('Button', module)
   .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>)
+  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>) // eslint-disable-line jsx-a11y/accessible-emoji
 
 storiesOf('Search', module)
   .add('with text', () => <Search />)

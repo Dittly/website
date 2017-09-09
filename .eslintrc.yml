@@ -1,3 +1,5 @@
 extends:
   - './.eslint/react-a11y.yml'
 parser: babel-eslint
+rules:
+  no-confusing-arrow: ['error', { 'allowParens': true }]

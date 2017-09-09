@@ -15,10 +15,10 @@ const Login = ({signin}) => (
     <Box bg="#fff" p={1}>
       {/* signin is the mutation function provided by apollo below */}
       <form onSubmit={signin}>
-        <label>Email
+        <label htmlFor="email">Email
           <Input type="email" placeholder="Email" name="email" />
         </label><br /><br />
-        <label>Password
+        <label htmlFor="password">Password
           <Input type="password" placeholder="Password" name="password" />
         </label><br /><br />
         <Button>Sign in</Button>

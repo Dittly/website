@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const cardStyles = {
   backgroundColor: 'white',
@@ -14,7 +15,7 @@ const Card = ({children}) => (
 )
 
 Card.propTypes = {
-  children: React.PropTypes
+  children: PropTypes.node
 }
 
 export default Card

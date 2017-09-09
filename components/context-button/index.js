@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import ContextButtonSC from './index-sc'
@@ -20,5 +21,9 @@ const ContextButton = ({children}) => (
     {children}
   </ContextButtonSC>
 )
+
+ContextButton.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 export default ContextButton

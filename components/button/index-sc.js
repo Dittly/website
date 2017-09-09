@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import {sizes, neutrals, colors, typography} from '../../styles/constants'
 import {media} from '../../styles/media'
 
 const ButtonSC = styled.button`
-  background-color: ${(props) => props.primary ? '#1A5CCF' : '#F9593C'};
-  font-family: ${(props) => props.primary ? 'Rubik' : 'Roboto Slab'};
+  background-color: ${(props) => (props.primary ? '#1A5CCF' : '#F9593C')};
+  font-family: ${(props) => (props.primary ? 'Rubik' : 'Roboto Slab')};
 
   line-height: normal;
 

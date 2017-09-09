@@ -1,7 +1,6 @@
 import React from 'react'
 
 import searchIcon from '../static/search.svg'
-import imageFile from '../static/avatar.png'
 
 import Avatar from './Avatar'
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {sizes, neutrals, colors} from '../../styles/constants'
+import {neutrals} from '../../styles/constants'
 
 const SearchContainer = styled.div`
   display: flex;

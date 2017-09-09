@@ -1,5 +1,3 @@
-import Box from '../box'
-
 const Footer = () => (
   <footer />
 )

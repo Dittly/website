@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const uiButtonStyles = {
   backgroundColor: '#196DC8',
@@ -9,8 +10,7 @@ const uiButtonStyles = {
   borderRadius: '5px',
   fontFamily: 'Rubik',
   fontWeight: '400',
-  fontSize: '14px',
-  borderRadius: '2px',
+  fontSize: '14px'
 }
 
 const UiButton = ({children, onClick}) => (
@@ -23,8 +23,8 @@ const UiButton = ({children, onClick}) => (
 )
 
 UiButton.propTypes = {
-  children: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func,
+  children: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 }
 
 export default UiButton
