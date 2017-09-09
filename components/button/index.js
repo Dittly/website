@@ -8,8 +8,8 @@ const Button = ({children}) => (
   </ButtonSC>
 )
 
-// Button.propTypes = {
-//   children: PropTypes.node.isRequired
-// }
+Button.propTypes = {
+  // children: PropTypes.node.isRequired
+}
 
 export default Button
