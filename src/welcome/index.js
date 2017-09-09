@@ -1,20 +1,48 @@
 import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getAllProjects} from './gq'
+import {Link} from '../../utils/routes'
+import {projectRoutes} from '../../utils/routes/routes-definitions'
 
 import ProjectList from '../../components/project/list'
 
-export const Loading = () => (
-  <p>Loading projects...</p>
-)
+import Box from '../../components/box'
+import Search from '../../components/search'
+import Section from '../../components/section'
+import HeadBanner from '../../components/head-banner'
+import ContextButton from '../../components/context-button'
 
-export const WelcomeWrapper = ({loggedInUser, signOut, data: {loading, allProjects}}) => (
+export const Loading = () => <p>Loading projects...</p>
+
+export const WelcomeWrapper = ({
+  loggedInUser,
+  signOut,
+  data: {loading, allProjects}
+}) => (
   <div>
-    Hello {loggedInUser.user.name}!<br />
-    <button onClick={signOut}>Sign out</button>
-    {
-      loading ? <Loading /> : <ProjectList isLoading={loading} projects={allProjects} />
-    }
+    <Search />
+    <HeadBanner>
+      <Section>
+        <h1>Hello {loggedInUser.user.name}!</h1>
+        <br />
+        <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>
+          Sign out
+        </a>
+        <Link route={projectRoutes.create.name}>
+          <a>+ Create Project</a>
+        </Link>
+      </Section>
+      <Box>
+        <ContextButton>Projects</ContextButton>
+      </Box>
+    </HeadBanner>
+    <Box p={1}>
+      {loading ? (
+        <Loading />
+      ) : (
+        <ProjectList isLoading={loading} projects={allProjects} />
+      )}
+    </Box>
   </div>
 )
 

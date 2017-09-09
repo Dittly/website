@@ -2,7 +2,7 @@ import withData from '../utils/apollo/with-data'
 import MainLayout from '../components/layouts/main'
 import IndexContent from '../src'
 
-const Index = (props) => (
+export const Index = props => (
   <MainLayout>
     <IndexContent {...props} />
   </MainLayout>

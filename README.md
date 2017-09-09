@@ -46,6 +46,28 @@ The following naming conventions apply:
 | `src/*`        | N/A            | Components used in `pages/*`. Deal with GraphQL queries, loading state, etc. here.       |
 | `components/*` | N/A            | Pure React components, ideally functional components.                                    |
 
+### Tech Stack
+
+Mainly Javascript (ES6+). For 3rd party services, see below.
+
+* **[Next.js](https://github.com/zeit/next.js)**: A minimalistic framework for server-rendered React applications.
+* **[GraphQL](http://graphql.org/learn)**: Our API query language, in lieu of a REST API.
+
+### Tools
+
+The following development tools help with code quality, formatting, and general automation:
+
+* **[Jest](https://facebook.github.io/jest)**: Main test framework.
+  * Run with `yarn test`
+* **[ESLint](https://eslint.org)**: Helps with code quality, avoids common bugs and enforces best practices.
+  * Run with `yarn lint`
+* **[lint-staged](https://github.com/okonet/lint-staged)**: Run commands against staged files.
+  * Runs automatically as a `git precommit` hook.
+* **[Prettier](https://github.com/prettier/prettier)**: Automatically format source files.
+  * Runs automatically as part of `lint-staged` and `ESLint`, see above.
+* **[Storybook](https://storybook.js.org)**: An interactive style guide.
+  * Run with `yarn storybook`
+
 ## 3rd Party Services
 
 We rely on 3rd party services to automate as many tasks as possible.

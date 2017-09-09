@@ -4,9 +4,7 @@ import {mount} from 'enzyme'
 import cookie from 'cookie'
 import withData, {getComponentDisplayName, parseCookies} from '../with-data'
 
-const DummyComponent = () => (
-  <p>A dummy component for testing purposes.</p>
-)
+const DummyComponent = () => <p>A dummy component for testing purposes.</p>
 DummyComponent.displayName = 'DummyComponent'
 
 describe('apollo/with-data', () => {
@@ -17,7 +15,9 @@ describe('apollo/with-data', () => {
   })
 
   it('gets the component displayName correctly', () => {
-    expect(getComponentDisplayName(DummyComponent)).toBe(DummyComponent.displayName)
+    expect(getComponentDisplayName(DummyComponent)).toBe(
+      DummyComponent.displayName
+    )
   })
 
   it('gets the component displayName as "Unknown" if appropriate', () => {

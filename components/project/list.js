@@ -1,14 +1,53 @@
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {Link} from '../../utils/routes'
 import {projectRoutes} from '../../utils/routes/routes-definitions'
+import {neutrals, typography} from '../../styles/constants'
+
+import Card from '../card'
+import Box from '../box'
+import Profile from '../profile'
+
+const ProjectTitle = styled.h1`
+  margin: 0;
+
+  color: ${neutrals.neutral50};
+  font-weight: 400;
+  font-family: ${typography.fontFamily};
+  font-size: 16px;
+`
+
+const Soft = styled.small`
+  color: ${neutrals.neutral40};
+  font-size: 10px;
+`
+
+const ProjectImage = styled.div`
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+
+  text-align: center;
+`
 
 export const ProjectListThumbnail = ({id, title, location, type, user}) => (
   <div>
-    <Link route={projectRoutes.details.name} params={{id}}><a><h1>{title}</h1></a></Link><br />
-    <small>{location}</small><br />
-    <p>Type: {type}</p><br />
-    <img src="https://unsplash.it/200/?random" alt={title} />
-    <p>{user.name}</p>
+    <Card>
+      <Box p={1}>
+        <Link route={projectRoutes.details.name} params={{id}}>
+          <a>
+            <ProjectTitle secondary>{title}</ProjectTitle>
+          </a>
+        </Link>
+        <Soft>
+          {location}, {type}
+        </Soft>
+        <ProjectImage>
+          <img src="https://unsplash.it/200/?random" alt={title} />
+        </ProjectImage>
+        <Profile userName={user.name} />
+      </Box>
+    </Card>
   </div>
 )
 
@@ -22,11 +61,9 @@ ProjectListThumbnail.propTypes = {
 
 const ProjectList = ({projects}) => (
   <div>
-    {
-      projects.map((project) => (
-        <ProjectListThumbnail key={project.id} {...project} />
-      ))
-    }
+    {projects.map(project => (
+      <ProjectListThumbnail key={project.id} {...project} />
+    ))}
   </div>
 )
 

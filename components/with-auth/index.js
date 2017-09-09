@@ -9,8 +9,9 @@ import withData from '../../utils/apollo/with-data'
 import {authRoutes} from '../../utils/routes/routes-definitions'
 import redirect from '../../utils/apollo/redirect'
 
-export default (WrappedComponent) => {
+export default WrappedComponent => {
   class WithAuth extends React.Component {
+    /* istanbul ignore next */
     static async getInitialProps(context, apolloClient) {
       const {loggedInUser} = await checkLoggedIn(apolloClient)
 
@@ -35,11 +36,8 @@ export default (WrappedComponent) => {
       })
     }
 
-
     render() {
-      return (
-        <WrappedComponent {...this.props} signOut={this.signOut} />
-      )
+      return <WrappedComponent {...this.props} signOut={this.signOut} />
     }
   }
 

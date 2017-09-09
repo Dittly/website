@@ -1,3 +1,4 @@
+/* global process */
 import React from 'react'
 import PropTypes from 'prop-types'
 import cookie from 'cookie'
@@ -5,23 +6,24 @@ import Head from 'next/head'
 import {ApolloProvider, getDataFromTree} from 'react-apollo'
 import initApollo from './init-apollo'
 
-export const parseCookies = (ctx = {}, options = {}) => (
+export const parseCookies = (ctx = {}, options = {}) =>
   cookie.parse(
     ctx.req && ctx.req.headers.cookie
       ? ctx.req.headers.cookie
       : document.cookie,
     options
   )
-)
 
-export const getComponentDisplayName = (Component) => {
+export const getComponentDisplayName = Component => {
   return Component.displayName || Component.name || 'Unknown'
 }
 
-export default (ComposedComponent) => {
+export default ComposedComponent => {
   /* istanbul ignore next */
   return class WithData extends React.Component {
-    static displayName = `WithData(${getComponentDisplayName(ComposedComponent)})`
+    static displayName = `WithData(${getComponentDisplayName(
+      ComposedComponent
+    )})`
     static propTypes = {
       serverState: PropTypes.object.isRequired
     }
@@ -31,19 +33,25 @@ export default (ComposedComponent) => {
 
       // Setup a server-side one-time-use apollo client for initial props and
       // rendering (on server)
-      const apollo = initApollo({}, {
-        getToken: () => parseCookies(ctx).token
-      })
+      const apollo = initApollo(
+        {},
+        {
+          getToken: () => parseCookies(ctx).token
+        }
+      )
 
       // Evaluate the composed component's getInitialProps()
       let composedInitialProps = {}
       if (ComposedComponent.getInitialProps) {
-        composedInitialProps = await ComposedComponent.getInitialProps(ctx, apollo)
+        composedInitialProps = await ComposedComponent.getInitialProps(
+          ctx,
+          apollo
+        )
       }
 
       // Run all graphql queries in the component tree
       // and extract the resulting data
-      if (!process.browser) { // eslint-disable-line no-undef
+      if (!process.browser) {
         if (ctx.res && ctx.res.finished) {
           // When redirecting, the response is finished.
           // No point in continuing to render
@@ -75,7 +83,8 @@ export default (ComposedComponent) => {
         const state = apollo.getInitialState()
 
         serverState = {
-          apollo: { // Make sure to only include Apollo's data state
+          apollo: {
+            // Make sure to only include Apollo's data state
             data: state.data
           }
         }

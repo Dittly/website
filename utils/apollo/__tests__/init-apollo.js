@@ -1,7 +1,7 @@
 /* eslint-env jest, node */
 import initApollo, {_create} from '../init-apollo'
 
-const verifyAuthorizationMiddlewareApplied = (middlewares) => {
+const verifyAuthorizationMiddlewareApplied = middlewares => {
   const authorizationMiddleware = middlewares[0]
   const mockNextFn = jest.fn()
 
@@ -25,7 +25,9 @@ const verifyAuthorizationMiddlewareApplied = (middlewares) => {
 const expectApolloClientToBeInitializedProperly = (client, initialState) => {
   expect(client).toBeDefined()
   expect(client.initialState).toBe(initialState)
-  expect(client.networkInterface._uri).toBe('https://api.graph.cool/simple/v1/cj4c5zajubgpn0142pihd2xs3')
+  expect(client.networkInterface._uri).toBe(
+    'https://api.graph.cool/simple/v1/cj4c5zajubgpn0142pihd2xs3'
+  )
 }
 
 describe('apollo/init-apollo', () => {
@@ -73,7 +75,10 @@ describe('apollo/init-apollo', () => {
         }
       }
       // Apply authorization middleware
-      client.networkInterface._middlewares[0].applyMiddleware(mockReq, mockNextFn)
+      client.networkInterface._middlewares[0].applyMiddleware(
+        mockReq,
+        mockNextFn
+      )
       expect(mockNextFn).toHaveBeenCalled()
       expect(mockReq.options.headers.authorization).toBe('Bearer test-token')
     })
@@ -92,7 +97,10 @@ describe('apollo/init-apollo', () => {
         }
       }
       // Apply authorization middleware
-      client.networkInterface._middlewares[0].applyMiddleware(mockReq, mockNextFn)
+      client.networkInterface._middlewares[0].applyMiddleware(
+        mockReq,
+        mockNextFn
+      )
       expect(mockNextFn).toHaveBeenCalled()
       expect(mockReq.options.headers.authorization).toBe(null)
     })

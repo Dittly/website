@@ -1,3 +1,4 @@
+/* global process */
 import {ApolloClient, createNetworkInterface} from 'react-apollo'
 import fetch from 'isomorphic-fetch'
 
@@ -5,7 +6,7 @@ let apolloClient = null
 
 /* istanbul ignore next */
 // Polyfill fetch() on the server (used by apollo-client)
-if (!process.browser) { // eslint-disable-line no-undef
+if (!process.browser) {
   global.fetch = fetch
 }
 
@@ -19,16 +20,18 @@ export const _create = (initialState, {getToken}) => {
     }
   })
 
-  networkInterface.use([{
-    applyMiddleware(req, next) {
-      if (!req.options.headers) {
-        req.options.headers = {} // Create the header object if needed.
+  networkInterface.use([
+    {
+      applyMiddleware(req, next) {
+        if (!req.options.headers) {
+          req.options.headers = {} // Create the header object if needed.
+        }
+        const token = getToken()
+        req.options.headers.authorization = token ? `Bearer ${token}` : null
+        next()
       }
-      const token = getToken()
-      req.options.headers.authorization = token ? `Bearer ${token}` : null
-      next()
     }
-  }])
+  ])
 
   return new ApolloClient({
     initialState,
@@ -41,7 +44,8 @@ export const _create = (initialState, {getToken}) => {
 export default function initApollo(initialState, options = {}) {
   // Make sure to create a new client for every server-side request so that data
   // isn't shared between connections (which would be bad)
-  if (!process.browser) { // eslint-disable-line no-undef
+  if (!process.browser) {
+    // eslint-disable-line no-undef
     return _create(initialState, options)
   }
 
