@@ -1,11 +1,9 @@
-/* eslint-disable import/no-commonjs */
-
 /**
  *  name - The route name
  *  pattern - Express-style route pattern (uses path-to-regexp)
  *  page - Page inside ./pages to be rendered (defaults to name)
  */
-const authRoutes = {
+export const authRoutes = {
   login: {
     name: 'login',
     pattern: '/login',
@@ -18,7 +16,7 @@ const authRoutes = {
   }
 }
 
-const homeRoutes = {
+export const homeRoutes = {
   home: {
     name: 'index',
     pattern: '/'
@@ -29,7 +27,7 @@ const homeRoutes = {
   }
 }
 
-const projectRoutes = {
+export const projectRoutes = {
   create: {
     name: 'projects/create',
     pattern: '/projects/create'
@@ -40,7 +38,7 @@ const projectRoutes = {
   }
 }
 
-module.exports = {
+export default {
   authRoutes,
   homeRoutes,
   projectRoutes

@@ -8,16 +8,19 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
-    "dev": "node server.js",
+    "dev": "node -r @std/esm index.js",
     "lint": "eslint '**/*.js'",
     "precommit": "lint-staged",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node -r @std/esm index.js",
     "test": "yarn lint && yarn test:coverage",
     "test:ci": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "jest --maxWorkers=4 --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -s ./static -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "@std/esm": {
+    "esm": "js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -27,6 +30,7 @@
       "<rootDir>/components/add/",
       "<rootDir>/components/h1/",
       "<rootDir>/coverage/",
+      "<rootDir>/index.js",
       "<rootDir>/node_modules/",
       "<rootDir>/pages/_document.js",
       "<rootDir>/server.js",
@@ -57,6 +61,7 @@
     "bracketSpacing": false
   },
   "dependencies": {
+    "@std/esm": "^0.8.3",
     "babel-plugin-inline-dotenv": "^1.1.1",
     "babel-plugin-transform-inline-environment-variables": "^0.2.0",
     "cookie": "^0.3.1",
