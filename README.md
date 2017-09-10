@@ -13,6 +13,7 @@
   - [Naming Conventions](#naming-conventions)
   - [Tech Stack](#tech-stack)
   - [Tools](#tools)
+  - [Workflow](#workflow)
 - [3rd Party Services](#3rd-party-services)
 
 <!-- /TOC -->
@@ -84,6 +85,14 @@ The following development tools help with code quality, formatting, and general 
   * Runs automatically as part of `lint-staged` and `ESLint`, see above.
 * **[Storybook](https://storybook.js.org)**: An interactive style guide.
   * Run with `yarn storybook`
+
+### Workflow
+
+We follow the [GitHub Flow](https://guides.github.com/introduction/flow). In short:
+
+* `master` is the single source of truth.
+* New features and bug fixes get merged into `master` with a pull request.
+* Each pull request is reviewed by a team member. The reviewer is responsible to merge the PR and delete the branch.
 
 ## 3rd Party Services
 
