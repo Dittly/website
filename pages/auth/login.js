@@ -2,7 +2,7 @@ import BasePageComponent from '../../components/base-page'
 import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
-import MainLayout from '../../components/layouts/main'
+import Layout from '../../components/layouts'
 import {homeRoutes} from '../../utils/routes/routes-definitions'
 
 import withData from '../../utils/apollo/with-data'
@@ -26,9 +26,9 @@ export class Login extends BasePageComponent {
 
   render() {
     return (
-      <MainLayout>
+      <Layout>
         <LoginContent {...this.props} />
-      </MainLayout>
+      </Layout>
     )
   }
 }

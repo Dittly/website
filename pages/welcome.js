@@ -1,14 +1,14 @@
 import BasePageComponent from '../components/base-page'
 import withAuth from '../components/with-auth'
-import MainLayout from '../components/layouts/main'
+import Layout from '../components/layouts'
 import WelcomeContent from '../src/welcome'
 
 export class Welcome extends BasePageComponent {
   render() {
     return (
-      <MainLayout>
+      <Layout>
         <WelcomeContent {...this.props} />
-      </MainLayout>
+      </Layout>
     )
   }
 }
