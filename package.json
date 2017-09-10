@@ -68,15 +68,15 @@
     "graphql": "^0.11.3",
     "grid-styled": "^2.0.0-8",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^3.0.3",
+    "next": "^3.2.2",
     "next-routes": "^1.0.40",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-apollo": "^1.4.3",
+    "react-apollo": "^1.4.15",
     "react-dom": "^15.6.1",
     "react-ga": "^2.2.0",
     "styled-components": "^2.1.1",
-    "styled-system": "^1.0.0-8"
+    "styled-system": "^1.0.0-13"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.6",
