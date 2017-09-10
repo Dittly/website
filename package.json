@@ -30,6 +30,7 @@
       "<rootDir>/components/add/",
       "<rootDir>/components/h1/",
       "<rootDir>/coverage/",
+      "<rootDir>/index.js",
       "<rootDir>/node_modules/",
       "<rootDir>/pages/_document.js",
       "<rootDir>/server.js",
