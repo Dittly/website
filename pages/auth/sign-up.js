@@ -5,7 +5,7 @@ import cookie from 'cookie'
 import {homeRoutes} from '../../utils/routes/routes-definitions'
 
 import withData from '../../utils/apollo/with-data'
-import MainLayout from '../../components/layouts/main'
+import Layout from '../../components/layouts'
 import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
 import SignUpContent from '../../src/auth/sign-up'
@@ -26,9 +26,9 @@ export class SignUp extends BasePageComponent {
 
   render() {
     return (
-      <MainLayout>
+      <Layout>
         <SignUpContent {...this.props} />
-      </MainLayout>
+      </Layout>
     )
   }
 }

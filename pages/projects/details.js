@@ -1,14 +1,14 @@
 import BasePageComponent from '../../components/base-page'
 import withAuth from '../../components/with-auth'
-import MainLayout from '../../components/layouts/main'
+import Layout from '../../components/layouts'
 import DetailsContent from '../../src/projects/details'
 
 export class Details extends BasePageComponent {
   render() {
     return (
-      <MainLayout>
+      <Layout>
         <DetailsContent {...this.props} />
-      </MainLayout>
+      </Layout>
     )
   }
 }
