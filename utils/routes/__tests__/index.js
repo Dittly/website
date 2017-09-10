@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import Routes from '../'
+import {nextRoutes} from '../'
 import routesDefinitions from '../routes-definitions'
 
 describe('utils/routes/index', () => {
@@ -10,6 +10,6 @@ describe('utils/routes/index', () => {
         Object.values(routeDefinition).filter(route => route.name).length, // eslint-disable-line max-nested-callbacks
       0
     )
-    expect(Routes.routes.length).toBe(totalNumberOfRoutesDefined)
+    expect(nextRoutes.routes.length).toBe(totalNumberOfRoutesDefined)
   })
 })

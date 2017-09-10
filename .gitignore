@@ -1,5 +1,6 @@
 .DS_Store
 .env
+.esm-cache
 .next
 coverage
 node_modules
