@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import main from './main'
 
 export const layouts = {
-  // main: <Main />
   main
 }
 
