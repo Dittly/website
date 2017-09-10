@@ -92,7 +92,7 @@ We follow the [GitHub Flow](https://guides.github.com/introduction/flow). In sho
 
 * `master` is the single source of truth.
 * New features and bug fixes get merged into `master` with a pull request.
-* Branches must be deleted at the time a pull request gets merged into `master`.
+* Each pull request is reviewed by a team member. The reviewer is responsible to merge the PR and delete the branch.
 
 ## 3rd Party Services
 
