@@ -1,4 +1,6 @@
 /* eslint-env jest */
+jest.mock('../../utils/ga')
+
 import {mount} from 'enzyme'
 
 import {Index} from '../../pages'
