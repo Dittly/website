@@ -1,6 +1,6 @@
 # Dittly
 
-[![Build Status](https://travis-ci.org/Dittly/website.svg?branch=master)](https://travis-ci.org/Dittly/website) [![Coverage Status](https://coveralls.io/repos/github/Dittly/website/badge.svg?branch=master)](https://coveralls.io/github/Dittly/website?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Dittly/website.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/Dittly/website.svg?style=svg)](https://circleci.com/gh/Dittly/website) [![Coverage Status](https://coveralls.io/repos/github/Dittly/website/badge.svg?branch=master)](https://coveralls.io/github/Dittly/website?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Dittly/website.svg)](https://greenkeeper.io/)
 
 ## Table of contents
 
@@ -98,7 +98,7 @@ We follow the [GitHub Flow](https://guides.github.com/introduction/flow). In sho
 
 We rely on 3rd party services to automate as many tasks as possible.
 
-* **[Travis](https://travis-ci.org/Dittly)**: Continuous integration service to run tests.
+* **[CircleCI](https://circleci.com/gh/Dittly)**: Continuous integration service to run tests.
 * **[Coveralls](https://coveralls.io/github/Dittly/website)**: Test coverage reports.
 * **[Greenkeeper](https://greenkeeper.io/)**: Automatically monitors and updates NPM dependencies.
 * **[Now](https://zeit.co/now)**: Deployment infrastructure.
