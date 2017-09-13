@@ -1,4 +1,6 @@
 /* eslint-env jest */
+jest.mock('../../utils/ga')
+
 import {mountComponentWithApolloProvider} from '../../utils/test-helper'
 
 import {Welcome} from '../../pages/welcome'
