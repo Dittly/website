@@ -6,9 +6,9 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@std/esm@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.8.3.tgz#7a3c3144ca0905c9b92d82b79987503ecb58a193"
+"@std/esm@0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.9.2.tgz#825dfadee6ba354536d275d6f7dbe1db542295b0"
 
 "@storybook/addon-actions@^3.2.6":
   version "3.2.6"
