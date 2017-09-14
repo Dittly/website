@@ -1,12 +1,26 @@
 import Box from '../box'
 import {Link} from '../../utils/routes'
 import {authRoutes, homeRoutes} from '../../utils/routes/routes-definitions'
+import styled from 'styled-components'
+
+import {colors, typography} from '../../styles/constants'
+
+import HeaderSC from './index-sc'
+
+const Logo = styled.a`
+  color: ${colors.brandOrange};
+  font-family: ${typography.headerFontFamily};
+  padding: 12px;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 20px;
+`
 
 const Header = () => (
-  <header>
-    <Box bg="#d2654b" color="white" p={1}>
+  <HeaderSC>
+    <Box>
       <Link route={homeRoutes.home.name}>
-        <a>Dittly</a>
+        <Logo>Dittly</Logo>
       </Link>{' '}
       |{' '}
       <Link route={homeRoutes.welcome.name}>
@@ -17,7 +31,7 @@ const Header = () => (
         <a>Login</a>
       </Link>
     </Box>
-  </header>
+  </HeaderSC>
 )
 
 export default Header
