@@ -7,6 +7,7 @@ import {neutrals, typography} from '../../styles/constants'
 import Card from '../card'
 import Box from '../box'
 import Profile from '../profile'
+import ProjectListSC from './list-sc'
 
 const ProjectTitle = styled.h1`
   margin: 0;
@@ -63,11 +64,11 @@ ProjectListThumbnail.propTypes = {
 }
 
 const ProjectList = ({projects}) => (
-  <div>
+  <ProjectListSC>
     {projects.map(project => (
       <ProjectListThumbnail key={project.id} {...project} />
     ))}
-  </div>
+  </ProjectListSC>
 )
 
 ProjectList.propTypes = {
