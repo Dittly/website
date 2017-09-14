@@ -31,7 +31,7 @@ const Search = () => (
     <SearchIcon>
       <image src="../../static/search.svg" />
     </SearchIcon>
-    <SearchInput placeholder="Search projects" type="text" />
+    <SearchInput placeholder="Search" type="text" />
   </SearchSC>
 )
 
