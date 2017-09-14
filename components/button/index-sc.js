@@ -4,6 +4,7 @@ import {media} from '../../styles/media'
 const ButtonSC = styled.button`
   background-color: ${props => (props.primary ? '#1A5CCF' : '#F9593C')};
   font-family: ${props => (props.primary ? 'Rubik' : 'Roboto Slab')};
+  text-transform: ${props => (props.primary ? 'none' : 'uppercase')};
 
   line-height: normal;
 
@@ -19,7 +20,6 @@ const ButtonSC = styled.button`
 
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
 
   color: inherit;
   border: 0;

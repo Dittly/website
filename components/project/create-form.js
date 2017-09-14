@@ -45,7 +45,7 @@ const CreateForm = ({projectTypes, onSubmit}) => (
     </label>
     <br />
     <br />
-    <Button primary>Create</Button>
+    <Button>Create</Button>
   </form>
 )
 
