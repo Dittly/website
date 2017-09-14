@@ -8,7 +8,7 @@ const TabBarSC = styled.div`
   bottom: 0;
 
   background-color: white;
-  border-top: 1px solid #EDEDED;
+  border-top: 1px solid #ededed;
 `
 
 export default TabBarSC

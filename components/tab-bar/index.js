@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import TabBarSC from './index-sc'
 import Avatar from '../avatar'
 
-
 const SearchIcon = styled.div`
   display: flex;
   width: 27px;
@@ -14,7 +13,7 @@ const TabBarButton = styled.button`
   background-color: white;
   border: none;
   font-family: Rubik;
-  color: #9B9B9B;
+  color: #9b9b9b;
   font-size: 14px;
   width: 50%;
   padding: 8px;

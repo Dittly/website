@@ -25,7 +25,6 @@ const Soft = styled.small`
 const ProjectImage = styled.div`
   display: block;
   width: 100%;
-  margin: 8px 0;
 
   text-align: center;
 `
@@ -33,19 +32,23 @@ const ProjectImage = styled.div`
 export const ProjectListThumbnail = ({id, title, location, type, user}) => (
   <div>
     <Card>
-      <Box p={1}>
-        <Link route={projectRoutes.details.name} params={{id}}>
-          <a>
-            <ProjectTitle secondary>{title}</ProjectTitle>
-          </a>
-        </Link>
-        <Soft>
-          {location}, {type}
-        </Soft>
+      <Box>
+        <Box p={1}>
+          <Link route={projectRoutes.details.name} params={{id}}>
+            <a>
+              <ProjectTitle secondary>{title}</ProjectTitle>
+            </a>
+          </Link>
+          <Soft>
+            {location}, {type}
+          </Soft>
+        </Box>
         <ProjectImage>
-          <img src="https://unsplash.it/200/?random" alt={title} />
+          <img src="https://unsplash.it/400/?random" alt={title} />
         </ProjectImage>
-        <Profile userName={user.name} />
+        <Box p={1}>
+          <Profile userName={user.name} />
+        </Box>
       </Box>
     </Card>
   </div>

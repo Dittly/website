@@ -24,7 +24,10 @@ export const WelcomeWrapper = ({
     <HeadBanner>
       <Section>
         <h1>Hello {loggedInUser.user.name}!</h1>
-        <br />
+        <p>
+          We&#39;ve added a new feature! You can now add photos along with your
+          posts.
+        </p>
         <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>
           Sign out
         </a>

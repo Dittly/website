@@ -1,16 +1,28 @@
 import PropTypes from 'prop-types'
+import HeaderBar from '../header-bar'
+import HeadBanner from '../head-banner'
+import Section from '../section'
+import Box from '../box'
+import Profile from '../profile'
 
 export const ProjectDetails = ({id, title, location, type, user}) => (
   <div>
-    <h1>{title}</h1>
-    <small>(#{id})</small>
-    <br />
-    <small>{location}</small>
-    <br />
-    <p>Type: {type}</p>
-    <br />
-    <img src="https://unsplash.it/200/?random" alt={title} />
-    <p>{user.name}</p>
+    <HeaderBar>{title}</HeaderBar>
+    <HeadBanner>
+      <Profile />
+      {user.name}
+      <Section>
+        <small>(#{id})</small>
+        <br />
+        <small>{location}</small>
+        <br />
+        <p>Type: {type}</p>
+        <br />
+      </Section>
+      <Box>
+        <img src="https://unsplash.it/400/?random" alt={title} />
+      </Box>
+    </HeadBanner>
   </div>
 )
 

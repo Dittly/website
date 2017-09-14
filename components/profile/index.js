@@ -18,14 +18,14 @@ const Name = styled.span`
   font-family: Rubik;
 `
 
-const Time = styled.time`
-  margin-left: 4px;
+// const Time = styled.time`
+//   margin-left: 4px;
 
-  font-size: 8px;
-  color: #9b9b9b;
-  font-family: Rubik;
-  line-height: 2;
-`
+//   font-size: 8px;
+//   color: #9b9b9b;
+//   font-family: Rubik;
+//   line-height: 2;
+// `
 
 const FlexContainer = styled.div`
   display: flex;
@@ -38,7 +38,6 @@ const Profile = ({userName}) => (
     <Avatar />
     <FlexContainer>
       <Name>{userName}</Name>
-      <Time>Time</Time>
     </FlexContainer>
   </ProfileSC>
 )
