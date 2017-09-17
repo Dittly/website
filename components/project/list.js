@@ -4,7 +4,7 @@ import {Link} from '../../utils/routes'
 import {projectRoutes} from '../../utils/routes/routes-definitions'
 import {neutrals, typography} from '../../styles/constants'
 
-import Card from '../card'
+import Project from './project'
 import Box from '../box'
 import Profile from '../profile'
 import ProjectListSC from './list-sc'
@@ -32,7 +32,7 @@ const ProjectImage = styled.div`
 
 export const ProjectListThumbnail = ({id, title, location, type, user}) => (
   <div>
-    <Card>
+    <Project>
       <Box>
         <Box p={1}>
           <Link route={projectRoutes.details.name} params={{id}}>
@@ -51,7 +51,7 @@ export const ProjectListThumbnail = ({id, title, location, type, user}) => (
           <Profile userName={user.name} />
         </Box>
       </Box>
-    </Card>
+    </Project>
   </div>
 )
 
