@@ -1,18 +1,6 @@
 import styled from 'styled-components'
 import {neutrals} from '../../styles/constants'
-
-const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 12px;
-  background-color: ${neutrals.neutral00};
-
-  border-bottom: 1px solid ${neutrals.neutral15};
-
-  font-family: Rubik;
-  color: ${neutrals.neutral40};
-  font-size: 14px;
-`
+import SearchSC from './index-sc'
 
 const SearchIcon = styled.div`
   display: flex;
@@ -39,12 +27,12 @@ const SearchInput = styled.input`
 `
 
 const Search = () => (
-  <SearchContainer>
+  <SearchSC>
     <SearchIcon>
       <image src="../../static/search.svg" />
     </SearchIcon>
-    <SearchInput placeholder="Search projects" type="text" />
-  </SearchContainer>
+    <SearchInput placeholder="Search" type="text" />
+  </SearchSC>
 )
 
 export default Search

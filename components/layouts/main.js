@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from '../header'
 import Footer from '../footer'
+import TabBar from '../tab-bar'
 
 const MainLayout = ({children, pageTitle}) => (
   <div>
@@ -12,6 +13,7 @@ const MainLayout = ({children, pageTitle}) => (
     </Head>
     <Header />
     {children}
+    <TabBar />
     <Footer />
   </div>
 )
