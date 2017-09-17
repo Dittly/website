@@ -6,7 +6,6 @@ import Search from '../components/search'
 import Section from '../components/section'
 import HeadBanner from '../components/head-banner'
 import ContextButton from '../components/context-button'
-import TabBar from '../components/tab-bar'
 
 const Index = () => (
   <div>
