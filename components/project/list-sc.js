@@ -19,21 +19,21 @@ const ProjectListSC = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    max-width: 768px;
+    max-width: ${sizes.tablet}px;
     margin: 0 auto;
   `};
   ${media.desktop`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    max-width: 992px;
+    max-width: ${sizes.desktop}px;
     margin: 0 auto;
   `};
   ${media.giant`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    max-width: 1170px;
+    max-width: ${sizes.giant}px;
     margin: 0 auto;
   `};
 `
