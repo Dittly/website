@@ -1,27 +1,77 @@
+import styled from 'styled-components'
+
+import {neutrals} from '../../styles/constants'
+import {media} from '../../styles/media'
+
 import PropTypes from 'prop-types'
 import HeaderBar from '../header-bar'
+import Box from '../box'
 import HeadBanner from '../head-banner'
 import Section from '../section'
-import Box from '../box'
 import Profile from '../profile'
+import Journey from './journey'
+
+const ProjectOwner = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+`
+
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  padding: 4px;
+`
+
+const Dt = styled.dt`
+  display: inline;
+  text-transform: uppercase;
+  color: ${neutrals.neutral40};
+  font-weight: 500;
+  font-size: 12px;
+`
+
+const Dd = styled.dd`
+  display: inline;
+  margin: 0;
+`
+
+const MobileSlide = styled.div`
+  img {
+    width: 100%;
+  }
+  ${media.phone`
+    display: none;
+  `};
+`
 
 export const ProjectDetails = ({id, title, location, type, user}) => (
   <div>
     <HeaderBar>{title}</HeaderBar>
     <HeadBanner>
-      <Profile userName={user.name} />
+      <ProjectOwner>
+        <Profile userName={user.name} />
+      </ProjectOwner>
       <Section>
         <small>(#{id})</small>
-        <br />
-        <small>{location}</small>
-        <br />
-        <p>Type: {type}</p>
-        <br />
+        <FlexContainer>
+          <div>
+            <Dt>Location: </Dt>
+            <Dd>{location}</Dd>
+          </div>
+          <div>
+            <Dt>Type: </Dt>
+            <Dd>{type}</Dd>
+          </div>
+        </FlexContainer>
       </Section>
-      <Box>
+      <MobileSlide>
         <img src="https://unsplash.it/400/?random" alt={title} />
-      </Box>
+      </MobileSlide>
     </HeadBanner>
+    <Box p={1}>
+      <Journey />
+    </Box>
   </div>
 )
 
