@@ -1,8 +1,8 @@
-import BasePageComponent from '../../components/base-page'
+import BasePageComponent from '/components/base-page'
 import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
-import Layout from '../../components/layouts'
+import Layout from '/components/layouts'
 import {homeRoutes} from '../../utils/routes/routes-definitions'
 
 import withData from '../../utils/apollo/with-data'

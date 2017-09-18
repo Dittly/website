@@ -4,7 +4,7 @@ jest.mock('../../../utils/ga')
 import {mountComponentWithApolloProvider} from '../../../utils/test-helper'
 
 import {Details} from '../../../pages/projects/details'
-import MainLayout from '../../../components/layouts/main'
+import MainLayout from '/components/layouts/main'
 import DetailsContent from '../../../src/projects/details'
 
 const getMockCurrentResult = () =>
