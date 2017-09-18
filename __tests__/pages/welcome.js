@@ -3,7 +3,7 @@ jest.mock('../../utils/ga')
 
 import {mountComponentWithApolloProvider} from '/utils/test-helper'
 
-import {Welcome} from '../../pages/welcome'
+import {Welcome} from '/pages/welcome'
 
 const getMockCurrentResult = () =>
   jest.fn().mockReturnValue({

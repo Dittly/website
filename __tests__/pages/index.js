@@ -3,7 +3,7 @@ jest.mock('../../utils/ga')
 
 import {mount} from 'enzyme'
 
-import {Index} from '../../pages'
+import {Index} from '/pages'
 
 describe('pages/index', () => {
   it(`verifies ${Index.name} renders correctly`, () => {
