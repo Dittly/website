@@ -9,8 +9,7 @@ export const ProjectDetails = ({id, title, location, type, user}) => (
   <div>
     <HeaderBar>{title}</HeaderBar>
     <HeadBanner>
-      <Profile />
-      {user.name}
+      <Profile userName={user.name} />
       <Section>
         <small>(#{id})</small>
         <br />
