@@ -1,6 +1,6 @@
 /* eslint-env jest */
 jest.mock('../../../utils/ga')
-import {mountComponentWithApolloProvider} from '../../../utils/test-helper'
+import {mountComponentWithApolloProvider} from '/utils/test-helper'
 
 import {Create} from '../../../pages/projects/create'
 import MainLayout from '/components/layouts/main'

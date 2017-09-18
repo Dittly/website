@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getAllProjects} from './gq'
-import {Link} from '../../utils/routes'
-import {projectRoutes} from '../../utils/routes/routes-definitions'
+import {Link} from '/utils/routes'
+import {projectRoutes} from '/utils/routes/routes-definitions'
 
 import ProjectList from '/components/project/list'
 

@@ -2,12 +2,12 @@ import BasePageComponent from '/components/base-page'
 import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
-import {homeRoutes} from '../../utils/routes/routes-definitions'
+import {homeRoutes} from '/utils/routes/routes-definitions'
 
-import withData from '../../utils/apollo/with-data'
+import withData from '/utils/apollo/with-data'
 import Layout from '/components/layouts'
-import redirect from '../../utils/apollo/redirect'
-import checkLoggedIn from '../../utils/apollo/check-logged-in'
+import redirect from '/utils/apollo/redirect'
+import checkLoggedIn from '/utils/apollo/check-logged-in'
 import SignUpContent from '/src/auth/sign-up'
 
 export class SignUp extends BasePageComponent {

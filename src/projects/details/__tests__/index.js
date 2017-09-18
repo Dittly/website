@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import {mount} from 'enzyme'
 
-import {deepClone} from '../../../../utils/helpers'
+import {deepClone} from '/utils/helpers'
 
 import {Loading, ProjectDetailsWrapper} from '../index'
 import ProjectDetails from '/components/project/details'
