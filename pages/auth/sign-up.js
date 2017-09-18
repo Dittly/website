@@ -8,7 +8,7 @@ import withData from '../../utils/apollo/with-data'
 import Layout from '/components/layouts'
 import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
-import SignUpContent from '../../src/auth/sign-up'
+import SignUpContent from '/src/auth/sign-up'
 
 export class SignUp extends BasePageComponent {
   /* istanbul ignore next */

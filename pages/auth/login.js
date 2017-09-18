@@ -8,7 +8,7 @@ import {homeRoutes} from '../../utils/routes/routes-definitions'
 import withData from '../../utils/apollo/with-data'
 import redirect from '../../utils/apollo/redirect'
 import checkLoggedIn from '../../utils/apollo/check-logged-in'
-import LoginContent from '../../src/auth/login'
+import LoginContent from '/src/auth/login'
 
 export class Login extends BasePageComponent {
   /* istanbul ignore next */

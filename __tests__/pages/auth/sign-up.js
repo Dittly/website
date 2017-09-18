@@ -13,7 +13,7 @@ import {
   _signUpError
 } from '../../../pages/auth/sign-up'
 import MainLayout from '/components/layouts/main'
-import SignUpContent from '../../../src/auth/sign-up'
+import SignUpContent from '/src/auth/sign-up'
 
 describe('pages/auth/sign-up', () => {
   const props = {

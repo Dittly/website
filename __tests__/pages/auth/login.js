@@ -13,7 +13,7 @@ import {
   _signInError
 } from '../../../pages/auth/login'
 import MainLayout from '/components/layouts/main'
-import LoginContent from '../../../src/auth/login'
+import LoginContent from '/src/auth/login'
 
 describe('pages/auth/login', () => {
   const defaultProps = {
