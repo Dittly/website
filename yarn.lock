@@ -6,9 +6,9 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@std/esm@^0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.9.2.tgz#825dfadee6ba354536d275d6f7dbe1db542295b0"
+"@std/esm@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.10.0.tgz#5610607ec4c99acdb2104b263d3a3c406d06ef2d"
 
 "@storybook/addon-actions@^3.2.6":
   version "3.2.6"
@@ -865,6 +865,12 @@ babel-plugin-react-docgen@^1.6.0:
 babel-plugin-react-require@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-require/-/babel-plugin-react-require-3.0.0.tgz#2e4e7b4496b93a654a1c80042276de4e4eeb20e3"
+
+babel-plugin-root-import@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-root-import/-/babel-plugin-root-import-5.1.0.tgz#80ea1cd5945b463a5e3f7e204a69478c573e328c"
+  dependencies:
+    slash "^1.0.0"
 
 babel-plugin-styled-components@^1.2.0:
   version "1.2.0"

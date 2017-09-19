@@ -3,8 +3,8 @@ jest.mock('../../../../utils/routes')
 import {mount} from 'enzyme'
 
 import SignUp from '../'
-import {Link} from '../../../../utils/routes'
-import {authRoutes} from '../../../../utils/routes/routes-definitions'
+import {Link} from '/utils/routes'
+import {authRoutes} from '/utils/routes/routes-definitions'
 
 describe('src/auth/sign-up', () => {
   it(`verifies ${SignUp.name} renders correctly`, () => {

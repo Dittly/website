@@ -1,14 +1,14 @@
-import BasePageComponent from '../../components/base-page'
+import BasePageComponent from '/components/base-page'
 import {graphql, gql, withApollo, compose} from 'react-apollo'
 import cookie from 'cookie'
 
-import Layout from '../../components/layouts'
-import {homeRoutes} from '../../utils/routes/routes-definitions'
+import Layout from '/components/layouts'
+import {homeRoutes} from '/utils/routes/routes-definitions'
 
-import withData from '../../utils/apollo/with-data'
-import redirect from '../../utils/apollo/redirect'
-import checkLoggedIn from '../../utils/apollo/check-logged-in'
-import LoginContent from '../../src/auth/login'
+import withData from '/utils/apollo/with-data'
+import redirect from '/utils/apollo/redirect'
+import checkLoggedIn from '/utils/apollo/check-logged-in'
+import LoginContent from '/src/auth/login'
 
 export class Login extends BasePageComponent {
   /* istanbul ignore next */

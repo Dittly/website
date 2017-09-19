@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getAllProjects} from './gq'
-import {Link} from '../../utils/routes'
-import {projectRoutes} from '../../utils/routes/routes-definitions'
+import {Link} from '/utils/routes'
+import {projectRoutes} from '/utils/routes/routes-definitions'
 
-import ProjectList from '../../components/project/list'
+import ProjectList from '/components/project/list'
 
-import Box from '../../components/box'
-import Search from '../../components/search'
-import Section from '../../components/section'
-import HeadBanner from '../../components/head-banner'
-import ContextButton from '../../components/context-button'
+import Box from '/components/box'
+import Search from '/components/search'
+import Section from '/components/section'
+import HeadBanner from '/components/head-banner'
+import ContextButton from '/components/context-button'
 
 export const Loading = () => <p>Loading projects...</p>
 

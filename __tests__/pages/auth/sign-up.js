@@ -11,9 +11,9 @@ import {
   _mapApolloDataToProps,
   _signUpSuccess,
   _signUpError
-} from '../../../pages/auth/sign-up'
-import MainLayout from '../../../components/layouts/main'
-import SignUpContent from '../../../src/auth/sign-up'
+} from '/pages/auth/sign-up'
+import MainLayout from '/components/layouts/main'
+import SignUpContent from '/src/auth/sign-up'
 
 describe('pages/auth/sign-up', () => {
   const props = {
