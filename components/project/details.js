@@ -15,6 +15,10 @@ const ProjectOwner = styled.div`
   display: flex;
   justify-content: center;
   padding: 8px;
+
+  ${media.phone`
+    justify-content: start;
+  `};
 `
 
 const FlexContainer = styled.div`
@@ -44,30 +48,42 @@ const MobileSlide = styled.div`
     display: none;
   `};
 `
+const DesktopTitle = styled.h1`
+  display: none;
+  ${media.phone`
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 28px;
+  `};
+`
 
 export const ProjectDetails = ({id, title, location, type, user}) => (
   <div>
     <HeaderBar>{title}</HeaderBar>
     <HeadBanner>
-      <ProjectOwner>
-        <Profile userName={user.name} />
-      </ProjectOwner>
-      <Section>
-        <small>(#{id})</small>
-        <FlexContainer>
-          <div>
-            <Dt>Location: </Dt>
-            <Dd>{location}</Dd>
-          </div>
-          <div>
-            <Dt>Type: </Dt>
-            <Dd>{type}</Dd>
-          </div>
-        </FlexContainer>
-      </Section>
-      <MobileSlide>
-        <img src="https://unsplash.it/400/?random" alt={title} />
-      </MobileSlide>
+      <Box p={1}>
+        <DesktopTitle>{title}</DesktopTitle>
+        <ProjectOwner>
+          <Profile userName={user.name} />
+        </ProjectOwner>
+        <Section>
+          <small>(#{id})</small>
+          <FlexContainer>
+            <div>
+              <Dt>Location: </Dt>
+              <Dd>{location}</Dd>
+            </div>
+            <div>
+              <Dt>Type: </Dt>
+              <Dd>{type}</Dd>
+            </div>
+          </FlexContainer>
+        </Section>
+        <MobileSlide>
+          <img src="https://unsplash.it/400/?random" alt={title} />
+        </MobileSlide>
+      </Box>
     </HeadBanner>
     <Box p={1}>
       <Journey />
