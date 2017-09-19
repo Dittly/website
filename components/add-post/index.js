@@ -4,23 +4,29 @@ import Card from '../card'
 import Add from '../add'
 import UiButton from '../ui-button'
 
+import {neutrals} from '../../styles/constants'
+
 const TextArea = styled.textarea`
   webkit-appearance: none;
   border: 0;
   font-family: Rubik;
-  color: #9b9b9b;
-  font-size: 14px;
+  color: ${neutrals.neutral50};
+  font-size: 16px;
   padding: 12px;
-  width: CALC(100% - 24px);
-  max-width: 375px;
+  width: 100%;
   resize: none;
+
+  &::placeholder {
+    color: ${neutrals.neutral40};
+  }
 `
 
 const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 6px;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid;
+  border-color: ${neutrals.neutral15};
 `
 
 const AddPost = () => (
