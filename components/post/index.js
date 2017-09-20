@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import {neutrals, typography} from '../../styles/constants'
+import {neutrals, typography} from '/styles/constants'
 
-import Card from '../card'
-import Profile from '../profile'
-import Box from '../box'
+import Card from '/components/card'
+import Profile from '/components/profile'
+import Box from '/components/box'
 
 const TextBox = styled.div`padding: 0px 12px 12px 12px;`
 

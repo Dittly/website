@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-import Card from '../card'
-import Add from '../add'
-import UiButton from '../ui-button'
+import Card from '/components/card'
+import Add from '/components/add'
+import UiButton from '/components/ui-button'
 
-import {neutrals} from '../../styles/constants'
+import {neutrals} from '/styles/constants'
 
 const TextArea = styled.textarea`
   webkit-appearance: none;
