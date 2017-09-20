@@ -1,5 +1,6 @@
 import {css} from 'styled-components'
 import {neutrals, typography} from '../constants'
+import {media} from '../media'
 
 export default css`
   * {
@@ -18,6 +19,11 @@ export default css`
 
     -webkit-font-smoothing: antialiased;
     color: ${neutrals.neutral50};
+    padding-bottom: 44px;
+
+    ${media.hlfScreen`
+      padding-bottom: 0
+    `};
   }
 
   h1,

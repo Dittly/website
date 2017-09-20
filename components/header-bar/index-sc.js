@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import {neutrals, typography} from '../../styles/constants'
+import {media} from '../../styles/media'
 
 const HeaderBarSC = styled.div`
   display: flex;
@@ -12,6 +13,10 @@ const HeaderBarSC = styled.div`
   border-bottom: 1px solid ${neutrals.neutral15};
 
   text-align: center;
+
+  ${media.phone`
+    display: none;
+  `};
 
   h1 {
     margin: 0 auto;
