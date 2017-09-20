@@ -2,7 +2,7 @@
 import {mount} from 'enzyme'
 
 import {Loading, WelcomeWrapper} from '../index'
-import ProjectList from '../../../components/project/list'
+import ProjectList from '/components/project/list'
 
 describe('src/welcome/index', () => {
   it(`verifies ${WelcomeWrapper.name} renders correctly while loading`, () => {

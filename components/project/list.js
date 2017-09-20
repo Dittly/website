@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import {Link} from '../../utils/routes'
-import {projectRoutes} from '../../utils/routes/routes-definitions'
+import {Link} from '/utils/routes'
+import {projectRoutes} from '/utils/routes/routes-definitions'
 import {neutrals, typography} from '../../styles/constants'
 
 import Card from '../card'
