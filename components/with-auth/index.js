@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import cookie from 'cookie'
 import {withApollo, compose} from 'react-apollo'
 
-import checkLoggedIn from '../../utils/apollo/check-logged-in'
-import withData from '../../utils/apollo/with-data'
+import checkLoggedIn from '/utils/apollo/check-logged-in'
+import withData from '/utils/apollo/with-data'
 
-import {authRoutes} from '../../utils/routes/routes-definitions'
-import redirect from '../../utils/apollo/redirect'
+import {authRoutes} from '/utils/routes/routes-definitions'
+import redirect from '/utils/apollo/redirect'
 
 export default WrappedComponent => {
   class WithAuth extends React.Component {

@@ -1,6 +1,6 @@
 import Box from '../box'
-import {Link} from '../../utils/routes'
-import {authRoutes, homeRoutes} from '../../utils/routes/routes-definitions'
+import {Link} from '/utils/routes'
+import {authRoutes, homeRoutes} from '/utils/routes/routes-definitions'
 import styled from 'styled-components'
 
 import {colors, typography} from '../../styles/constants'

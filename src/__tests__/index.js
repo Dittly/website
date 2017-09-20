@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import {mount} from 'enzyme'
-import {Link} from '../../utils/routes'
-import {projectRoutes} from '../../utils/routes/routes-definitions'
+import {Link} from '/utils/routes'
+import {projectRoutes} from '/utils/routes/routes-definitions'
 
 import Index from '../index'
 

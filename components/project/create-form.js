@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import Button from '../button'
 
-import Input from '../../components/input'
+import Input from '/components/input'
 
 const CreateForm = ({projectTypes, onSubmit}) => (
   <form onSubmit={onSubmit}>

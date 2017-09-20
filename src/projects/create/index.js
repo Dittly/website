@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import {graphql, compose} from 'react-apollo'
 import {getProjectTypes, createProject} from './gq'
 
-import CreateProjectForm from '../../../components/project/create-form'
-import HeaderBar from '../../../components/header-bar'
-import Box from '../../../components/box'
+import CreateProjectForm from '/components/project/create-form'
+import HeaderBar from '/components/header-bar'
+import Box from '/components/box'
 
 export class Create extends React.Component {
   onSubmit = event => {
