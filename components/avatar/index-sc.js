@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const AvatarSC = styled.div`
+  width: ${props => (props.large ? '50px' : '27px')};
+  height: ${props => (props.large ? '50px' : '27px')};
   display: inline-block;
-  width: 27px;
-  height: 27px;
 
   border-radius: 100%;
 
