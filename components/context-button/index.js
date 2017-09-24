@@ -16,7 +16,7 @@ const Icon = styled.div`
 const ContextButton = ({children}) => (
   <ContextButtonSC>
     <Icon>
-      <image src="../../static/mallet.png" />
+      <img src="../../static/mallet.png" alt="" />
     </Icon>
     {children}
   </ContextButtonSC>

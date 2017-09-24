@@ -25,7 +25,7 @@ const TabBar = () => (
   <TabBarSC>
     <TabBarButton>
       <SearchIcon>
-        <image src="../../static/search.svg" />
+        <img src="../../static/search.svg" alt="search" />
       </SearchIcon>
     </TabBarButton>
     <TabBarButton>
