@@ -14,6 +14,10 @@
   - [Tech Stack](#tech-stack)
   - [Tools](#tools)
   - [Workflow](#workflow)
+- [Deployment](#deployment)
+  - [Test URLs](#test-urls)
+  - [Production](#production)
+  - [Alias configuration](#alias-configuration)
 - [3rd Party Services](#3rd-party-services)
 
 <!-- /TOC -->
@@ -93,6 +97,34 @@ We follow the [GitHub Flow](https://guides.github.com/introduction/flow). In sho
 * `master` is the single source of truth.
 * New features and bug fixes get merged into `master` with a pull request.
 * Each pull request is reviewed by a team member. The reviewer is responsible to merge the PR and delete the branch.
+
+## Deployment
+
+Dittly is deployed on the Now platform (https://zeit.co/now).
+
+### Test URLs
+
+Before you deploy, make sure you use the Dittly team: `now teams ls`. Contact Mike if you're not part of that team.
+
+To deploy a _test build_, run:
+
+```
+now
+```
+
+The deployment URL is automatically copied to your clipboard. Paste it into a browser to get real-time updates of the deployment process.
+
+### Production
+
+Once you have a [test URL](#test-urls) your happy with, deploy it with:
+
+```
+now alias <test-url>
+```
+
+### Alias configuration
+
+Please refer to the `now.json` configuration file at the project root for further deployment configuration options.
 
 ## 3rd Party Services
 
