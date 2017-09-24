@@ -72,4 +72,8 @@ ProfileWrapper.propTypes = {
   signOut: PropTypes.func.isRequired
 }
 
-export default graphql(getAllProjects)(ProfileWrapper)
+export default graphql(getAllProjects, {
+  options: ({loggedInUser}) => ({
+    variables: {userId: loggedInUser.user.id}
+  })
+})(ProfileWrapper)

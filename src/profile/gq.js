@@ -1,8 +1,8 @@
 import {gql} from 'react-apollo'
 
 export const getAllProjects = gql`
-  query getAllProjects {
-    allProjects(orderBy: createdAt_DESC) {
+  query getAllProjects($userId: ID!) {
+    allProjects(filter: {user: {id: $userId}}, orderBy: createdAt_DESC) {
       id
       title
       location
