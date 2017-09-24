@@ -61,7 +61,7 @@
     "bracketSpacing": false
   },
   "dependencies": {
-    "@std/esm": "^0.10.0",
+    "@std/esm": "^0.11.0",
     "babel-plugin-inline-dotenv": "^1.1.1",
     "babel-plugin-transform-inline-environment-variables": "^0.2.0",
     "cookie": "^0.3.1",
