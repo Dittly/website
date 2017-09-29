@@ -29,7 +29,7 @@ const SearchInput = styled.input`
 const Search = () => (
   <SearchSC>
     <SearchIcon>
-      <image src="/static/search.png" alt="magnifying glass" />
+      <img src="/static/search.png" alt="magnifying glass" />
     </SearchIcon>
     <SearchInput placeholder="Search" type="text" />
   </SearchSC>
