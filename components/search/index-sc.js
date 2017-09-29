@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 
-import {neutrals} from '../../styles/constants'
+import {neutrals} from '/styles/constants'
+import {media} from '/styles/media'
 
 const SearchSC = styled.div`
+  background-color: ${({mobile}) => (mobile ? '#F2F2F2' : 'white')};
+  width: ${props => (props.mobile ? '314px' : '100%')};
+
   display: flex;
   align-items: center;
   padding-left: 12px;
-  background-color: ${neutrals.neutral00};
 
   position: relative;
 
@@ -15,6 +18,10 @@ const SearchSC = styled.div`
   font-family: Rubik;
   color: ${neutrals.neutral40};
   font-size: 14px;
+
+  ${media.phone`
+    display: ${props => (props.mobile ? 'flex' : 'none')};
+  `};
 `
 
 export default SearchSC

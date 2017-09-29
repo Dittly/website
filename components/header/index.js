@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import {colors, typography} from '../../styles/constants'
 
 import HeaderSC from './index-sc'
+import Search from '../search'
 
 const Logo = styled.a`
   color: ${colors.brandOrange};
@@ -30,6 +31,7 @@ const Header = () => (
       <Link route={authRoutes.login.name}>
         <a>Login</a>
       </Link>
+      <Search />
     </Box>
   </HeaderSC>
 )

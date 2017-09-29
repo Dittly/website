@@ -4,15 +4,17 @@ import SearchSC from './index-sc'
 
 const SearchIcon = styled.div`
   display: flex;
-  width: 27px;
-  height: 27px;
+  width: 22px;
+  height: 22px;
 `
 
 const SearchInput = styled.input`
   display: inline-block;
   padding: 12px 12px 12px 0;
   width: 100%;
+  margin-left: 12px;
   resize: none;
+  background-color: transparent;
   -webkit-appearance: none;
 
   border: 0;
