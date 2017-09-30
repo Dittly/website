@@ -4,12 +4,12 @@ import {neutrals} from '/styles/constants'
 import {media} from '/styles/media'
 
 const SearchSC = styled.div`
-  background-color: ${props => (props.mobile ? '#F2F2F2' : 'white')};
-  width: ${props => (props.mobile ? '314px' : '100%')};
+  background-color: ${props => (props.mobile ? 'white' : '#F2F2F2')};
+  width: ${props => (props.mobile ? '100%' : '314px')};
+  height: 100%;
 
-  display: ${props => (props.mobile ? 'none' : 'flex')};
+  display: ${props => (props.mobile ? 'flex' : 'none')};
   align-items: center;
-  padding-left: 12px;
 
   position: relative;
 
@@ -20,7 +20,8 @@ const SearchSC = styled.div`
   font-size: 14px;
 
   ${media.phone`
-    display: ${props => (props.mobile ? 'flex' : 'none')};
+    display: ${props => (props.mobile ? 'none' : 'inline-flex')};
+    height: 55px;
   `};
 `
 
