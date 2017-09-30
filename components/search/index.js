@@ -27,9 +27,6 @@ const SearchInput = styled.input`
 
 const Search = props => (
   <SearchSC {...props}>
-    {/* <SearchIcon>
-      <img src="/static/search.png" alt="magnifying glass" />
-    </SearchIcon> */}
     <SearchInput placeholder="Search" type="text" />
   </SearchSC>
 )

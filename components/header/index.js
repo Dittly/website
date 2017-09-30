@@ -1,6 +1,10 @@
 import Box from '../box'
 import {Link} from '/utils/routes'
-import {authRoutes, homeRoutes} from '/utils/routes/routes-definitions'
+import {
+  authRoutes,
+  homeRoutes,
+  profileRoutes
+} from '/utils/routes/routes-definitions'
 import styled from 'styled-components'
 
 import {colors, typography} from '../../styles/constants'
@@ -33,6 +37,9 @@ const Header = () => (
       <Navigation>
         <Link route={authRoutes.login.name}>
           <a>Login</a>
+        </Link>
+        <Link route={profileRoutes.profile.name}>
+          <a>Profile</a>
         </Link>
       </Navigation>
     </Box>
