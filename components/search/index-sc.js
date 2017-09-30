@@ -4,10 +4,10 @@ import {neutrals} from '/styles/constants'
 import {media} from '/styles/media'
 
 const SearchSC = styled.div`
-  background-color: ${({mobile}) => (mobile ? '#F2F2F2' : 'white')};
+  background-color: ${props => (props.mobile ? '#F2F2F2' : 'white')};
   width: ${props => (props.mobile ? '314px' : '100%')};
 
-  display: flex;
+  display: ${props => (props.mobile ? 'none' : 'flex')};
   align-items: center;
   padding-left: 12px;
 
