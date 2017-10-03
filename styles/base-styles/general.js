@@ -36,6 +36,7 @@ export default css`
 
   a {
     text-decoration: none;
+    cursor: pointer;
   }
 
   img {

@@ -20,7 +20,7 @@ export const WelcomeWrapper = ({
   data: {loading, allProjects}
 }) => (
   <div>
-    <Search />
+    <Search mobile />
     <HeadBanner>
       <Section>
         <h1>Hello {loggedInUser.user.name}!</h1>

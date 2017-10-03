@@ -1,35 +1,67 @@
 import Box from '../box'
 import {Link} from '/utils/routes'
-import {authRoutes, homeRoutes} from '/utils/routes/routes-definitions'
+import {
+  authRoutes,
+  homeRoutes,
+  profileRoutes
+} from '/utils/routes/routes-definitions'
 import styled from 'styled-components'
 
 import {colors, typography} from '../../styles/constants'
 
 import HeaderSC from './index-sc'
+import Search from '../search'
+import Avatar from '../avatar'
 
 const Logo = styled.a`
+  display: inline-block;
+  padding: 12px;
+
   color: ${colors.brandOrange};
   font-family: ${typography.headerFontFamily};
-  padding: 12px;
   font-weight: 600;
-  display: inline-block;
   font-size: 20px;
+`
+
+const Navigation = styled.div`
+  margin-left: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+`
+
+const NavLinks = styled.a`padding: 16px;`
+
+const AvatarLink = styled.a`
+  display: block;
+  padding: 12px;
 `
 
 const Header = () => (
   <HeaderSC>
-    <Box>
-      <Link route={homeRoutes.home.name}>
-        <Logo>Dittly</Logo>
-      </Link>{' '}
-      |{' '}
+    <Box flex center>
       <Link route={homeRoutes.welcome.name}>
-        <a>Welcome</a>
-      </Link>{' '}
-      |{' '}
-      <Link route={authRoutes.login.name}>
-        <a>Login</a>
+        <Logo>Dittly</Logo>
       </Link>
+      <Search />
+      <Navigation>
+        <ul>
+          <li>
+            <Link route={authRoutes.login.name}>
+              <NavLinks>Login</NavLinks>
+            </Link>
+          </li>
+          <li>
+            <Link route={profileRoutes.profile.name}>
+              <AvatarLink>
+                <Avatar />
+              </AvatarLink>
+            </Link>
+          </li>
+        </ul>
+      </Navigation>
     </Box>
   </HeaderSC>
 )
