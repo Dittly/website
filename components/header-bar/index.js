@@ -14,7 +14,7 @@ const HeaderBarButton = styled.div`
 const HeaderBar = ({children}) => (
   <HeaderBarSC>
     <HeaderBarButton>
-      <image src="../../static/back-arrow.svg" />
+      <img src="../../static/back-arrow.svg" alt="go back" />
     </HeaderBarButton>
     <h1>{children}</h1>
     <HeaderBarButton />
