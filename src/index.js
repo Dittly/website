@@ -9,7 +9,7 @@ import ContextButton from '../components/context-button'
 
 const Index = () => (
   <div>
-    <Search />
+    <Search mobile />
     <HeadBanner>
       <Section>
         <h1>Welcome!</h1>
