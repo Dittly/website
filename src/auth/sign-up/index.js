@@ -3,14 +3,19 @@ import {Link} from '/utils/routes'
 import {authRoutes} from '/utils/routes/routes-definitions'
 
 import Input from '/components/input'
-import HeaderBar from '/components/header-bar'
+import HeadBanner from '/components/head-banner'
 import Box from '/components/box'
 import Button from '/components/button'
+import H1 from '/components/h1'
 
 const SignUp = ({create}) => (
   <div>
-    <HeaderBar>Sign up</HeaderBar>
-    <Box bg="#fff" p={1}>
+    <HeadBanner>
+      <Box p={1}>
+        <H1 center>Sign up</H1>
+      </Box>
+    </HeadBanner>
+    <Box center p={1} width={[1, 375, 375]} mt={20}>
       {/* create is the mutation function provided by apollo below */}
       <form onSubmit={create}>
         <label htmlFor="name">
@@ -31,7 +36,7 @@ const SignUp = ({create}) => (
         </label>
         <br />
         <br />
-        <Button primary>Create account</Button>
+        <Button>Create account</Button>
       </form>
       <hr />
       Already have an account?{' '}
