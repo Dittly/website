@@ -2,13 +2,11 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getAllProjects} from './gq'
-import {Link} from '/utils/routes'
-import {projectRoutes} from '/utils/routes/routes-definitions'
 
 import ProjectList from '/components/project/list'
 
-import Add from '/components/add'
 import Avatar from '/components/avatar'
+import CreateButton from '/components/create-button'
 import Box from '/components/box'
 import Section from '/components/section'
 import HeadBanner from '/components/head-banner'
@@ -31,19 +29,19 @@ export const ProfileWrapper = ({
   <div>
     <HeaderBar />
     <HeadBanner>
-      <FlexContainer>
-        <Avatar large />
-        <Box pl={1}>
-          <h1>{loggedInUser.user.name}</h1>
-        </Box>
-      </FlexContainer>
       <Section>
-        <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>
-          Sign out
-        </a>
-        <Link route={projectRoutes.create.name}>
-          <Add>+ Create Project</Add>
-        </Link>
+        <FlexContainer>
+          <Avatar large />
+          <Box pl={1}>
+            <h1>{loggedInUser.user.name}</h1>
+          </Box>
+        </FlexContainer>
+        <div>
+          <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>
+            Sign out
+          </a>
+          <CreateButton />
+        </div>
       </Section>
       <Box>
         <ContextButton>Projects</ContextButton>
