@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getAllProjects} from './gq'
-import {Link} from '/utils/routes'
-import {projectRoutes} from '/utils/routes/routes-definitions'
 
 import ProjectList from '/components/project/list'
 
 import Box from '/components/box'
+import CreateButton from '/components/create-button'
 import Search from '/components/search'
 import Section from '/components/section'
 import HeadBanner from '/components/head-banner'
@@ -16,24 +15,22 @@ export const Loading = () => <p>Loading projects...</p>
 
 export const WelcomeWrapper = ({
   loggedInUser,
-  signOut,
   data: {loading, allProjects}
 }) => (
   <div>
     <Search mobile />
     <HeadBanner>
       <Section>
-        <h1>Hello {loggedInUser.user.name}!</h1>
-        <p>
-          We&#39;ve added a new feature! You can now add photos along with your
-          posts.
-        </p>
-        <a onClick={signOut} onKeyPress={signOut} role="link" tabIndex={0}>
-          Sign out
-        </a>
-        <Link route={projectRoutes.create.name}>
-          <a>+ Create Project</a>
-        </Link>
+        <div>
+          <h1>Hello {loggedInUser.user.name}!</h1>
+          <p>
+            We&#39;ve added a new feature! You can now add photos along with
+            your posts.
+          </p>
+        </div>
+        <div>
+          <CreateButton />
+        </div>
       </Section>
       <Box>
         <ContextButton>Projects</ContextButton>

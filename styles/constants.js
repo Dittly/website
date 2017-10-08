@@ -16,7 +16,9 @@ export const neutrals = {
 export const colors = {
   brandBlue: '#1A5CCF',
   brandOrange: '#F9593C',
-  brandYellow: '#FFBB00'
+  brandYellow: '#FFBB00',
+  hoverBlue: '#1552BC',
+  activeBlue: '#1049AC'
 }
 
 export const boxShadows = {
