@@ -1,6 +1,6 @@
 import {storiesOf} from '@storybook/react'
 
-import ProjectCreateForm from './components/create-form'
+import ProjectCreateForm from './create-form'
 
 storiesOf('ProjectCreateForm', module).add('default', () => {
   const props = {

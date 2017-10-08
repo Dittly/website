@@ -1,6 +1,6 @@
 import {storiesOf} from '@storybook/react'
 
-import ProjectDetails from './components/details'
+import ProjectDetails from './details'
 
 storiesOf('ProjectDetails', module).add('default', () => {
   const props = {
