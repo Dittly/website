@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import {mount} from 'enzyme'
-import CreateProjectForm from '/components/project/create-form'
+import CreateProjectForm from '../components/create-form'
 
 import {Create} from '../index'
 
