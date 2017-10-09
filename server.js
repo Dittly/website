@@ -1,16 +1,19 @@
 /* eslint-env node */
 import next from 'next'
-import http from 'http'
+import micro from 'micro'
 import {nextRoutes} from './utils/routes'
 
+const port = parseInt(process.env.PORT, 10) || 3000
 const app = next({dev: process.env.NODE_ENV !== 'production'})
 const handler = nextRoutes.getRequestHandler(app)
 
+const server = micro(async (req, res) => {
+  return handler(req, res)
+})
+
 app.prepare().then(() => {
-  http.createServer(handler).listen(3000, error => {
-    if (error) {
-      throw error
-    }
-    console.log('> Ready on http://localhost:3000')
+  server.listen(port, error => {
+    if (error) throw error
+    console.log(`> Ready on http://localhost:${port}`)
   })
 })
