@@ -17,7 +17,7 @@
       "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:coverage": "jest --maxWorkers=4 --coverage",
     "test:watch": "jest --watch",
-    "storybook": "start-storybook -s ./static -p 6006",
+    "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook"
   },
   "engines": {
