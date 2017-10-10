@@ -4,7 +4,7 @@ import TabBarSC from './index-sc'
 import Avatar from '../avatar'
 
 const SearchIcon = styled.div`
-  display: flex;
+  display: inline;
   width: 27px;
   height: 27px;
 `
@@ -17,15 +17,13 @@ const TabBarButton = styled.button`
   font-size: 14px;
   width: 50%;
   padding: 8px;
-  display: flex;
-  justify-content: center;
 `
 
 const TabBar = () => (
   <TabBarSC>
     <TabBarButton>
       <SearchIcon>
-        <image src="../../static/search.svg" />
+        <img src="../../static/search.svg" alt="search" />
       </SearchIcon>
     </TabBarButton>
     <TabBarButton>

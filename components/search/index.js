@@ -2,18 +2,17 @@ import styled from 'styled-components'
 import {neutrals} from '../../styles/constants'
 import SearchSC from './index-sc'
 
-const SearchIcon = styled.div`
-  display: flex;
-  width: 27px;
-  height: 27px;
-`
-
 const SearchInput = styled.input`
   display: inline-block;
-  padding: 12px 12px 12px 0;
+  padding: 12px 12px 12px 40px;
   width: 100%;
+  height: 100%;
   resize: none;
+  background-color: transparent;
   -webkit-appearance: none;
+  background: url('/static/search.svg') no-repeat;
+  background-size: 22px;
+  background-position: 12px center;
 
   border: 0;
 
@@ -26,11 +25,8 @@ const SearchInput = styled.input`
   }
 `
 
-const Search = () => (
-  <SearchSC>
-    <SearchIcon>
-      <image src="/static/search.png" alt="magnifying glass" />
-    </SearchIcon>
+const Search = props => (
+  <SearchSC {...props}>
     <SearchInput placeholder="Search" type="text" />
   </SearchSC>
 )

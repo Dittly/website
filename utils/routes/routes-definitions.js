@@ -38,6 +38,13 @@ export const projectRoutes = {
   }
 }
 
+export const profileRoutes = {
+  profile: {
+    name: 'profile',
+    pattern: '/profile'
+  }
+}
+
 export default {
   authRoutes,
   homeRoutes,

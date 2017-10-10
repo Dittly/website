@@ -19,6 +19,9 @@
     "storybook": "start-storybook -s ./static -p 6006",
     "build-storybook": "build-storybook"
   },
+  "engines": {
+    "node": "8.3.0"
+  },
   "@std/esm": {
     "esm": "js"
   },

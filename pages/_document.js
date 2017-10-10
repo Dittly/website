@@ -26,6 +26,10 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Arvo|Rubik:400,500"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+            rel="stylesheet"
+          />
 
           {styleTags}
         </Head>
