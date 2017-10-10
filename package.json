@@ -13,7 +13,8 @@
     "precommit": "lint-staged",
     "start": "NODE_ENV=production node -r @std/esm index.js",
     "test": "yarn lint && yarn test:coverage",
-    "test:ci": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:ci":
+      "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:coverage": "jest --maxWorkers=4 --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -s ./static -p 6006",
@@ -26,9 +27,7 @@
     "esm": "js"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "**/*.js"
-    ],
+    "collectCoverageFrom": ["**/*.js"],
     "coveragePathIgnorePatterns": [
       "<rootDir>/components/add/",
       "<rootDir>/components/h1/",
@@ -41,22 +40,11 @@
       "<rootDir>/styles/base-styles/",
       "-stories.js$"
     ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
-    "resetMocks": true
+    "resetMocks": true,
+    "setupTestFrameworkScriptFile": "./utils/tests-setup.js"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add",
-      "jest --bail --findRelatedTests"
-    ]
+    "*.js": ["eslint --fix", "git add", "jest --bail --findRelatedTests"]
   },
   "prettier": {
     "semi": false,
@@ -91,9 +79,10 @@
     "babel-eslint": "^8.0.0",
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-styled-components": "^1.2.0",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "dotenv": "^4.0.0",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.1",
     "eslint": "^4.6.1",
     "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-import": "^2.6.0",
