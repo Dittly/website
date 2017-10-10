@@ -19,6 +19,9 @@
     "storybook": "start-storybook -s ./static -p 6006",
     "build-storybook": "build-storybook"
   },
+  "engines": {
+    "node": "8.3.0"
+  },
   "@std/esm": {
     "esm": "js"
   },
@@ -38,14 +41,6 @@
       "<rootDir>/styles/base-styles/",
       "-stories.js$"
     ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
     "resetMocks": true
   },
   "lint-staged": {
@@ -85,7 +80,7 @@
     "babel-eslint": "^8.0.0",
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-styled-components": "^1.2.0",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "enzyme": "^3.1.0",
     "eslint": "^4.6.1",
     "eslint-config-prettier": "^2.4.0",
