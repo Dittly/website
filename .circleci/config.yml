@@ -49,15 +49,15 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       
-    #   - run:
-    #       name: Before tests
-    #       command: ./node_modules/.bin/greenkeeper-lockfile-update
+      - run:
+          name: Before tests
+          command: ./node_modules/.bin/greenkeeper-lockfile-update
       - run:
           name: Run tests
           command: yarn test:coverage
-    #   - run:
-    #       name: After tests
-    #       command: ./node_modules/.bin/greenkeeper-lockfile-upload
+      - run:
+          name: After tests
+          command: ./node_modules/.bin/greenkeeper-lockfile-upload
 
   deploy:
     <<: *job_defaults
