@@ -2976,7 +2976,7 @@ entities@^1.1.1, entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
-enzyme-adapter-react-16@^1.0.1:
+enzyme-adapter-react-16@^1.0.0, enzyme-adapter-react-16@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.1.tgz#066cb1735e65d8d95841a023f94dab3ce6109e17"
   dependencies:
@@ -3953,10 +3953,10 @@ graphql@^0.10.0, graphql@^0.10.3:
     iterall "^1.1.0"
 
 graphql@^0.11.3:
-  version "0.11.3"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.3.tgz#9934e2df28f17d397a85f83cb39d1d179bffef47"
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.11.7.tgz#e5abaa9cb7b7cccb84e9f0836bf4370d268750c6"
   dependencies:
-    iterall "^1.1.0"
+    iterall "1.1.3"
 
 greenkeeper-lockfile@^1.9.0:
   version "1.9.0"
@@ -3967,13 +3967,13 @@ greenkeeper-lockfile@^1.9.0:
     semver "^5.3.0"
 
 grid-styled@^2.0.0-8:
-  version "2.0.0-10"
-  resolved "https://registry.yarnpkg.com/grid-styled/-/grid-styled-2.0.0-10.tgz#d6e8254680027f3cf04a21d2d29e1f89dc24a622"
+  version "2.0.0-11"
+  resolved "https://registry.yarnpkg.com/grid-styled/-/grid-styled-2.0.0-11.tgz#4cf40503bfe202e7764f08a5346adb99f6fdf260"
   dependencies:
-    prop-types "^15.5.10"
-    styled-components "^2.0.1"
-    styled-system "^1.0.0-9"
-    tag-hoc "^1.0.0-0"
+    prop-types "^15.6.0"
+    styled-components "^2.2.0"
+    styled-system "^1.0.2"
+    tag-hoc "^1.0.0"
 
 growly@^1.3.0:
   version "1.3.0"
@@ -4651,6 +4651,10 @@ istanbul-reports@^1.1.1:
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.1.1.tgz#042be5c89e175bc3f86523caab29c014e77fee4e"
   dependencies:
     handlebars "^4.0.3"
+
+iterall@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.1.3.tgz#1cbbff96204056dde6656e2ed2e2226d0e6d72c9"
 
 iterall@^1.1.0:
   version "1.1.1"
@@ -6636,7 +6640,7 @@ prop-types@15.5.8:
   dependencies:
     fbjs "^0.8.9"
 
-prop-types@15.6.0, prop-types@^15.6.0:
+prop-types@15.6.0, prop-types@^15.5.10, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -6644,7 +6648,7 @@ prop-types@15.6.0, prop-types@^15.6.0:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.5.9:
+prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.5.9:
   version "15.5.10"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
@@ -6780,10 +6784,11 @@ rc@^1.1.7:
     strip-json-comments "~2.0.1"
 
 react-apollo@^1.4.15:
-  version "1.4.15"
-  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-1.4.15.tgz#3a213d11b847da7db03c4619ac640df734f9c4b5"
+  version "1.4.16"
+  resolved "https://registry.yarnpkg.com/react-apollo/-/react-apollo-1.4.16.tgz#62a623458b67a174ff8ef25f64e7b42531518e19"
   dependencies:
     apollo-client "^1.4.0"
+    enzyme-adapter-react-16 "^1.0.0"
     graphql-tag "^2.0.0"
     hoist-non-react-statics "^2.2.0"
     invariant "^2.2.1"
@@ -7851,9 +7856,9 @@ style-loader@^0.17.0:
   dependencies:
     loader-utils "^1.0.2"
 
-styled-components@^2.0.1, styled-components@^2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.1.2.tgz#bb419978e1287c5d0d88fa9106b2dd75f66a324c"
+styled-components@^2.1.1, styled-components@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.1.tgz#f4835f1001c37bcc301ac3865b5d93466de4dd5b"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
@@ -7876,9 +7881,11 @@ styled-jsx@2.0.2:
     string-hash "1.1.1"
     stylis "3.2.18"
 
-styled-system@^1.0.0-13, styled-system@^1.0.0-9:
-  version "1.0.0-13"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-1.0.0-13.tgz#c186461feea459b86c91303152aaebad92ef0ffc"
+styled-system@^1.0.0-13, styled-system@^1.0.2:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-1.0.7.tgz#3780625e800f903340d7742af3cf5ee43c1c023c"
+  dependencies:
+    prop-types "^15.6.0"
 
 stylis@3.2.18:
   version "3.2.18"
@@ -7939,7 +7946,7 @@ table@^4.0.1:
     slice-ansi "0.0.4"
     string-width "^2.0.0"
 
-tag-hoc@^1.0.0-0:
+tag-hoc@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/tag-hoc/-/tag-hoc-1.0.0.tgz#36ddc5f8831c40926ea520743cbddcc34f3c3ed9"
 
