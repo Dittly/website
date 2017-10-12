@@ -26,9 +26,13 @@ const JourneySC = styled.div`
   `};
 `
 
-const OneCol = styled.div`grid-column: 1;`
+const OneCol = styled.div`
+  grid-column: 1;
+`
 
-const TwoCol = styled.div`grid-column: 2 / 4;`
+const TwoCol = styled.div`
+  grid-column: 2 / 4;
+`
 
 export const Journey = () => (
   <JourneySC>
