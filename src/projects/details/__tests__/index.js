@@ -4,7 +4,7 @@ import {mount} from 'enzyme'
 import {deepClone} from '/utils/helpers'
 
 import {Loading, ProjectDetailsWrapper} from '../index'
-import ProjectDetails from '/components/project/details'
+import ProjectDetails from '../components/details'
 
 const baseProps = {
   data: {

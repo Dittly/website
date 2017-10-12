@@ -3,14 +3,19 @@ import {Link} from '/utils/routes'
 import {authRoutes} from '/utils/routes/routes-definitions'
 
 import Input from '/components/input'
-import HeaderBar from '/components/header-bar'
+import HeadBanner from '/components/head-banner'
 import Box from '/components/box'
 import Button from '/components/button'
+import H1 from '/components/h1'
 
 const Login = ({signin}) => (
   <div>
-    <HeaderBar>Login</HeaderBar>
-    <Box bg="#fff" p={1}>
+    <HeadBanner>
+      <Box p={1}>
+        <H1 center>Login</H1>
+      </Box>
+    </HeadBanner>
+    <Box center p={1} width={[1, 375, 375]} mt={20}>
       {/* signin is the mutation function provided by apollo below */}
       <form onSubmit={signin}>
         <label htmlFor="email">

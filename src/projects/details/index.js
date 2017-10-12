@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getProject} from './gq'
 
-import ProjectDetails from '/components/project/details'
+import ProjectDetails from './components/details'
 
 export const Loading = () => <p>Loading project...</p>
 
