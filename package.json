@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
+    "cypress:open": "cypress open",
     "dev": "node -r @std/esm index.js",
     "lint": "eslint '**/*.js'",
     "precommit": "lint-staged",
@@ -85,6 +86,7 @@
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-styled-components": "^1.2.0",
     "coveralls": "^3.0.0",
+    "cypress": "^1.0.1",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "eslint": "^4.6.1",
