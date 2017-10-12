@@ -32,7 +32,9 @@ const Navigation = styled.div`
   }
 `
 
-const NavLinks = styled.a`padding: 16px;`
+const NavLinks = styled.a`
+  padding: 16px;
+`
 
 const AvatarLink = styled.a`
   display: block;
