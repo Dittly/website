@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import {projectRoutes} from '/utils/routes/routes-definitions'
 import {Link} from '/utils/routes'
 
@@ -9,9 +8,5 @@ const CreateButton = () => (
     <CreateButtonSC>+ Create Project</CreateButtonSC>
   </Link>
 )
-
-CreateButton.propTypes = {
-  children: PropTypes.node.isRequired
-}
 
 export default CreateButton

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import {graphql} from 'react-apollo'
 import {getAllProjects} from './gq'
+import {media} from '../../styles/media'
 
 import ProjectList from '/components/project/list'
 
@@ -18,7 +19,12 @@ export const Loading = () => <p>Loading projects...</p>
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 12px;
+
+  ${media.tablet`
+    justify-content: end;
+  `};
 `
 
 export const ProfileWrapper = ({
@@ -27,7 +33,7 @@ export const ProfileWrapper = ({
   data: {loading, allProjects}
 }) => (
   <div>
-    <HeaderBar />
+    <HeaderBar>{loggedInUser.user.name}</HeaderBar>
     <HeadBanner>
       <Section>
         <FlexContainer>
