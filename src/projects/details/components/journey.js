@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import {media, sizes} from '../../styles/media'
-import Post from '../post'
-import AddPost from '../add-post'
-import Card from '../card'
+import {media, sizes} from '/styles/media'
+import Post from '/components/post'
+import AddPost from '/components/add-post'
+import Card from '/components/card'
 
 const DesktopSlide = styled.div`
   display: none;

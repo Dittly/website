@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {graphql, compose} from 'react-apollo'
 import {getProjectTypes, createProject} from './gq'
 
-import CreateProjectForm from '/components/project/create-form'
+import CreateProjectForm from './components/create-form'
 import HeaderBar from '/components/header-bar'
 import Box from '/components/box'
 

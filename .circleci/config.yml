@@ -1,25 +1,15 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
+job_defaults: &job_defaults
+  docker:
+    - image: circleci/node:8.3.0
+  working_directory: ~/repo
+
 version: 2
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8.3.0
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
+    <<: *job_defaults
 
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
@@ -32,13 +22,68 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
+  lint:
+    <<: *job_defaults
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      
+      - run:
+          name: Lint
+          command: yarn lint
+
+  test_coverage:
+    <<: *job_defaults
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      
       - run:
           name: Before tests
           command: ./node_modules/.bin/greenkeeper-lockfile-update
       - run:
           name: Run tests
-          command: yarn test:ci
+          command: yarn test:coverage
       - run:
           name: After tests
           command: ./node_modules/.bin/greenkeeper-lockfile-upload
+
+  deploy:
+    <<: *job_defaults
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      
+      - run: echo "Deploy here, eventually"
+        
+workflows:
+  version: 2
+  build_lint_test_coverage_deploy:
+    jobs:
+      - build
+      - lint:
+          requires:
+            - build
+      - test_coverage:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - lint
+            - test_coverage
