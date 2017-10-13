@@ -16,7 +16,9 @@ const getMockCurrentResult = () =>
         location: 'test-project-location',
         title: 'test-project-title',
         type: 'test-project-type',
-        user: {}
+        user: {
+          name: 'Test User'
+        }
       }
     }
   })
