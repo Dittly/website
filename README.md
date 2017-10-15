@@ -98,6 +98,14 @@ We follow the [GitHub Flow](https://guides.github.com/introduction/flow). In sho
 * New features and bug fixes get merged into `master` with a pull request.
 * Each pull request is reviewed by a team member. The reviewer is responsible to merge the PR and delete the branch.
 
+### Event tracking
+
+One of our core principles is `monitor everything`. Every new sign up, every project created, every failed project update, everything gets tracked.
+
+To track an event, the client can send a `POST` request to `/_track/:collection` with an `application/json` payload that represents the event data.
+
+**Note**: Make sure the `:collection` name is whitelisted in `utils/tracking.js`.
+
 ## Deployment
 
 Dittly is deployed on the Now platform (https://zeit.co/now).
