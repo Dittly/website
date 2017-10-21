@@ -5,7 +5,9 @@ import Card from '/components/card'
 import Profile from '/components/profile'
 import Box from '/components/box'
 
-const TextBox = styled.div`padding: 0px 12px 12px 12px;`
+const TextBox = styled.div`
+  padding: 0px 12px 12px 12px;
+`
 
 const LargeText = styled.p`
   font-family: ${typography.fontFamily};
