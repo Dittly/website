@@ -74,7 +74,7 @@
     "next-routes": "^1.0.40",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
-    "react-apollo": "^1.4.15",
+    "react-apollo": "^2.0.0",
     "react-dom": "^16.0.0",
     "react-ga": "^2.2.0",
     "styled-components": "^2.1.1",
