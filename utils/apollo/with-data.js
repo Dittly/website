@@ -69,7 +69,13 @@ export default ComposedComponent => {
 
         try {
           // Run all GraphQL queries
-          await getDataFromTree(app)
+          await getDataFromTree(app, {
+            router: {
+              query: ctx.query,
+              pathname: ctx.pathname,
+              asPath: ctx.asPath
+            }
+          })
         } catch (error) {
           // Prevent Apollo Client GraphQL errors from crashing SSR.
           // Handle them in components via the data.error prop:
@@ -80,14 +86,7 @@ export default ComposedComponent => {
         Head.rewind()
 
         // Extract query data from the Apollo's store
-        const state = apollo.getInitialState()
-
-        serverState = {
-          apollo: {
-            // Make sure to only include Apollo's data state
-            data: state.data
-          }
-        }
+        serverState = apollo.cache.extract()
       }
 
       return {

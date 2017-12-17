@@ -19,7 +19,9 @@ const baseProps = {
 }
 
 describe('src/projects/details', () => {
-  it(`verifies ${ProjectDetailsWrapper.name} renders correctly while loading`, () => {
+  it(`verifies ${
+    ProjectDetailsWrapper.name
+  } renders correctly while loading`, () => {
     const props = deepClone(baseProps)
     props.data.loading = true
 

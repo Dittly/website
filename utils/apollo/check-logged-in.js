@@ -1,6 +1,6 @@
-import {gql} from 'react-apollo'
+import gql from 'graphql-tag'
 
-export default apolloClient =>
+export default (context, apolloClient) =>
   apolloClient
     .query({
       query: gql`

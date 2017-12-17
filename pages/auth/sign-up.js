@@ -1,5 +1,6 @@
 import BasePageComponent from '/components/base-page'
-import {graphql, gql, withApollo, compose} from 'react-apollo'
+import {graphql, withApollo, compose} from 'react-apollo'
+import gql from 'graphql-tag'
 import cookie from 'cookie'
 
 import {homeRoutes} from '/utils/routes/routes-definitions'

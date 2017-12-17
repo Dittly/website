@@ -1,5 +1,6 @@
 import BasePageComponent from '/components/base-page'
-import {graphql, gql, withApollo, compose} from 'react-apollo'
+import {graphql, withApollo, compose} from 'react-apollo'
+import gql from 'graphql-tag'
 import cookie from 'cookie'
 
 import Layout from '/components/layouts'
@@ -13,7 +14,7 @@ import LoginContent from '/src/auth/login'
 export class Login extends BasePageComponent {
   /* istanbul ignore next */
   static async getInitialProps(context, apolloClient) {
-    const {loggedInUser} = await checkLoggedIn(apolloClient)
+    const {loggedInUser} = await checkLoggedIn(context, apolloClient)
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.

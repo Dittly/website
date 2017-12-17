@@ -13,7 +13,7 @@ export default WrappedComponent => {
   class WithAuth extends React.Component {
     /* istanbul ignore next */
     static async getInitialProps(context, apolloClient) {
-      const {loggedInUser} = await checkLoggedIn(apolloClient)
+      const {loggedInUser} = await checkLoggedIn(context, apolloClient)
 
       if (!loggedInUser.user) {
         // If not signed in, send them somewhere more useful

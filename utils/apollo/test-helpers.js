@@ -1,12 +1,13 @@
-import {ApolloClient} from 'react-apollo'
-import {mockNetworkInterface} from 'react-apollo/test-utils'
+import ApolloClient from 'apollo-client'
+import {InMemoryCache as Cache} from 'apollo-cache-inmemory'
+import {mockSingleLink} from 'react-apollo/test-utils'
 
 export const createMockClient = () => {
   const query = ''
   const data = {}
-  const networkInterface = mockNetworkInterface({
+  const link = mockSingleLink({
     request: {query},
     result: {data}
   })
-  return new ApolloClient({networkInterface})
+  return new ApolloClient({link, cache: new Cache({addTypename: false})})
 }
