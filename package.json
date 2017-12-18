@@ -105,7 +105,7 @@
     "eslint-plugin-react": "^7.3.0",
     "greenkeeper-lockfile": "^1.9.0",
     "husky": "^0.14.3",
-    "jest": "^21.0.0",
+    "jest": "^22.0.0",
     "lint-staged": "^6.0.0",
     "lodash.isfunction": "^3.0.8",
     "prettier": "^1.6.1",
