@@ -1,5 +1,5 @@
 /* eslint-env jest */
-/* global process */
+/* global jsdom, process */
 jest.mock('react-ga')
 
 import ReactGA from 'react-ga'
@@ -7,10 +7,6 @@ import * as ga from '../ga'
 
 const gaTrackingID = 'UA-notliveyet-1'
 
-Object.defineProperty(window.location, 'pathname', {
-  writable: true,
-  value: '/test-path'
-})
 Object.defineProperty(process.env, 'GA_TRACKING_ID', {
   writable: true,
   value: gaTrackingID
@@ -49,6 +45,9 @@ describe('utils/ga', () => {
     })
 
     it('fires the pageview correctly', () => {
+      jsdom.reconfigure({
+        url: 'https://test-url.com/test-path'
+      })
       ga.logPageView()
       expect(ReactGA.set).toBeCalledWith({page: '/test-path'})
       expect(ReactGA.pageview).toBeCalledWith('/test-path')
