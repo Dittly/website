@@ -14,7 +14,7 @@ import SignUpContent from '/src/auth/sign-up'
 export class SignUp extends BasePageComponent {
   /* istanbul ignore next */
   static async getInitialProps(context, apolloClient) {
-    const {loggedInUser} = await checkLoggedIn(apolloClient)
+    const {loggedInUser} = await checkLoggedIn(context, apolloClient)
 
     if (loggedInUser.user) {
       // Already signed in? No need to continue.
