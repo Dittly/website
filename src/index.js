@@ -1,7 +1,5 @@
-import {Link} from '../utils/routes'
-import {projectRoutes} from '../utils/routes/routes-definitions'
-
 import Box from '../components/box'
+import CreateButton from '../components/create-button'
 import Search from '../components/search'
 import Section from '../components/section'
 import HeadBanner from '../components/head-banner'
@@ -12,14 +10,14 @@ const Index = () => (
     <Search mobile />
     <HeadBanner>
       <Section>
-        <h1>Welcome!</h1>
-        <p>
-          Get started by creating your own project, or see what projects other’s
-          have done.
-        </p>
-        <Link route={projectRoutes.create.name}>
-          <a>+ Create Project</a>
-        </Link>
+        <div>
+          <h1>Welcome!</h1>
+          <p>
+            Get started by creating your own project, or see what projects
+            other’s have done.
+          </p>
+        </div>
+        <CreateButton />
       </Section>
       <Box>
         <ContextButton>Projects</ContextButton>

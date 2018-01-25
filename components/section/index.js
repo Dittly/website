@@ -8,6 +8,9 @@ const SectionSC = styled.div`
 
   ${media.tablet`
     text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   `};
 `
 
