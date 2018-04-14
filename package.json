@@ -13,8 +13,7 @@
     "precommit": "lint-staged",
     "start": "NODE_ENV=production node -r @std/esm index.js",
     "test": "yarn lint && yarn test:coverage",
-    "test:ci":
-      "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:ci": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:coverage": "jest --maxWorkers=4 --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -s ./ -p 6006",
@@ -27,7 +26,9 @@
     "esm": "js"
   },
   "jest": {
-    "collectCoverageFrom": ["**/*.js"],
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
     "coveragePathIgnorePatterns": [
       "<rootDir>/components/add/",
       "<rootDir>/components/h1/",
@@ -41,7 +42,10 @@
       "-stories.js$"
     ],
     "resetMocks": true,
-    "setupFiles": ["./utils/raf-shim.js", "./utils/tests-setup.js"],
+    "setupFiles": [
+      "./utils/raf-shim.js",
+      "./utils/tests-setup.js"
+    ],
     "testEnvironment": "jest-environment-jsdom-global"
   },
   "lint-staged": {
@@ -101,13 +105,13 @@
     "eslint-plugin-jsx-a11y": "^6.0.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
-    "greenkeeper-lockfile": "^1.9.0",
+    "greenkeeper-lockfile": "^1.14.0",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "jest-environment-jsdom-global": "^1.0.3",
     "lint-staged": "^7.0.4",
-    "lodash.isfunction": "^3.0.8",
-    "prettier": "^1.6.1",
+    "lodash.isfunction": "^3.0.9",
+    "prettier": "^1.12.0",
     "react-test-renderer": "^16.3.1",
     "test-listen": "^1.0.2",
     "webpack-bundle-analyzer": "^2.11.1"
