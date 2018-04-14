@@ -8,5 +8,5 @@ if (process.env.NODE_ENV === 'development') {
 /**
  * @see https://github.com/standard-things/esm
  */
-require = require('@std/esm')(module) // eslint-disable-line no-global-assign, no-native-reassign
-module.exports = require('./server.js').default
+require = require('esm')(module) // eslint-disable-line no-global-assign, no-native-reassign
+module.exports = require('./server.js')
