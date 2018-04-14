@@ -15,7 +15,7 @@ Object {
         "kind": "SelectionSet",
         "selections": Array [
           Object {
-            "alias": null,
+            "alias": undefined,
             "arguments": Array [
               Object {
                 "kind": "Argument",
@@ -42,7 +42,7 @@ Object {
               "kind": "SelectionSet",
               "selections": Array [
                 Object {
-                  "alias": null,
+                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -50,10 +50,10 @@ Object {
                     "kind": "Name",
                     "value": "id",
                   },
-                  "selectionSet": null,
+                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": null,
+                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -61,10 +61,10 @@ Object {
                     "kind": "Name",
                     "value": "title",
                   },
-                  "selectionSet": null,
+                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": null,
+                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -72,10 +72,10 @@ Object {
                     "kind": "Name",
                     "value": "location",
                   },
-                  "selectionSet": null,
+                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": null,
+                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -83,10 +83,10 @@ Object {
                     "kind": "Name",
                     "value": "type",
                   },
-                  "selectionSet": null,
+                  "selectionSet": undefined,
                 },
                 Object {
-                  "alias": null,
+                  "alias": undefined,
                   "arguments": Array [],
                   "directives": Array [],
                   "kind": "Field",
@@ -98,7 +98,7 @@ Object {
                     "kind": "SelectionSet",
                     "selections": Array [
                       Object {
-                        "alias": null,
+                        "alias": undefined,
                         "arguments": Array [],
                         "directives": Array [],
                         "kind": "Field",
@@ -106,10 +106,10 @@ Object {
                           "kind": "Name",
                           "value": "id",
                         },
-                        "selectionSet": null,
+                        "selectionSet": undefined,
                       },
                       Object {
-                        "alias": null,
+                        "alias": undefined,
                         "arguments": Array [],
                         "directives": Array [],
                         "kind": "Field",
@@ -117,7 +117,7 @@ Object {
                           "kind": "Name",
                           "value": "name",
                         },
-                        "selectionSet": null,
+                        "selectionSet": undefined,
                       },
                     ],
                   },
@@ -129,7 +129,7 @@ Object {
       },
       "variableDefinitions": Array [
         Object {
-          "defaultValue": null,
+          "defaultValue": undefined,
           "kind": "VariableDefinition",
           "type": Object {
             "kind": "NonNullType",
