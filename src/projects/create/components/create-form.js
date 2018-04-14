@@ -12,6 +12,7 @@ const CreateForm = ({projectTypes, onSubmit}) => (
         name="title"
         placeholder="e.g. Kitchen Makeover"
         type="text"
+        value=""
       />
     </label>
     <label htmlFor="create-project-location">
@@ -22,6 +23,7 @@ const CreateForm = ({projectTypes, onSubmit}) => (
         name="location"
         placeholder="Start typing a location"
         type="text"
+        value=""
       />
     </label>
     <label htmlFor="create-project-label">
