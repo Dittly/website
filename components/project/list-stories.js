@@ -1,6 +1,6 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import ProjectList from './list'
+import ProjectList from './list';
 
 storiesOf('ProjectList', module).add('default', () => {
   const props = {
@@ -15,6 +15,6 @@ storiesOf('ProjectList', module).add('default', () => {
         }
       }
     ]
-  }
-  return <ProjectList {...props} />
-})
+  };
+  return <ProjectList {...props} />;
+});

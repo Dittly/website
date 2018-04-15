@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {media, sizes} from '../../styles/media'
-import Post from '../post'
-import AddPost from '../add-post'
-import Card from '../card'
+import { media, sizes } from '../../styles/media';
+import Post from '../post';
+import AddPost from '../add-post';
+import Card from '../card';
 
 const DesktopSlide = styled.div`
   display: none;
@@ -14,7 +14,7 @@ const DesktopSlide = styled.div`
   ${media.phone`
     display: block;
   `};
-`
+`;
 
 const JourneySC = styled.div`
   max-width: ${sizes.tablet}px;
@@ -24,15 +24,15 @@ const JourneySC = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
   `};
-`
+`;
 
 const OneCol = styled.div`
   grid-column: 1;
-`
+`;
 
 const TwoCol = styled.div`
   grid-column: 2 / 4;
-`
+`;
 
 export const Journey = () => (
   <JourneySC>
@@ -49,6 +49,6 @@ export const Journey = () => (
       <Post />
     </TwoCol>
   </JourneySC>
-)
+);
 
-export default Journey
+export default Journey;

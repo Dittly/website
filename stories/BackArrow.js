@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const backArrowStyles = {
   backgroundColor: 'transparent',
@@ -6,8 +6,8 @@ const backArrowStyles = {
   fontFamily: 'Rubik',
   color: '#1A5CCF',
   fontSize: '16px'
-}
+};
 
-const BackArrow = () => <button style={backArrowStyles}>&lt;</button>
+const BackArrow = () => <button style={backArrowStyles}>&lt;</button>;
 
-export default BackArrow
+export default BackArrow;

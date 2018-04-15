@@ -1,6 +1,6 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import ProjectDetails from './details'
+import ProjectDetails from './details';
 
 storiesOf('ProjectDetails', module).add('default', () => {
   const props = {
@@ -11,6 +11,6 @@ storiesOf('ProjectDetails', module).add('default', () => {
     user: {
       name: 'Test User'
     }
-  }
-  return <ProjectDetails {...props} />
-})
+  };
+  return <ProjectDetails {...props} />;
+});

@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {neutrals} from '../../styles/constants'
+import { neutrals } from '../../styles/constants';
 
 const HeaderSC = styled.header`
   position: relative;
@@ -10,6 +10,6 @@ const HeaderSC = styled.header`
   border-color: ${neutrals.neutral20};
 
   color: ${neutrals.neutral50};
-`
+`;
 
-export default HeaderSC
+export default HeaderSC;

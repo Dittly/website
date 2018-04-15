@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import Search from '.'
+import Search from '.';
 
-storiesOf('Search', module).add('default', () => <Search />)
+storiesOf('Search', module).add('default', () => <Search />);

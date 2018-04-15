@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types'
-import {Link} from '/utils/routes'
-import {authRoutes} from '/utils/routes/routes-definitions'
+import PropTypes from 'prop-types';
+import { Link } from '/utils/routes';
+import { authRoutes } from '/utils/routes/routes-definitions';
 
-import Input from '/components/input'
-import HeadBanner from '/components/head-banner'
-import Box from '/components/box'
-import Button from '/components/button'
-import H1 from '/components/h1'
+import Input from '/components/input';
+import HeadBanner from '/components/head-banner';
+import Box from '/components/box';
+import Button from '/components/button';
+import H1 from '/components/h1';
 
-const SignUp = ({create}) => (
+const SignUp = ({ create }) => (
   <div>
     <HeadBanner>
       <Box p={1}>
@@ -45,10 +45,10 @@ const SignUp = ({create}) => (
       </Link>
     </Box>
   </div>
-)
+);
 
 SignUp.propTypes = {
   create: PropTypes.func.isRequired
-}
+};
 
-export default SignUp
+export default SignUp;

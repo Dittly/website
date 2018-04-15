@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import Avatar from '.'
+import Avatar from '.';
 
-storiesOf('Avatar', module).add('default', () => <Avatar />)
+storiesOf('Avatar', module).add('default', () => <Avatar />);

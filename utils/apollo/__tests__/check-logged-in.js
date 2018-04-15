@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import checkLoggedIn from '../check-logged-in'
+import checkLoggedIn from '../check-logged-in';
 
 describe('utils/apollo/checked-logged-in', () => {
   it('returns a loggedInUser', async () => {
@@ -11,15 +11,15 @@ describe('utils/apollo/checked-logged-in', () => {
           }
         })
       )
-    }
-    const {loggedInUser} = await checkLoggedIn({}, mockApolloClient)
-    expect(loggedInUser.name).toBe('Test User')
-  })
+    };
+    const { loggedInUser } = await checkLoggedIn({}, mockApolloClient);
+    expect(loggedInUser.name).toBe('Test User');
+  });
   it('returns an empty loggedInUser in case of an error', async () => {
     const mockApolloClient = {
       query: jest.fn().mockReturnValue(Promise.reject())
-    }
-    const {loggedInUser} = await checkLoggedIn({}, mockApolloClient)
-    expect(loggedInUser).toEqual({})
-  })
-})
+    };
+    const { loggedInUser } = await checkLoggedIn({}, mockApolloClient);
+    expect(loggedInUser).toEqual({});
+  });
+});

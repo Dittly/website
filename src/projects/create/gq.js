@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from 'graphql-tag';
 
 export const getProjectTypes = gql`
   query enumValuesOfMetaInformationTags {
@@ -9,7 +9,7 @@ export const getProjectTypes = gql`
       }
     }
   }
-`
+`;
 
 export const createProject = gql`
   mutation createProjectMutation(
@@ -35,4 +35,4 @@ export const createProject = gql`
       }
     }
   }
-`
+`;

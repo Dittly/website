@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import {colors} from '../../styles/constants'
+import styled from 'styled-components';
+import { colors } from '../../styles/constants';
 
 const ContextButtonSC = styled.button`
   min-height: 47px;
@@ -26,6 +26,6 @@ const ContextButtonSC = styled.button`
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-`
+`;
 
-export default ContextButtonSC
+export default ContextButtonSC;

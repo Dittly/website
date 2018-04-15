@@ -1,7 +1,7 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import HeaderBar from '.'
+import HeaderBar from '.';
 
 storiesOf('HeaderBar', module).add('default', () => (
   <HeaderBar>A header bar</HeaderBar>
-))
+));

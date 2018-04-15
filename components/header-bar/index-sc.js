@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {neutrals, typography} from '../../styles/constants'
-import {media} from '../../styles/media'
+import { neutrals, typography } from '../../styles/constants';
+import { media } from '../../styles/media';
 
 const HeaderBarSC = styled.div`
   display: flex;
@@ -24,6 +24,6 @@ const HeaderBarSC = styled.div`
     font-size: 20px;
     font-family: ${typography.headerFontFamily};
   }
-`
+`;
 
-export default HeaderBarSC
+export default HeaderBarSC;

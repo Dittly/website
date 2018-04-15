@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import Button from '/components/button'
-import Input from '/components/input'
+import Button from '/components/button';
+import Input from '/components/input';
 
-const CreateForm = ({projectTypes, onSubmit}) => (
+const CreateForm = ({ projectTypes, onSubmit }) => (
   <form onSubmit={onSubmit}>
     <label htmlFor="create-project-title">
       <br />Project Title*<br />
@@ -12,6 +12,7 @@ const CreateForm = ({projectTypes, onSubmit}) => (
         name="title"
         placeholder="e.g. Kitchen Makeover"
         type="text"
+        value=""
       />
     </label>
     <label htmlFor="create-project-location">
@@ -22,6 +23,7 @@ const CreateForm = ({projectTypes, onSubmit}) => (
         name="location"
         placeholder="Start typing a location"
         type="text"
+        value=""
       />
     </label>
     <label htmlFor="create-project-label">
@@ -35,7 +37,7 @@ const CreateForm = ({projectTypes, onSubmit}) => (
       </select>
       <select id="create-project-type" name="type">
         {projectTypes &&
-          projectTypes.map(projectType => (
+          projectTypes.map((projectType) => (
             <option key={projectType} value={projectType}>
               {projectType}
             </option>
@@ -46,11 +48,11 @@ const CreateForm = ({projectTypes, onSubmit}) => (
     <br />
     <Button>Create</Button>
   </form>
-)
+);
 
 CreateForm.propTypes = {
   projectTypes: PropTypes.array.isRequired,
   onSubmit: PropTypes.func.isRequired
-}
+};
 
-export default CreateForm
+export default CreateForm;

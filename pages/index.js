@@ -1,7 +1,7 @@
-import BasePageComponent from '../components/base-page'
-import withData from '../utils/apollo/with-data'
-import Layout from '../components/layouts'
-import IndexContent from '../src'
+import BasePageComponent from '../components/base-page';
+import withData from '../utils/apollo/with-data';
+import Layout from '../components/layouts';
+import IndexContent from '../src';
 
 export class Index extends BasePageComponent {
   render() {
@@ -9,8 +9,8 @@ export class Index extends BasePageComponent {
       <Layout>
         <IndexContent {...this.props} />
       </Layout>
-    )
+    );
   }
 }
 
-export default withData(Index)
+export default withData(Index);

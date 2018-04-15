@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import TabBar from '.'
+import TabBar from '.';
 
-storiesOf('TabBar', module).add('default', () => <TabBar />)
+storiesOf('TabBar', module).add('default', () => <TabBar />);

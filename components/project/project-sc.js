@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {boxShadows, neutrals} from '../../styles/constants'
+import { boxShadows, neutrals } from '../../styles/constants';
 
 const ProjectSC = styled.div`
   background-color: ${neutrals.neutral00};
@@ -11,6 +11,6 @@ const ProjectSC = styled.div`
     object-fit: cover;
     width: 100%;
   }
-`
+`;
 
-export default ProjectSC
+export default ProjectSC;

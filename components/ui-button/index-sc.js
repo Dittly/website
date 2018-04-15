@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {colors, neutrals} from '/styles/constants'
+import { colors, neutrals } from '/styles/constants';
 
 const UiButtonSC = styled.button`
   background-color: ${colors.brandBlue};
@@ -19,6 +19,6 @@ const UiButtonSC = styled.button`
   &:active {
     background-color: #1049ac;
   }
-`
+`;
 
-export default UiButtonSC
+export default UiButtonSC;

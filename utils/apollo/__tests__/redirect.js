@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import redirect from '../redirect'
+import redirect from '../redirect';
 
 describe('utils/apollo/redirect', () => {
   it('redirects on the server', () => {
@@ -8,14 +8,14 @@ describe('utils/apollo/redirect', () => {
         end: jest.fn(),
         writeHead: jest.fn()
       }
-    }
+    };
     const targetRoute = {
       pattern: 'test/pattern'
-    }
-    redirect(mockContext, targetRoute)
+    };
+    redirect(mockContext, targetRoute);
     expect(mockContext.res.writeHead).toHaveBeenCalledWith(303, {
       Location: 'test/pattern'
-    })
-    expect(mockContext.res.end).toHaveBeenCalled()
-  })
-})
+    });
+    expect(mockContext.res.end).toHaveBeenCalled();
+  });
+});

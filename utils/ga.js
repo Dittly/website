@@ -1,40 +1,40 @@
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga';
 
-let isInitialized = false
+let isInitialized = false;
 
 // Used for testing purposes
 export const _resetInitialized = () => {
-  isInitialized = false
-}
+  isInitialized = false;
+};
 
 export const initGA = () => {
-  ReactGA.initialize(process.env.GA_TRACKING_ID) // eslint-disable-line no-undef
-  isInitialized = true
-}
+  ReactGA.initialize(process.env.GA_TRACKING_ID); // eslint-disable-line no-undef
+  isInitialized = true;
+};
 
 export const logPageView = () => {
   if (!isInitialized) {
-    initGA()
+    initGA();
   }
-  console.log(`Logging pageview for ${window.location.pathname}`)
-  ReactGA.set({page: window.location.pathname})
-  ReactGA.pageview(window.location.pathname)
-}
+  console.log(`Logging pageview for ${window.location.pathname}`);
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+};
 
 export const logEvent = (category = '', action = '') => {
   if (!isInitialized) {
-    initGA()
+    initGA();
   }
   if (category && action) {
-    ReactGA.event({category, action})
+    ReactGA.event({ category, action });
   }
-}
+};
 
 export const logException = (description = '', fatal = false) => {
   if (!isInitialized) {
-    initGA()
+    initGA();
   }
   if (description) {
-    ReactGA.exception({description, fatal})
+    ReactGA.exception({ description, fatal });
   }
-}
+};

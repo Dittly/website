@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import Card from './Card'
-import Profile from './Profile'
-import LargeText from './LargeText'
+import Card from './Card';
+import Profile from './Profile';
+import LargeText from './LargeText';
 
 const postStyles = {
   padding: '12px'
-}
+};
 
 const textStyles = {
   padding: '0px 12px 12px 12px'
-}
+};
 
 const Post = () => (
   <Card>
@@ -21,6 +21,6 @@ const Post = () => (
       <LargeText>This is a post with large text!</LargeText>
     </div>
   </Card>
-)
+);
 
-export default Post
+export default Post;

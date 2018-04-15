@@ -1,4 +1,4 @@
-import {css} from 'styled-components'
+import { css } from 'styled-components';
 
 export default css`
   body {
@@ -213,4 +213,4 @@ export default css`
   [hidden] {
     display: none;
   }
-`
+`;

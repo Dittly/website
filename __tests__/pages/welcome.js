@@ -1,9 +1,9 @@
 /* eslint-env jest */
-jest.mock('../../utils/ga')
+jest.mock('../../utils/ga');
 
-import {mountComponentWithApolloProvider} from '/utils/test-helper'
+import { mountComponentWithApolloProvider } from '/utils/test-helper';
 
-import {Welcome} from '/pages/welcome'
+import { Welcome } from '/pages/welcome';
 
 const getMockCurrentResult = () =>
   jest.fn().mockReturnValue({
@@ -11,7 +11,7 @@ const getMockCurrentResult = () =>
     data: {
       allProjects: []
     }
-  })
+  });
 
 describe('pages/welcome', () => {
   const defaultProps = {
@@ -21,13 +21,13 @@ describe('pages/welcome', () => {
       }
     },
     signOut: jest.fn()
-  }
+  };
 
   it(`verifies ${Welcome.name} renders correctly`, () => {
     const wrapper = mountComponentWithApolloProvider(
       <Welcome {...defaultProps} />,
       getMockCurrentResult()
-    )
-    expect(wrapper.length).toBe(1)
-  })
-})
+    );
+    expect(wrapper.length).toBe(1);
+  });
+});

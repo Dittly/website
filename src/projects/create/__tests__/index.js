@@ -1,22 +1,22 @@
 /* eslint-env jest */
-import {mount} from 'enzyme'
-import CreateProjectForm from '../components/create-form'
+import { mount } from 'enzyme';
+import CreateProjectForm from '../components/create-form';
 
-import {Create} from '../index'
+import { Create } from '../index';
 
 describe('src/projects/create', () => {
   it(`verifies ${Create.name} renders correctly`, () => {
     const props = {
       projectTypes: [],
       submitProject: jest.fn()
-    }
-    const wrapper = mount(<Create {...props} />)
-    expect(wrapper.length).toBe(1)
-    expect(wrapper.find(CreateProjectForm).length).toBe(1)
-  })
+    };
+    const wrapper = mount(<Create {...props} />);
+    expect(wrapper.length).toBe(1);
+    expect(wrapper.find(CreateProjectForm).length).toBe(1);
+  });
 
   // Test success and error case when creating a project
-  ;[
+  [
     {
       name: 'success',
       returnValue: Promise.resolve()
@@ -25,11 +25,11 @@ describe('src/projects/create', () => {
       name: 'failure',
       returnValue: Promise.reject()
     }
-  ].forEach(scenario => {
+  ].forEach((scenario) => {
     it(`verifies a project gets submitted with ${scenario.name}`, () => {
       const submitProjectMock = jest
         .fn()
-        .mockReturnValueOnce(scenario.returnValue)
+        .mockReturnValueOnce(scenario.returnValue);
       const props = {
         projectTypes: [],
         submitProject: submitProjectMock,
@@ -38,20 +38,20 @@ describe('src/projects/create', () => {
             id: 'test-user-id'
           }
         }
-      }
+      };
 
-      const wrapper = mount(<Create {...props} />)
+      const wrapper = mount(<Create {...props} />);
       wrapper
         .find(CreateProjectForm)
         .find('form')
-        .simulate('submit')
-      expect(submitProjectMock).toHaveBeenCalledTimes(1)
+        .simulate('submit');
+      expect(submitProjectMock).toHaveBeenCalledTimes(1);
       expect(submitProjectMock).toHaveBeenCalledWith({
         location: '',
         title: '',
         type: null,
         userId: 'test-user-id'
-      })
-    })
-  })
-})
+      });
+    });
+  });
+});

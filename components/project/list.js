@@ -1,13 +1,13 @@
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import {Link} from '/utils/routes'
-import {projectRoutes} from '/utils/routes/routes-definitions'
-import {neutrals, typography} from '../../styles/constants'
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Link } from '/utils/routes';
+import { projectRoutes } from '/utils/routes/routes-definitions';
+import { neutrals, typography } from '../../styles/constants';
 
-import Project from './project'
-import Box from '../box'
-import Profile from '../profile'
-import ProjectListSC from './list-sc'
+import Project from './project';
+import Box from '../box';
+import Profile from '../profile';
+import ProjectListSC from './list-sc';
 
 const ProjectTitle = styled.h1`
   margin: 0;
@@ -16,26 +16,26 @@ const ProjectTitle = styled.h1`
   font-weight: 400;
   font-family: ${typography.fontFamily};
   font-size: 16px;
-`
+`;
 
 const Soft = styled.small`
   color: ${neutrals.neutral40};
   font-size: 10px;
-`
+`;
 
 const ProjectImage = styled.div`
   display: block;
   width: 100%;
 
   text-align: center;
-`
+`;
 
-export const ProjectListThumbnail = ({id, title, location, type, user}) => (
+export const ProjectListThumbnail = ({ id, title, location, type, user }) => (
   <div>
     <Project>
       <Box>
         <Box p={1}>
-          <Link route={projectRoutes.details.name} params={{id}}>
+          <Link route={projectRoutes.details.name} params={{ id }}>
             <a>
               <ProjectTitle secondary>{title}</ProjectTitle>
             </a>
@@ -53,7 +53,7 @@ export const ProjectListThumbnail = ({id, title, location, type, user}) => (
       </Box>
     </Project>
   </div>
-)
+);
 
 ProjectListThumbnail.propTypes = {
   id: PropTypes.string.isRequired,
@@ -61,18 +61,18 @@ ProjectListThumbnail.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   user: PropTypes.object.isRequired
-}
+};
 
-const ProjectList = ({projects}) => (
+const ProjectList = ({ projects }) => (
   <ProjectListSC>
-    {projects.map(project => (
+    {projects.map((project) => (
       <ProjectListThumbnail key={project.id} {...project} />
     ))}
   </ProjectListSC>
-)
+);
 
 ProjectList.propTypes = {
   projects: PropTypes.array.isRequired
-}
+};
 
-export default ProjectList
+export default ProjectList;

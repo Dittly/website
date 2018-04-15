@@ -1,9 +1,9 @@
-import AvatarSC from './index-sc'
+import AvatarSC from './index-sc';
 
-const Avatar = props => (
+const Avatar = (props) => (
   <AvatarSC {...props}>
     <img src="/static/avatar.png" alt="avatar" />
   </AvatarSC>
-)
+);
 
-export default Avatar
+export default Avatar;

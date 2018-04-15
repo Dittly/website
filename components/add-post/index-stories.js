@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import AddPost from '.'
+import AddPost from '.';
 
-storiesOf('AddPost', module).add('default', () => <AddPost />)
+storiesOf('AddPost', module).add('default', () => <AddPost />);

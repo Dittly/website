@@ -1,23 +1,23 @@
-import PropTypes from 'prop-types'
-import {graphql} from 'react-apollo'
-import {getAllProjects} from './gq'
-import {Link} from '/utils/routes'
-import {projectRoutes} from '/utils/routes/routes-definitions'
+import PropTypes from 'prop-types';
+import { graphql } from 'react-apollo';
+import { getAllProjects } from './gq';
+import { Link } from '/utils/routes';
+import { projectRoutes } from '/utils/routes/routes-definitions';
 
-import ProjectList from '/components/project/list'
+import ProjectList from '/components/project/list';
 
-import Box from '/components/box'
-import Search from '/components/search'
-import Section from '/components/section'
-import HeadBanner from '/components/head-banner'
-import ContextButton from '/components/context-button'
+import Box from '/components/box';
+import Search from '/components/search';
+import Section from '/components/section';
+import HeadBanner from '/components/head-banner';
+import ContextButton from '/components/context-button';
 
-export const Loading = () => <p>Loading projects...</p>
+export const Loading = () => <p>Loading projects...</p>;
 
 export const WelcomeWrapper = ({
   loggedInUser,
   signOut,
-  data: {loading, allProjects}
+  data: { loading, allProjects }
 }) => (
   <div>
     <Search mobile />
@@ -47,7 +47,7 @@ export const WelcomeWrapper = ({
       )}
     </Box>
   </div>
-)
+);
 
 WelcomeWrapper.propTypes = {
   data: PropTypes.shape({
@@ -60,6 +60,6 @@ WelcomeWrapper.propTypes = {
     })
   }).isRequired,
   signOut: PropTypes.func.isRequired
-}
+};
 
-export default graphql(getAllProjects)(WelcomeWrapper)
+export default graphql(getAllProjects)(WelcomeWrapper);

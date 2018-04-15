@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {colors, typography} from '../../styles/constants'
+import { colors, typography } from '../../styles/constants';
 
 const AddSC = styled.button`
   font-family: ${typography.fontFamily};
@@ -12,6 +12,6 @@ const AddSC = styled.button`
 
   cursor: pointer;
   user-select: none;
-`
+`;
 
-export default AddSC
+export default AddSC;

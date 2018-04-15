@@ -1,8 +1,8 @@
-import gql from 'graphql-tag'
+import gql from 'graphql-tag';
 
 export const getAllProjects = gql`
   query getAllProjects($userId: ID!) {
-    allProjects(filter: {user: {id: $userId}}, orderBy: createdAt_DESC) {
+    allProjects(filter: { user: { id: $userId } }, orderBy: createdAt_DESC) {
       id
       title
       location
@@ -13,4 +13,4 @@ export const getAllProjects = gql`
       }
     }
   }
-`
+`;

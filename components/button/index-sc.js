@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const ButtonSC = styled.button`
-  background-color: ${props => (props.primary ? '#1A5CCF' : '#F9593C')};
-  font-family: ${props => (props.primary ? 'Rubik' : 'Roboto Slab')};
-  font-size: ${props => (props.primary ? '16px' : '20px')};
+  background-color: ${(props) => (props.primary ? '#1A5CCF' : '#F9593C')};
+  font-family: ${(props) => (props.primary ? 'Rubik' : 'Roboto Slab')};
+  font-size: ${(props) => (props.primary ? '16px' : '20px')};
 
   line-height: normal;
 
@@ -37,6 +37,6 @@ const ButtonSC = styled.button`
   color: white;
   font-weight: bold;
   letter-spacing: 0.8px;
-`
+`;
 
-export default ButtonSC
+export default ButtonSC;

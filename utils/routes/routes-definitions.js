@@ -14,7 +14,7 @@ export const authRoutes = {
     pattern: '/sign-up',
     page: 'auth/sign-up'
   }
-}
+};
 
 export const homeRoutes = {
   home: {
@@ -25,7 +25,7 @@ export const homeRoutes = {
     name: 'welcome',
     pattern: '/welcome'
   }
-}
+};
 
 export const projectRoutes = {
   create: {
@@ -36,17 +36,17 @@ export const projectRoutes = {
     name: 'projects/details',
     pattern: '/projects/:id'
   }
-}
+};
 
 export const profileRoutes = {
   profile: {
     name: 'profile',
     pattern: '/profile'
   }
-}
+};
 
 export default {
   authRoutes,
   homeRoutes,
   projectRoutes
-}
+};
