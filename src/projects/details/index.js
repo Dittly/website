@@ -18,7 +18,11 @@ ProjectDetailsWrapper.propTypes = {
 }
 
 export default graphql(getProject, {
-  options: /* istanbul ignore next */ ({url: {query: {id}}}) => {
+  options: /* istanbul ignore next */ ({
+    url: {
+      query: {id}
+    }
+  }) => {
     return {
       variables: {
         projectId: id

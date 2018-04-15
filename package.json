@@ -9,11 +9,12 @@
   "scripts": {
     "build": "next build",
     "dev": "node -r esm index.js",
-    "lint": "eslint '**/*.js'",
+    "lint": "eslint --fix '**/*.js'",
     "precommit": "lint-staged",
     "start": "NODE_ENV=production node -r @std/esm index.js",
     "test": "yarn lint && yarn test:coverage",
-    "test:ci": "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test:ci":
+      "yarn test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test:coverage": "jest --maxWorkers=4 --coverage",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -s ./ -p 6006",
@@ -26,9 +27,7 @@
     "esm": "js"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "**/*.js"
-    ],
+    "collectCoverageFrom": ["**/*.js"],
     "coveragePathIgnorePatterns": [
       "<rootDir>/components/add/",
       "<rootDir>/components/h1/",
@@ -42,10 +41,7 @@
       "-stories.js$"
     ],
     "resetMocks": true,
-    "setupFiles": [
-      "./utils/raf-shim.js",
-      "./utils/tests-setup.js"
-    ],
+    "setupFiles": ["./utils/raf-shim.js", "./utils/tests-setup.js"],
     "testEnvironment": "jest-environment-jsdom-global"
   },
   "lint-staged": {

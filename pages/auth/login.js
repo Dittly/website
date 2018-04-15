@@ -34,7 +34,11 @@ export class Login extends BasePageComponent {
   }
 }
 
-export const _signInSuccess = client => ({data: {signinUser: {token}}}) => {
+export const _signInSuccess = client => ({
+  data: {
+    signinUser: {token}
+  }
+}) => {
   // Store the token in cookie
   document.cookie = cookie.serialize('token', token, {
     maxAge: 30 * 24 * 60 * 60 // 30 days
