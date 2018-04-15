@@ -1,13 +1,13 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import TabBarSC from './index-sc'
-import Avatar from '../avatar'
+import TabBarSC from './index-sc';
+import Avatar from '../avatar';
 
 const SearchIcon = styled.div`
   display: inline;
   width: 27px;
   height: 27px;
-`
+`;
 
 const TabBarButton = styled.button`
   background-color: white;
@@ -17,7 +17,7 @@ const TabBarButton = styled.button`
   font-size: 14px;
   width: 50%;
   padding: 8px;
-`
+`;
 
 const TabBar = () => (
   <TabBarSC>
@@ -30,6 +30,6 @@ const TabBar = () => (
       <Avatar />
     </TabBarButton>
   </TabBarSC>
-)
+);
 
-export default TabBar
+export default TabBar;

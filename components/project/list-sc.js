@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import {sizes, media} from '../../styles/media'
+import styled from 'styled-components';
+import { sizes, media } from '../../styles/media';
 
 const ProjectListSC = styled.div`
   max-width: 375px;
@@ -24,6 +24,6 @@ const ProjectListSC = styled.div`
     grid-template-columns: repeat(4, 1fr);
     max-width: ${sizes.giant}px;
   `};
-`
+`;
 
-export default ProjectListSC
+export default ProjectListSC;

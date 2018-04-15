@@ -2,11 +2,11 @@
 
 /* eslint-disable import/no-commonjs */
 if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config()
+  require('dotenv').config();
 }
 
 /**
  * @see https://github.com/standard-things/esm
  */
-require = require('esm')(module) // eslint-disable-line no-global-assign, no-native-reassign
-module.exports = require('./server.js')
+require = require('esm')(module); // eslint-disable-line no-global-assign, no-native-reassign
+module.exports = require('./server.js');

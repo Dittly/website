@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {media} from '../../styles/media'
+import { media } from '../../styles/media';
 
 const TabBarSC = styled.div`
   display: flex;
@@ -15,6 +15,6 @@ const TabBarSC = styled.div`
   ${media.tablet`
     display: none;
   `};
-`
+`;
 
-export default TabBarSC
+export default TabBarSC;

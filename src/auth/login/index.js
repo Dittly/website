@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types'
-import {Link} from '/utils/routes'
-import {authRoutes} from '/utils/routes/routes-definitions'
+import PropTypes from 'prop-types';
+import { Link } from '/utils/routes';
+import { authRoutes } from '/utils/routes/routes-definitions';
 
-import Input from '/components/input'
-import HeadBanner from '/components/head-banner'
-import Box from '/components/box'
-import Button from '/components/button'
-import H1 from '/components/h1'
+import Input from '/components/input';
+import HeadBanner from '/components/head-banner';
+import Box from '/components/box';
+import Button from '/components/button';
+import H1 from '/components/h1';
 
-const Login = ({signin}) => (
+const Login = ({ signin }) => (
   <div>
     <HeadBanner>
       <Box p={1}>
@@ -39,10 +39,10 @@ const Login = ({signin}) => (
       </Link>
     </Box>
   </div>
-)
+);
 
 Login.propTypes = {
   signin: PropTypes.func.isRequired
-}
+};
 
-export default Login
+export default Login;

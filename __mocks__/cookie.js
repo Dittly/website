@@ -1,4 +1,4 @@
 /* eslint-env jest */
-const cookie = jest.genMockFromModule('cookie')
+const cookie = jest.genMockFromModule('cookie');
 
-export default cookie
+export default cookie;

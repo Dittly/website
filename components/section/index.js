@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import {media} from '../../styles/media'
+import styled from 'styled-components';
+import { media } from '../../styles/media';
 
 const SectionSC = styled.div`
   padding: 12px;
@@ -9,6 +9,6 @@ const SectionSC = styled.div`
   ${media.tablet`
     text-align: left;
   `};
-`
+`;
 
-export default SectionSC
+export default SectionSC;

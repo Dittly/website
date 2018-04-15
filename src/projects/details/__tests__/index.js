@@ -1,10 +1,10 @@
 /* eslint-env jest */
-import {mount} from 'enzyme'
+import { mount } from 'enzyme';
 
-import {deepClone} from '/utils/helpers'
+import { deepClone } from '/utils/helpers';
 
-import {Loading, ProjectDetailsWrapper} from '../index'
-import ProjectDetails from '../components/details'
+import { Loading, ProjectDetailsWrapper } from '../index';
+import ProjectDetails from '../components/details';
 
 const baseProps = {
   data: {
@@ -16,28 +16,28 @@ const baseProps = {
       user: {}
     }
   }
-}
+};
 
 describe('src/projects/details', () => {
   it(`verifies ${
     ProjectDetailsWrapper.name
   } renders correctly while loading`, () => {
-    const props = deepClone(baseProps)
-    props.data.loading = true
+    const props = deepClone(baseProps);
+    props.data.loading = true;
 
-    const wrapper = mount(<ProjectDetailsWrapper {...props} />)
-    expect(wrapper.length).toBe(1)
-    expect(wrapper.find(Loading).length).toBe(1)
-    expect(wrapper.find(ProjectDetails).length).toBe(0)
-  })
+    const wrapper = mount(<ProjectDetailsWrapper {...props} />);
+    expect(wrapper.length).toBe(1);
+    expect(wrapper.find(Loading).length).toBe(1);
+    expect(wrapper.find(ProjectDetails).length).toBe(0);
+  });
 
   it(`verifies ${ProjectDetailsWrapper.name} renders correctly`, () => {
-    const props = deepClone(baseProps)
-    props.data.loading = false
+    const props = deepClone(baseProps);
+    props.data.loading = false;
 
-    const wrapper = mount(<ProjectDetailsWrapper {...props} />)
-    expect(wrapper.length).toBe(1)
-    expect(wrapper.find(Loading).length).toBe(0)
-    expect(wrapper.find(ProjectDetails).length).toBe(1)
-  })
-})
+    const wrapper = mount(<ProjectDetailsWrapper {...props} />);
+    expect(wrapper.length).toBe(1);
+    expect(wrapper.find(Loading).length).toBe(0);
+    expect(wrapper.find(ProjectDetails).length).toBe(1);
+  });
+});

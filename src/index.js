@@ -1,11 +1,11 @@
-import {Link} from '../utils/routes'
-import {projectRoutes} from '../utils/routes/routes-definitions'
+import { Link } from '../utils/routes';
+import { projectRoutes } from '../utils/routes/routes-definitions';
 
-import Box from '../components/box'
-import Search from '../components/search'
-import Section from '../components/section'
-import HeadBanner from '../components/head-banner'
-import ContextButton from '../components/context-button'
+import Box from '../components/box';
+import Search from '../components/search';
+import Section from '../components/section';
+import HeadBanner from '../components/head-banner';
+import ContextButton from '../components/context-button';
 
 const Index = () => (
   <div>
@@ -26,6 +26,6 @@ const Index = () => (
       </Box>
     </HeadBanner>
   </div>
-)
+);
 
-export default Index
+export default Index;

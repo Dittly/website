@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import HeaderBarSC from './index-sc'
-import PropTypes from 'prop-types'
+import HeaderBarSC from './index-sc';
+import PropTypes from 'prop-types';
 
 const HeaderBarButton = styled.div`
   display: flex;
@@ -9,9 +9,9 @@ const HeaderBarButton = styled.div`
   padding: 0 8px;
   width: 44px;
   height: 44px;
-`
+`;
 
-const HeaderBar = ({children}) => (
+const HeaderBar = ({ children }) => (
   <HeaderBarSC>
     <HeaderBarButton>
       <img src="../../static/back-arrow.svg" alt="go back" />
@@ -19,10 +19,10 @@ const HeaderBar = ({children}) => (
     <h1>{children}</h1>
     <HeaderBarButton />
   </HeaderBarSC>
-)
+);
 
 HeaderBar.propTypes = {
   children: PropTypes.node.isRequired
-}
+};
 
-export default HeaderBar
+export default HeaderBar;

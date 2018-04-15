@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-import Card from './Card'
-import Add from './Add'
-import UiButton from './UiButton'
+import Card from './Card';
+import Add from './Add';
+import UiButton from './UiButton';
 
 const textAreaStyles = {
   WebkitAppearance: 'none',
@@ -14,14 +14,14 @@ const textAreaStyles = {
   width: 'CALC(100% - 24px)',
   maxWidth: '375px',
   resize: 'none'
-}
+};
 
 const flexContainerStyles = {
   display: 'flex',
   justifyContent: 'space-between',
   padding: '6px',
   borderTop: '1px solid #EDEDED'
-}
+};
 
 const AddPost = () => (
   <Card>
@@ -34,6 +34,6 @@ const AddPost = () => (
       <UiButton>Post</UiButton>
     </div>
   </Card>
-)
+);
 
-export default AddPost
+export default AddPost;

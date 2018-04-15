@@ -1,15 +1,15 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-import {neutrals} from '../../styles/constants'
-import {media} from '../../styles/media'
+import { neutrals } from '../../styles/constants';
+import { media } from '../../styles/media';
 
-import PropTypes from 'prop-types'
-import HeaderBar from '../header-bar'
-import Box from '../box'
-import HeadBanner from '../head-banner'
-import Section from '../section'
-import Profile from '../profile'
-import Journey from './journey'
+import PropTypes from 'prop-types';
+import HeaderBar from '../header-bar';
+import Box from '../box';
+import HeadBanner from '../head-banner';
+import Section from '../section';
+import Profile from '../profile';
+import Journey from './journey';
 
 const ProjectOwner = styled.div`
   display: flex;
@@ -19,13 +19,13 @@ const ProjectOwner = styled.div`
   ${media.phone`
     justify-content: start;
   `};
-`
+`;
 
 const FlexContainer = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 4px;
-`
+`;
 
 const Dt = styled.dt`
   display: inline;
@@ -33,12 +33,12 @@ const Dt = styled.dt`
   color: ${neutrals.neutral40};
   font-weight: 500;
   font-size: 12px;
-`
+`;
 
 const Dd = styled.dd`
   display: inline;
   margin: 0;
-`
+`;
 
 const MobileSlide = styled.div`
   img {
@@ -47,7 +47,7 @@ const MobileSlide = styled.div`
   ${media.phone`
     display: none;
   `};
-`
+`;
 const DesktopTitle = styled.h1`
   display: none;
   ${media.phone`
@@ -56,9 +56,9 @@ const DesktopTitle = styled.h1`
     padding: 8px 0;
     font-size: 28px;
   `};
-`
+`;
 
-export const ProjectDetails = ({id, title, location, type, user}) => (
+export const ProjectDetails = ({ id, title, location, type, user }) => (
   <div>
     <HeaderBar>{title}</HeaderBar>
     <HeadBanner>
@@ -89,7 +89,7 @@ export const ProjectDetails = ({id, title, location, type, user}) => (
       <Journey />
     </Box>
   </div>
-)
+);
 
 ProjectDetails.propTypes = {
   id: PropTypes.string.isRequired,
@@ -97,6 +97,6 @@ ProjectDetails.propTypes = {
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   user: PropTypes.object.isRequired
-}
+};
 
-export default ProjectDetails
+export default ProjectDetails;

@@ -1,7 +1,7 @@
-import BasePageComponent from '/components/base-page'
-import withAuth from '/components/with-auth'
-import Layout from '/components/layouts'
-import CreateContent from '/src/projects/create'
+import BasePageComponent from '/components/base-page';
+import withAuth from '/components/with-auth';
+import Layout from '/components/layouts';
+import CreateContent from '/src/projects/create';
 
 export class Create extends BasePageComponent {
   render() {
@@ -9,8 +9,8 @@ export class Create extends BasePageComponent {
       <Layout>
         <CreateContent {...this.props} />
       </Layout>
-    )
+    );
   }
 }
 
-export default withAuth(Create)
+export default withAuth(Create);

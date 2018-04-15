@@ -1,5 +1,5 @@
-import {css} from 'styled-components'
-import {media} from '../media'
+import { css } from 'styled-components';
+import { media } from '../media';
 
 export default css`
   html {
@@ -21,4 +21,4 @@ export default css`
       font-size: 28px;
     `};
   }
-`
+`;

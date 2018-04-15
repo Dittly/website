@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import {neutrals} from '../../styles/constants'
-import SearchSC from './index-sc'
+import styled from 'styled-components';
+import { neutrals } from '../../styles/constants';
+import SearchSC from './index-sc';
 
 const SearchInput = styled.input`
   display: inline-block;
@@ -23,12 +23,12 @@ const SearchInput = styled.input`
   &::placeholder {
     color: ${neutrals.neutral40};
   }
-`
+`;
 
-const Search = props => (
+const Search = (props) => (
   <SearchSC {...props}>
     <SearchInput placeholder="Search" type="text" />
   </SearchSC>
-)
+);
 
-export default Search
+export default Search;

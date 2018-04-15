@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import {logPageView} from '/utils/ga'
+import { logPageView } from '/utils/ga';
 
 class BasePageComponent extends React.Component {
   componentDidMount() {
-    logPageView()
+    logPageView();
   }
 }
 
-export default BasePageComponent
+export default BasePageComponent;

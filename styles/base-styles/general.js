@@ -1,6 +1,6 @@
-import {css} from 'styled-components'
-import {neutrals, typography} from '../constants'
-import {media} from '../media'
+import { css } from 'styled-components';
+import { neutrals, typography } from '../constants';
+import { media } from '../media';
 
 export default css`
   * {
@@ -60,4 +60,4 @@ export default css`
     padding: 0;
     list-style-type: none;
   }
-`
+`;

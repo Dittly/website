@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const inputStyles = {
   WebkitAppearance: 'none',
@@ -11,14 +11,14 @@ const inputStyles = {
   width: 'CALC(100% - 24px)',
   maxWidth: '375px',
   resize: 'none'
-}
+};
 
-const Input = ({placeholder}) => (
+const Input = ({ placeholder }) => (
   <input style={inputStyles} placeholder={placeholder} />
-)
+);
 
 Input.propTypes = {
   placeholder: PropTypes.string.isRequired
-}
+};
 
-export default Input
+export default Input;

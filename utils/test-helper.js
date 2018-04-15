@@ -1,6 +1,6 @@
 /* eslint-env jest */
-import {mount} from 'enzyme'
-import {ApolloProvider} from 'react-apollo'
+import { mount } from 'enzyme';
+import { ApolloProvider } from 'react-apollo';
 
 export const mountComponentWithApolloProvider = (
   Component,
@@ -24,4 +24,4 @@ export const mountComponentWithApolloProvider = (
     >
       {Component}
     </ApolloProvider>
-  )
+  );

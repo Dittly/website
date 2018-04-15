@@ -1,0 +1,4 @@
+.esm-cache
+.next
+coverage
+node_modules

@@ -9,9 +9,4 @@ rules:
   no-confusing-arrow:
     - error
     - allowParens: true
-  prettier/prettier:
-    - error
-    - semi: false
-      singleQuote: true
-      bracketSpacing: false
-      printWidth: 80
+  prettier/prettier: error

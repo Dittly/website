@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from 'graphql-tag';
 
 export const getProject = gql`
   query getProject($projectId: ID!) {
@@ -13,4 +13,4 @@ export const getProject = gql`
       }
     }
   }
-`
+`;

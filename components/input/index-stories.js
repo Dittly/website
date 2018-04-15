@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import Input from '.'
+import Input from '.';
 
-storiesOf('Input', module).add('default', () => <Input />)
+storiesOf('Input', module).add('default', () => <Input />);

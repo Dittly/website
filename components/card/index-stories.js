@@ -1,5 +1,5 @@
-import {storiesOf} from '@storybook/react'
+import { storiesOf } from '@storybook/react';
 
-import Card from '.'
+import Card from '.';
 
-storiesOf('Card', module).add('default', () => <Card>Card content</Card>)
+storiesOf('Card', module).add('default', () => <Card>Card content</Card>);

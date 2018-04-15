@@ -1,8 +1,8 @@
 /* eslint-env jest */
-import {mount} from 'enzyme'
+import { mount } from 'enzyme';
 
-import {Loading, WelcomeWrapper} from '../index'
-import ProjectList from '/components/project/list'
+import { Loading, WelcomeWrapper } from '../index';
+import ProjectList from '/components/project/list';
 
 describe('src/welcome/index', () => {
   it(`verifies ${WelcomeWrapper.name} renders correctly while loading`, () => {
@@ -16,12 +16,12 @@ describe('src/welcome/index', () => {
         }
       },
       signOut: jest.fn()
-    }
-    const wrapper = mount(<WelcomeWrapper {...props} />)
-    expect(wrapper.length).toBe(1)
-    expect(wrapper.find(Loading).length).toBe(1)
-    expect(wrapper.find(ProjectList).length).toBe(0)
-  })
+    };
+    const wrapper = mount(<WelcomeWrapper {...props} />);
+    expect(wrapper.length).toBe(1);
+    expect(wrapper.find(Loading).length).toBe(1);
+    expect(wrapper.find(ProjectList).length).toBe(0);
+  });
 
   it(`verifies ${WelcomeWrapper.name} renders correctly`, () => {
     const props = {
@@ -35,10 +35,10 @@ describe('src/welcome/index', () => {
         }
       },
       signOut: jest.fn()
-    }
-    const wrapper = mount(<WelcomeWrapper {...props} />)
-    expect(wrapper.length).toBe(1)
-    expect(wrapper.find(Loading).length).toBe(0)
-    expect(wrapper.find(ProjectList).length).toBe(1)
-  })
-})
+    };
+    const wrapper = mount(<WelcomeWrapper {...props} />);
+    expect(wrapper.length).toBe(1);
+    expect(wrapper.find(Loading).length).toBe(0);
+    expect(wrapper.find(ProjectList).length).toBe(1);
+  });
+});

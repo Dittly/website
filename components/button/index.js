@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import ButtonSC from './index-sc'
+import ButtonSC from './index-sc';
 
-const Button = props => <ButtonSC {...props}>{props.children}</ButtonSC>
+const Button = (props) => <ButtonSC {...props}>{props.children}</ButtonSC>;
 
 Button.propTypes = {
   children: PropTypes.node.isRequired
-}
+};
 
-export default Button
+export default Button;
