@@ -57,11 +57,11 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.0",
     "cookie": "^0.3.1",
     "esm": "^3.0.18",
-    "graphql": "^0.13.2",
+    "graphql": "^14.0.0-rc.1",
     "graphql-tag": "^2.8.0",
-    "grid-styled": "^4.0.0",
+    "grid-styled": "^5.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "keen-tracking": "^1.4.0",
+    "keen-tracking": "^2.0.0",
     "micro": "^9.1.4",
     "micro-route": "^2.4.0",
     "next": "^5.1.0",
@@ -72,20 +72,20 @@
     "react-dom": "^16.3.1",
     "react-ga": "^2.4.1",
     "styled-components": "^3.2.5",
-    "styled-system": "^2.2.1"
+    "styled-system": "^3.0.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.1",
     "@storybook/addon-links": "^3.4.1",
     "@storybook/react": "^3.4.1",
     "babel-eslint": "^8.2.3",
-    "babel-plugin-root-import": "^5.1.0",
+    "babel-plugin-root-import": "^6.0.0",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-runtime": "^6.26.0",
     "coveralls": "^3.0.0",
-    "dotenv": "^5.0.1",
+    "dotenv": "^6.0.0",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^3.0.0",
     "eslint-plugin-import": "^2.11.0",
@@ -93,7 +93,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "greenkeeper-lockfile": "^1.14.0",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0",
     "jest": "^22.4.3",
     "jest-environment-jsdom-global": "^1.0.3",
     "lint-staged": "^7.0.4",
@@ -101,6 +101,6 @@
     "prettier": "^1.12.0",
     "react-test-renderer": "^16.3.1",
     "test-listen": "^1.0.2",
-    "webpack-bundle-analyzer": "^2.11.1"
+    "webpack-bundle-analyzer": "^3.0.0"
   }
 }
