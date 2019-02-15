@@ -95,7 +95,7 @@
     "greenkeeper-lockfile": "^1.14.0",
     "husky": "^1.0.0",
     "jest": "^22.4.3",
-    "jest-environment-jsdom-global": "^1.0.3",
+    "jest-environment-jsdom-global": "^1.1.1",
     "lint-staged": "^7.0.4",
     "lodash.isfunction": "^3.0.9",
     "prettier": "^1.12.0",
