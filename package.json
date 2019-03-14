@@ -53,7 +53,7 @@
     "apollo-client": "^2.2.8",
     "apollo-link-context": "^1.0.8",
     "apollo-link-http": "^1.5.4",
-    "babel-plugin-inline-dotenv": "^1.1.2",
+    "babel-plugin-inline-dotenv": "^1.2.2",
     "babel-plugin-transform-inline-environment-variables": "^0.4.0",
     "cookie": "^0.3.1",
     "esm": "^3.0.18",
