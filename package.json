@@ -56,7 +56,7 @@
     "babel-plugin-inline-dotenv": "^1.1.2",
     "babel-plugin-transform-inline-environment-variables": "^0.4.0",
     "cookie": "^0.3.1",
-    "esm": "^3.0.18",
+    "esm": "^3.2.25",
     "graphql": "^14.0.0-rc.1",
     "graphql-tag": "^2.8.0",
     "grid-styled": "^5.0.0",
