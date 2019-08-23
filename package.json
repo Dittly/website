@@ -57,7 +57,7 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.0",
     "cookie": "^0.3.1",
     "esm": "^3.0.18",
-    "graphql": "^14.0.0-rc.1",
+    "graphql": "^14.5.2",
     "graphql-tag": "^2.8.0",
     "grid-styled": "^5.0.0",
     "isomorphic-fetch": "^2.2.1",
