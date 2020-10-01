@@ -1,4 +1,4 @@
-# Dittly
+# Dittly : Its a fab project!
 
 [![CircleCI](https://circleci.com/gh/Dittly/website.svg?style=svg)](https://circleci.com/gh/Dittly/website) [![Coverage Status](https://coveralls.io/repos/github/Dittly/website/badge.svg?branch=master)](https://coveralls.io/github/Dittly/website?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Dittly/website.svg)](https://greenkeeper.io/)
 
