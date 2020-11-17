@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/Dittly/website.svg?style=svg)](https://circleci.com/gh/Dittly/website) [![Coverage Status](https://coveralls.io/repos/github/Dittly/website/badge.svg?branch=master)](https://coveralls.io/github/Dittly/website?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/Dittly/website.svg)](https://greenkeeper.io/)
 
-## Table of contents
+## Table of contents:
 
 <!-- TOC -->
 
@@ -36,14 +36,14 @@
 
 ## What we care about
 
-At Dittly, we care about
+At Dittly, we care about:
 
-**Our customers**. They expect a platform that
+**Our customers**. They expect a platform that,
 
-* solves real problems
-* is simple to use
-* works as expected
-* is available 24/7
+* Solves real problems
+* Simple to use
+* Works as expected
+* Available 24x7
 
 **Our team**. To exceed what our customers expect, we
 
